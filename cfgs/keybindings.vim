@@ -1,0 +1,240 @@
+" ------------------------------BASE KEYS--------------------------------------
+" ------------------------------------------------------------------------------
+" ===========窗口管理
+" ------------------------------------------------------------------------------
+" 调整窗口大小
+" Ctrl+Shift+上下左右键
+nmap <c-s-right> <c-w>>
+nmap <c-s-left> <c-w><
+nmap <c-s-up> <c-w>-
+nmap <c-s-down> <c-w>+
+
+" 关闭 s 默认功能
+"noremap s <nop>
+
+" split the screens to up (horizontal), down (horizontal), left (vertical), right (vertical)
+noremap <leader>sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
+noremap <leader>sj :set splitbelow<CR>:split<CR>
+noremap <leader>sl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+noremap <leader>sh :set splitright<CR>:vsplit<CR>
+
+" 常规模式下输入 cS 清除行尾空格,同时取消高亮
+"nmap cS :%s/\s\+$//g<CR>:noh<CR>
+"上面的cS与vim surround冲突
+nmap <leader><leader>cS :%s/\s\+$//g<CR>:noh<CR>
+" 常规模式下输入 cM 清除行尾 ^M 符号,同时取消高亮
+nmap <leader><leader>cM :%s/\r$//g<CR>:noh<CR>
+
+" 在不使用 MiniBufExplorer 插件时也可用<C-k,j,h,l>切换到上下左右的窗口中去
+" noremap <c-k> <c-w>k
+" noremap <c-j> <c-w>j
+" noremap <c-h> <c-w>h
+" noremap <c-l> <c-w>l
+" 在不使用 MiniBufExplorer 插件时也可用<Alt+Shift+k,j,h,l>切换到上下左右的窗口中去
+noremap <s-m-k> <c-w>k
+noremap <s-m-j> <c-w>j
+noremap <s-m-h> <c-w>h
+noremap <s-m-l> <c-w>l
+
+" ----------插入模式------------------
+" Ctrl + K 插入模式下光标向上移动
+imap <c-k> <Up>
+" Ctrl + J 插入模式下光标向下移动
+imap <c-j> <Down>
+" Ctrl + H 插入模式下光标向左移动
+imap <c-h> <Left>
+" Ctrl + L 插入模式下光标向右移动
+imap <c-l> <Right>
+
+" 设置快捷键将选中文本块复制至系统剪贴板
+vnoremap <Leader>y "+y
+" 设置快捷键将系统剪贴板内容粘贴至 vim
+nmap <Leader>p "+p
+
+
+" ------------------------------Plugins KEYS--------------------------------------
+
+" ----------------------
+" ====== Plug - floaterm
+" ----------------------
+" let g:floaterm_keymap_toggle = '<F1>'
+" 打开floaterm窗口
+let g:floaterm_keymap_toggle = '<leader>ff'
+" 下一个floaterm窗口
+let g:floaterm_keymap_next = '<leader>fn'
+" 上一个floaterm窗口
+let g:floaterm_keymap_prev = '<leader>fp'
+" 创建一个新的floaterm窗口
+let g:floaterm_keymap_new = '<leader>fc'
+" 跳转到第一个floaterm窗口
+let g:floaterm_keymap_first = '<leader>fi'
+" 跳转到最后一个floaterm窗口
+let g:floaterm_keymap_last = '<leader>fa'
+" 隐藏floaterm
+let g:floaterm_keymap_hide = '<leader>fh'
+" 显示floaterm
+let g:floaterm_keymap_show = '<leader>fs'
+" 关闭floaterm当前窗口,并退出floaterm
+let g:floaterm_keymap_kill = '<leader>fk'
+
+" floaterm 打开ranger
+nmap <leader>fr :FloatermNew ranger<CR>
+" floaterm 打开 fzf
+nmap <leader>fz :FloatermNew fzf<CR>
+
+" ----------------------
+" ====== Plug - NerdTree
+" ----------------------
+" NERDTree plugin,  配置打开/关闭nerdTree快捷键
+"map <F2> :NERDTreeMirror<CR>
+"map <F3> :NERDTreeToggle<CR>
+nmap tt :NERDTreeToggle<CR>
+
+" --------------------
+" ====== ale 语法检查2
+" --------------------
+nmap ]a <Plug>(ale_next_wrap)
+nmap [a <Plug>(ale_previous_wrap)
+
+" ------------------------------
+" ====== coc-translator 英文翻译
+" ------------------------------
+" popup
+nmap <Leader>ts <Plug>(coc-translator-p)
+vmap <Leader>ts <Plug>(coc-translator-pv)
+" echo
+nmap <Leader>te <Plug>(coc-translator-e)
+vmap <Leader>te <Plug>(coc-translator-ev)
+" replace
+nmap <Leader>tr <Plug>(coc-translator-r)
+vmap <Leader>tr <Plug>(coc-translator-rv)
+
+
+" ------------------------
+" ======== Plug - coc.nvim
+" ------------------------
+" 代码提示使用tab键选择
+let g:coc_snippet_next = '<tab>'
+
+" ----------------------------
+" ====== Plug - airline 标签切换
+" ----------------------------
+"  根据标签序号切换窗口
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>- <Plug>AirlineSelectPrevTab
+nmap <leader>= <Plug>AirlineSelectNextTab
+nmap <leader>q :bp<cr>:bd #<cr>
+
+" 新建一个标签页
+noremap <leader>tc :tabe<CR>
+" 移至左侧标签页
+noremap <leader>tp :-tabnext<CR>
+" 移至右侧标签页
+noremap <leader>tn :+tabnext<CR>
+" 当前标签页左移动一格
+noremap <leader>th :-tabmove<CR>
+" 当前标签页右移动一格
+noremap <leader>tl :+tabmove<CR>
+
+
+" ----------------------------
+" ====== Plug - ctags
+" ----------------------------
+nnoremap <leader>ct :TagbarToggle<CR>
+
+
+" ----------------------------
+" ====== Plug - markdown-preview
+" ----------------------------
+"  markdown 预览开启
+nmap <leader>mp <Plug>MarkdownPreview
+" markdown 预览关闭
+nmap <leader>ms <Plug>MarkdownPreviewStop
+
+" markdown预览(开启或关闭),MarkdownPreview与MarkdownPreviewStop是一对
+" MarkdownPreviewToggle开启后再执行则会关闭当前预览的页面
+" 而MarkdownPreview每执行一次会打开一个预览页面,必须使用MarkdownPreviewStop来关闭
+nmap <leader>mt <Plug>MarkdownPreviewToggle
+" coc-markdownlint >>  markdownlint.fixAll: fix all errors in current file found by markdownlint
+" CocInstall coc-markdownlint
+" markdown 语法修正
+nmap <leader>mf <Plug>(coc-codeaction)
+
+" --------------------------
+" ====== Plug - neoformat
+" --------------------------
+
+" nmap <Leader>bb :Neoformat jsbeautify<CR>
+nmap <Leader>nf :Neoformat<CR>
+
+" indent 对应的折叠代码有：
+" zc 折叠
+" zC 对所在范围内所有嵌套的折叠点进行折叠
+" zo 展开折叠
+" zO 对所在范围内所有嵌套的折叠点展开
+" [z 到当前打开的折叠的开始处。
+" ]z 到当前打开的折叠的末尾处。
+" zj 向下移动。到达下一个折叠的开始处。关闭的折叠也被计入。
+" zk 向上移动到前一折叠的结束处。关闭的折叠也被计入。
+"    使用时在大括号中间输入以上命令。
+"    当使用marker方式时，需要用标计来标识代码的折叠，系统默认是{{{和}}}，最好不要改动之：）
+"    可以使用下面的命令来创建和删除折叠：
+"
+" zf 创建折叠，比如在marker方式下：
+"    zf56G，创建从当前行起到56行的代码折叠；
+"    10zf或10zf+或zf10↓，创建从当前行起到后10行的代码折叠。
+"    10zf-或zf10↑，创建从当前行起到之前10行的代码折叠。
+"    在括号处zf%，创建从当前行起到对应的匹配的括号上去（（），{}，[]，等）。
+"
+" zd 删除 (delete) 在光标下的折叠。仅当 'foldmethod' 设为 "manual" 或 "marker" 时有效。
+" zD 循环删除 (Delete) 光标下的折叠，即嵌套删除折叠。
+"    仅当 'foldmethod' 设为 "manual" 或 "marker" 时有效。
+"
+" zE 除去 (Eliminate) 窗口里“所有”的折叠。
+"    仅当 'foldmethod' 设为 "manual" 或 "marker" 时有效。
+" -----------------------折叠设置 end---------------------------
+
+" --------------------------
+" ====== Plug bookmarks
+" --------------------------
+"  在当前行添加或删除书签 bookmark toggle
+nmap <leader>bc <Plug>BookmarkToggle
+" 在当前行添加注释 bookmark annotate
+nmap <leader>ba <Plug>BookmarkAnnotate
+" 显示所有书签
+nmap <leader>bs <Plug>BookmarkShowAll
+" 下一个书签
+nmap <leader>bn <Plug>BookmarkNext
+" 上一个书签
+nmap <leader>bp <Plug>BookmarkPrev
+" 清除书签 好像和BookmarkClearAll是一样的效果
+nmap <leader>bx <Plug>BookmarkClear
+" 清除所有书签 大写X
+nmap <leader>bX <Plug>BookmarkClearAll
+" 将书签向上移动一行
+nmap <leader>bk <Plug>BookmarkMoveUp
+" 将书签向下移动一行
+nmap <leader>bj <Plug>BookmarkMoveDown
+"将书签移至任意一行
+nmap <Leader>bg <Plug>BookmarkMoveToLine
+" 保存所有书签至一个文件:BookmarkSave <filePath>
+" 从一个文件加载书签:BookmarkLoad <filePath>
+"
+let g:terminal_key ="<leader>tt" "哪个键将用于切换终端窗口，默认为<m-=>。
+" let g:terminal_cwd ="<leader>" "初始化工作目录：0保持不变，1文件路径和2项目根目录。
+" let g:terminal_height ="<leader>" "新的终端高度，默认为10。
+" let g:terminal_pos  ="<leader>" "打开终端的位置，默认为rightbelow。
+" let g:terminal_shell ="<leader>" "指定外壳而不是默认外壳。
+" let g:terminal_edit ="<leader>" "命令在vim中打开文件，默认为tab drop。
+" let g:terminal_kill ="<leader>" "设置term退出vim时终止学期会话。
+" let g:terminal_list  ="<leader>" "设置为0以将终端缓冲区隐藏在缓冲区列表中。
+" let g:terminal_fixheight ="<leader>" "设置为1以设置winfixheight终端窗口。
+" let g:terminal_close ="<leader>" "设置为1以在处理完成后关闭窗口。
