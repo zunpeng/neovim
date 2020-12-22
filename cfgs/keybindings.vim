@@ -2,6 +2,10 @@
 " ------------------------------------------------------------------------------
 " ===========窗口管理
 " ------------------------------------------------------------------------------
+
+" Open the vimrc file anytime
+noremap <LEADER>rc :e ~/.config/nvim/init.vim<CR>
+
 " 调整窗口大小
 " Ctrl+Shift+上下左右键
 nmap <c-s-right> <c-w>>
@@ -31,10 +35,14 @@ nmap <leader><leader>cM :%s/\r$//g<CR>:noh<CR>
 " noremap <c-h> <c-w>h
 " noremap <c-l> <c-w>l
 " 在不使用 MiniBufExplorer 插件时也可用<Alt+Shift+k,j,h,l>切换到上下左右的窗口中去
-noremap <s-m-k> <c-w>k
-noremap <s-m-j> <c-w>j
-noremap <s-m-h> <c-w>h
-noremap <s-m-l> <c-w>l
+" noremap <s-m-k> <c-w>k
+" noremap <s-m-j> <c-w>j
+" noremap <s-m-h> <c-w>h
+" noremap <s-m-l> <c-w>l
+noremap <leader>wk <c-w>k
+noremap <leader>wj <c-w>j
+noremap <leader>wh <c-w>h
+noremap <leader>wl <c-w>l
 
 " ----------插入模式------------------
 " Ctrl + K 插入模式下光标向上移动
