@@ -93,7 +93,7 @@
 		}
 	],
 	"explorer.file.column.indent.indentLine": true,
-	"explorer.file.showHiddenFiles": true,
+	"explorer.file.showHiddenFiles": false,
 	"explorer.file.hiddenRules": {
 		"extensions": ["o", "a", "obj", "pyc"],
 		"filenames": [".git"],
@@ -113,8 +113,8 @@
 		"gj": ["wait", "expandableNext"],
 		"h": ["wait", "collapse"],
 		"l": ["wait", "expandable?", "expand", "open"],
-		"J": ["wait", "toggleSelection", "normal:j"],
-		"K": ["wait", "toggleSelection", "normal:k"],
+		"<C-j>": ["wait", "toggleSelection", "normal:j"],
+		"<C-k>": ["wait", "toggleSelection", "normal:k"],
 		"gl": ["wait", "expand:recursive"],
 		"gh": ["wait", "collapse:recursive"],
 		"<2-LeftMouse>": ["expandable?", ["expanded?", "collapse", "expand"], "open"],
@@ -125,6 +125,7 @@
 		"E": "open:vsplit",
 		"t": "open:tab",
 		"<bs>": ["wait", "gotoParent"],
+		"K": ["wait", "gotoParent"],
 		"gs": ["wait", "reveal:select"],
 		"il": "preview:labeling",
 		"ic": "preview:content",

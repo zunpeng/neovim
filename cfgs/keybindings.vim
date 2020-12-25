@@ -13,7 +13,7 @@ nmap <c-s-left> <c-w><
 nmap <c-s-up> <c-w>-
 nmap <c-s-down> <c-w>+
 " Press <SPACE> + q to close the window below the current window
-noremap <LEADER>qq <C-w>j:q<CR>
+noremap <LEADER>q <C-w>j:q<CR>
 
 " 关闭 s 默认功能
 "noremap s <nop>
@@ -31,6 +31,38 @@ nmap <leader><leader>cS :%s/\s\+$//g<CR>:noh<CR>
 " 常规模式下输入 cM 清除行尾 ^M 符号,同时取消高亮
 nmap <leader><leader>cM :%s/\r$//g<CR>:noh<CR>
 
+"---------------- plug easymotion
+map <Leader><Leader>l <Plug>(easymotion-lineforward)
+map <Leader><Leader>j <Plug>(easymotion-j)
+map <Leader><Leader>k <Plug>(easymotion-k)
+map <Leader><Leader>h <Plug>(easymotion-linebackward)
+" <Leader>f{char} to move to {char}
+map  <Leader><Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader><Leader>f <Plug>(easymotion-overwin-f)
+" 查询两个字符
+" s{char}{char} to move to {char}{char}
+nmap <leader><leader>s <Plug>(easymotion-overwin-f2)
+nmap <leader><leader>t <Plug>(easymotion-t2)
+" Move to line
+map <Leader><Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader><Leader>L <Plug>(easymotion-overwin-line)
+" Move to word
+map  <Leader><Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
+
+"---------easymotion替换原生的查找 但问号就不好用了
+" Gif config
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+" Without these mappings, `n` & `N` works fine. (These mappings just provide
+" different highlight method and have some other features )
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+"---------easymotion替换原生的查找
+
+
+
 " 在不使用 MiniBufExplorer 插件时也可用<C-k,j,h,l>切换到上下左右的窗口中去
 " noremap <c-k> <c-w>k
 " noremap <c-j> <c-w>j
@@ -45,6 +77,9 @@ noremap <leader>wk <c-w>k
 noremap <leader>wj <c-w>j
 noremap <leader>wh <c-w>h
 noremap <leader>wl <c-w>l
+
+" 从当前字符换行
+noremap <leader>j i<CR><ESC>
 
 " find and replace
 " noremap \s :%s//g<left><left>
@@ -68,6 +103,8 @@ imap <c-l> <Right>
 
 " 设置快捷键将选中文本块复制至系统剪贴板
 vnoremap <Leader>y "+y
+" 复制当前行到系统剪切板
+noremap <Leader>ly <s-v>"+y
 " 设置快捷键将系统剪贴板内容粘贴至 vim
 nmap <Leader>p "+p
 
@@ -151,7 +188,7 @@ nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 nmap <leader>- <Plug>AirlineSelectPrevTab
 nmap <leader>= <Plug>AirlineSelectNextTab
-nmap <leader>q :bp<cr>:bd #<cr>
+nmap <leader>tq :bp<cr>:bd #<cr>
 
 " 新建一个标签页
 noremap <leader>tc :tabe<CR>
@@ -167,8 +204,24 @@ noremap <leader>tl :+tabmove<CR>
 
 " ----------------------------
 " ====== Plug - ctags
+" tagbar 被vista替换了
 " ----------------------------
-nnoremap <leader>ct :TagbarToggle<CR>
+" nnoremap <leader>ct :TagbarToggle<CR>
+"
+" ----------------------------
+" ====== Plug - vista
+" ----------------------------
+"
+" let g:vista#renderer#enable_icon = 1
+noremap <LEADER>v :Vista!!<CR>
+noremap <c-t> :silent! Vista finder ctags<CR>
+
+" ===
+" === suda.vim
+" 在写没有权限的文件时，使用:sw可以调用root权限写入
+" ===
+cnoreabbrev sudowrite w suda://%
+cnoreabbrev sw w suda://%
 
 
 " ----------------------------

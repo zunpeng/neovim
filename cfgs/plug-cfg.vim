@@ -13,8 +13,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Pretty Dress
 " Plug 'bpietravalle/vim-bolt'
-" Plug 'theniceboy/nvim-deus'
-" Plug 'ajmwagar/vim-deus'
+Plug 'ajmwagar/vim-deus'
 "Plug 'arzg/vim-colors-xcode'
 Plug 'morhetz/gruvbox'
 
@@ -38,6 +37,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mg979/vim-xtabline'
 "图标
 Plug 'ryanoasis/vim-devicons'
+
+" easymotion
+Plug 'easymotion/vim-easymotion'
 
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -70,7 +72,11 @@ Plug 'luochen1990/rainbow'
 " make -j
 " make install
 " 然后配置环境变量
-Plug 'majutsushi/tagbar'
+" 使用 vista替换tagbar，vista同样需要安装ctags sudo pacman -S
+" ctags安装的更易被vista识别，源码安装的不太好用
+"Plug 'majutsushi/tagbar'
+
+Plug 'liuchengxu/vista.vim'
 
 " markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
@@ -117,5 +123,7 @@ Plug 'skywind3000/vim-terminal-help'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug vim-visual-multi
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+" sudo write root file
+Plug 'lambdalisue/suda.vim'
 
 call plug#end()

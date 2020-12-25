@@ -163,7 +163,10 @@ source $HOME/.config/nvim/cfgs/plug-cfg/xtabline-cfg.vim
 
 source $HOME/.config/nvim/cfgs/plug-cfg/nerdcommenter-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/rainbow-cfg.vim
-source $HOME/.config/nvim/cfgs/plug-cfg/tagbar-cfg.vim
+" 使用vista-cfg替换tagbar-cfg
+"source $HOME/.config/nvim/cfgs/plug-cfg/tagbar-cfg.vim
+source $HOME/.config/nvim/cfgs/plug-cfg/vista-cfg.vim
+
 source $HOME/.config/nvim/cfgs/plug-cfg/markdown-preview-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/markdown-toc-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/autoformat-cfg.vim
@@ -172,6 +175,9 @@ source $HOME/.config/nvim/cfgs/plug-cfg/indentline-cfg.vim
 " 使用coc-bookmark
 " source $HOME/.config/nvim/cfgs/plug-cfg/bookmarks-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/coc-bookmark-cfg.vim
+
+source $HOME/.config/nvim/cfgs/plug-cfg/easymotion-cfg.vim
+
 
 
 " debug
