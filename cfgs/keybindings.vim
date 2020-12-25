@@ -4,7 +4,7 @@
 " ------------------------------------------------------------------------------
 
 " Open the vimrc file anytime
-noremap <LEADER>rc :e ~/.config/nvim/init.vim<CR>
+noremap <leader>rc :e ~/.config/nvim/init.vim<CR>
 
 " 调整窗口大小
 " Ctrl+Shift+上下左右键
@@ -12,6 +12,8 @@ nmap <c-s-right> <c-w>>
 nmap <c-s-left> <c-w><
 nmap <c-s-up> <c-w>-
 nmap <c-s-down> <c-w>+
+" Press <SPACE> + q to close the window below the current window
+noremap <LEADER>q <C-w>j:q<CR>
 
 " 关闭 s 默认功能
 "noremap s <nop>
@@ -44,6 +46,16 @@ noremap <leader>wj <c-w>j
 noremap <leader>wh <c-w>h
 noremap <leader>wl <c-w>l
 
+" find and replace
+" noremap \s :%s//g<left><left>
+noremap <leader>sr :%s//g<left><left>
+
+" ===
+" === 光标移动
+" ===
+noremap <C-a> <Home>
+noremap <C-e> <End>
+
 " ----------插入模式------------------
 " Ctrl + K 插入模式下光标向上移动
 imap <c-k> <Up>
@@ -75,9 +87,9 @@ let g:floaterm_keymap_prev = '<leader>fp'
 " 创建一个新的floaterm窗口
 let g:floaterm_keymap_new = '<leader>fc'
 " 跳转到第一个floaterm窗口
-let g:floaterm_keymap_first = '<leader>fi'
+let g:floaterm_keymap_first = '<leader>fa'
 " 跳转到最后一个floaterm窗口
-let g:floaterm_keymap_last = '<leader>fa'
+let g:floaterm_keymap_last = '<leader>fe'
 " 隐藏floaterm
 let g:floaterm_keymap_hide = '<leader>fh'
 " 显示floaterm
@@ -211,31 +223,41 @@ nmap <Leader>nf :Neoformat<CR>
 " -----------------------折叠设置 end---------------------------
 
 " --------------------------
-" ====== Plug bookmarks
+" ====== plug bookmarks
 " --------------------------
-"  在当前行添加或删除书签 bookmark toggle
-nmap <leader>bc <Plug>BookmarkToggle
-" 在当前行添加注释 bookmark annotate
-nmap <leader>ba <Plug>BookmarkAnnotate
-" 显示所有书签
-nmap <leader>bs <Plug>BookmarkShowAll
-" 下一个书签
-nmap <leader>bn <Plug>BookmarkNext
-" 上一个书签
-nmap <leader>bp <Plug>BookmarkPrev
-" 清除书签 好像和BookmarkClearAll是一样的效果
-nmap <leader>bx <Plug>BookmarkClear
-" 清除所有书签 大写X
-nmap <leader>bX <Plug>BookmarkClearAll
-" 将书签向上移动一行
-nmap <leader>bk <Plug>BookmarkMoveUp
-" 将书签向下移动一行
-nmap <leader>bj <Plug>BookmarkMoveDown
-"将书签移至任意一行
-nmap <Leader>bg <Plug>BookmarkMoveToLine
-" 保存所有书签至一个文件:BookmarkSave <filePath>
-" 从一个文件加载书签:BookmarkLoad <filePath>
+" "  在当前行添加或删除书签 bookmark toggle
+" nmap <leader>bc <Plug>BookmarkToggle
+" " 在当前行添加注释 bookmark annotate
+" nmap <leader>ba <Plug>BookmarkAnnotate
+" " 显示所有书签
+" nmap <leader>bs <Plug>BookmarkShowAll
+" " 下一个书签
+" nmap <leader>bn <Plug>BookmarkNext
+" " 上一个书签
+" nmap <leader>bp <Plug>BookmarkPrev
+" " 清除书签 好像和BookmarkClearAll是一样的效果
+" nmap <leader>bx <Plug>BookmarkClear
+" " 清除所有书签 大写X
+" nmap <leader>bX <Plug>BookmarkClearAll
+" " 将书签向上移动一行
+" nmap <leader>bk <Plug>BookmarkMoveUp
+" " 将书签向下移动一行
+" nmap <leader>bj <Plug>BookmarkMoveDown
+" "将书签移至任意一行
+" nmap <Leader>bg <Plug>BookmarkMoveToLine
+" " 保存所有书签至一个文件:BookmarkSave <filePath>
+" " 从一个文件加载书签:BookmarkLoad <filePath>
 "
+" --------------------------
+" ====== plug coc-bookmark 上面的bookmarks不再使用
+" --------------------------
+"
+" bookmark insert(插入书签)比bt更省事一些
+nmap <Leader>bi <Plug>(coc-bookmark-toggle)
+nmap <Leader>ba <Plug>(coc-bookmark-annotate)
+nmap <Leader>bj <Plug>(coc-bookmark-next)
+nmap <Leader>bk <Plug>(coc-bookmark-prev)
+
 let g:terminal_key ="<leader>tt" "哪个键将用于切换终端窗口，默认为<m-=>。
 " let g:terminal_cwd ="<leader>" "初始化工作目录：0保持不变，1文件路径和2项目根目录。
 " let g:terminal_height ="<leader>" "新的终端高度，默认为10。

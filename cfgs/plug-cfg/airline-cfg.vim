@@ -4,15 +4,15 @@
 "是否显示状态栏,0 表示不显示，1 表示只在多窗口时显示，2 表示显示。
 set laststatus=2
 " 设置状态栏主题,airline
-"let g:airline_theme="luna"
-"let g:airline_theme="dark_minimal"
-"let g:airline_theme="peaksea"
+" let g:airline_theme="luna"
+" let g:airline_theme="dark_minimal"
+" let g:airline_theme="peaksea"
 let g:airline_theme="dracula"
-"let g:airline_theme="ravenpower"
-"let g:airline_theme="monochrome"
+" let g:airline_theme="ravenpower"
+" let g:airline_theme="monochrome"
 
 let g:airline_powerline_fonts = 0  "支持 powerline 字体,1表示支持
-let g:airline#extensions#tabline#enabled = 1 "显示窗口tab和buffer
+let g:airline#extensions#tabline#enabled = 0 "显示窗口tab和buffer
 
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#buffer_nr_show = 0

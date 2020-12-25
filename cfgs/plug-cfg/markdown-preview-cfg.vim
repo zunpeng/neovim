@@ -15,7 +15,7 @@ let g:mkdp_refresh_slow = 0
 " 如果设置为1,所有文件都可以使用markdownpreview 命令预览,默认为0
 let g:mkdp_command_for_global = 0
 " 设置为1时，局域网内其他人也可以预览,默认为0,为0时只能本机预览
-let g:mkdp_open_to_the_world = 0
+let g:mkdp_open_to_the_world = 1
 " 用于使用本地浏览器预览远程服务器上vim下的markdown文档,默认为空
 let g:mkdp_open_ip = ''
 " 预览使用的默认浏览器
@@ -41,7 +41,7 @@ let g:mkdp_markdown_css = ''
 " 自定义的markdown高亮css，路径必须是css文件的绝对路径
 let g:mkdp_highlight_css = ''
 " 预览url端口，为空是随机生成一个端口
-let g:mkdp_port = ''
+let g:mkdp_port = '8888'
 " markdown 预览窗口标题，${name}是当前文件名称
 let g:mkdp_page_title = '「${name}」'
 " 预览可识别的文件类型

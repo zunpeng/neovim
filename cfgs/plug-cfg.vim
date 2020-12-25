@@ -13,9 +13,20 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 "文件树
 Plug 'scrooloose/nerdtree'
+
+"rnvimr
+"已配置了ranger目前不需要使用此插件
+" Plug 'kevinhwang91/rnvimr'
+
+
 "状态栏airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+Plug 'mg979/vim-xtabline'
+"图标
+Plug 'ryanoasis/vim-devicons'
+
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "符号对齐
@@ -29,7 +40,7 @@ Plug 'scrooloose/nerdcommenter'
 
 "语法检查
 "Plug 'dense-analysis/ale'
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 
 " 浮动窗口
 Plug 'voldikss/vim-floaterm'
@@ -70,12 +81,12 @@ Plug 'tpope/vim-repeat'
 Plug 'mzlogin/vim-markdown-toc'
 
 " 书签
-Plug 'MattesGroeger/vim-bookmarks'
+" Plug 'MattesGroeger/vim-bookmarks'
 
 " debug插件
 " Plug 'vim-vdebug/vdebug'
 " debug 插件2 vimspector
-" Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
+Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
 "
 " 虚拟环境
 Plug 'jmcantrell/vim-virtualenv'

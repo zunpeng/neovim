@@ -24,6 +24,9 @@ set autoread
 set t_Co=256
 syntax on
 filetype on
+
+" au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 " 制表符
 set tabstop=4
 "把tab转成空格
@@ -99,7 +102,8 @@ hi Search term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
 set noimdisable
 "设置字体
 "set guifont=Courier\ New:h12
-set guifont=Source\ Code\ Pro:h12
+" set guifont=Source\ Code\ Pro:h12
+set guifont=DroidSansMono\ Nerd\ Font\ 11
 " 设置为双字宽显示，否则无法完整显示如:☆
 " 此设置会导致floaterm显示不全
 "set ambiwidth=double
@@ -126,7 +130,7 @@ set backspace=2 "能使用backspace回删
 "  < 编码配置 >
 " -----------------------------------------------------------------------------
 " 注：使用utf-8格式后，软件与程序源码、文件路径不能有中文，否则报错
-set encoding=utf-8                                    "设置vim内部编码，默认不更改
+set encoding=utf8                                    "设置vim内部编码，默认不更改
 set fileencoding=utf-8                                "设置当前文件编码，可以更改，如：gbk（同cp936）
 set fileencodings=ucs-bom,utf-8,gbk,cp936,latin-1     "设置支持打开的文件的编码
 
@@ -144,13 +148,18 @@ set foldlevelstart=99
 " 插件配置
 source $HOME/.config/nvim/cfgs/plug-cfg.vim
 source $HOME/.config/nvim/cfgs/keybindings.vim
+source $HOME/.config/nvim/cfgs/compileRunGcc.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/which-key-cfg.vim
 
 " ====== Plug dracula主题   -----------必须在plug配置之后
 " source $HOME/.config/nvim/cfgs/plug-cfg/theme-dracula-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/floaterm-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/nerdtree-cfg.vim
+source $HOME/.config/nvim/cfgs/plug-cfg/coc-explorer-cfg.vim
+" source $HOME/.config/nvim/cfgs/plug-cfg/rnvimr.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/airline-cfg.vim
+source $HOME/.config/nvim/cfgs/plug-cfg/xtabline-cfg.vim
+
 source $HOME/.config/nvim/cfgs/plug-cfg/nerdcommenter-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/rainbow-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/tagbar-cfg.vim
@@ -159,7 +168,12 @@ source $HOME/.config/nvim/cfgs/plug-cfg/markdown-preview-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/autoformat-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/neoformat-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/indentline-cfg.vim
-source $HOME/.config/nvim/cfgs/plug-cfg/bookmarks-cfg.vim
+" 使用coc-bookmark
+" source $HOME/.config/nvim/cfgs/plug-cfg/bookmarks-cfg.vim
+source $HOME/.config/nvim/cfgs/plug-cfg/coc-bookmark-cfg.vim
+
+
 " debug
 " source $HOME/.config/nvim/cfgs/plug-cfg/vdebug-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/vimspector-cfg.vim
+"

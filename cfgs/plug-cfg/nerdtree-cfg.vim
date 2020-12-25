@@ -8,3 +8,16 @@
 "let NERDTreeWinPos="right"
 " 当打开 NERDTree 窗口时，自动显示 Bookmarks
 let NERDTreeShowBookmarks=1
+
+" let g:NERDTreeIndicatorMapCustom = {
+"             \ "modified" : "✹",
+"             \ "Staged":"✚",
+"             \ "Untracked":"✭",
+"             \ "Renamed":"➜",
+"             \ "Unmerged":"═",
+"             \ "Deleted":"✖",
+"             \ "Dirty":"✗",
+"             \ "Clean":"✔︎",
+"             \ "Ignored":"☒",
+"             \ "Unknown":"?"
+"             \ }
