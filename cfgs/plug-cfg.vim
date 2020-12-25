@@ -11,6 +11,13 @@ call plug#begin('~/.config/nvim/plugins')
 " https://draculatheme.com/vim
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+" Pretty Dress
+" Plug 'bpietravalle/vim-bolt'
+" Plug 'theniceboy/nvim-deus'
+" Plug 'ajmwagar/vim-deus'
+"Plug 'arzg/vim-colors-xcode'
+Plug 'morhetz/gruvbox'
+
 "文件树
 Plug 'scrooloose/nerdtree'
 
@@ -22,6 +29,11 @@ Plug 'scrooloose/nerdtree'
 "状态栏airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Plug 'liuchengxu/eleline.vim'
+
+" Status line
+" Plug 'theniceboy/eleline.vim'
+" Plug 'ojroques/vim-scrollstatus'
 
 Plug 'mg979/vim-xtabline'
 "图标

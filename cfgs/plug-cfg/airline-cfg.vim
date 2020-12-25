@@ -7,7 +7,8 @@ set laststatus=2
 " let g:airline_theme="luna"
 " let g:airline_theme="dark_minimal"
 " let g:airline_theme="peaksea"
-let g:airline_theme="dracula"
+" let g:airline_theme="dracula"
+let g:airline_theme="deus"
 " let g:airline_theme="ravenpower"
 " let g:airline_theme="monochrome"
 

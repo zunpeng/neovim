@@ -4,7 +4,7 @@
 " ------------------------------------------------------------------------------
 
 " Open the vimrc file anytime
-noremap <leader>rc :e ~/.config/nvim/init.vim<CR>
+noremap <leader>nc :e ~/.config/nvim/init.vim<CR>
 
 " 调整窗口大小
 " Ctrl+Shift+上下左右键
@@ -13,7 +13,7 @@ nmap <c-s-left> <c-w><
 nmap <c-s-up> <c-w>-
 nmap <c-s-down> <c-w>+
 " Press <SPACE> + q to close the window below the current window
-noremap <LEADER>q <C-w>j:q<CR>
+noremap <LEADER>qq <C-w>j:q<CR>
 
 " 关闭 s 默认功能
 "noremap s <nop>

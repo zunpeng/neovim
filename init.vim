@@ -25,6 +25,7 @@ set t_Co=256
 syntax on
 filetype on
 
+
 " au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " 制表符
@@ -152,7 +153,7 @@ source $HOME/.config/nvim/cfgs/compileRunGcc.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/which-key-cfg.vim
 
 " ====== Plug dracula主题   -----------必须在plug配置之后
-" source $HOME/.config/nvim/cfgs/plug-cfg/theme-dracula-cfg.vim
+source $HOME/.config/nvim/cfgs/theme-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/floaterm-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/nerdtree-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/coc-explorer-cfg.vim
