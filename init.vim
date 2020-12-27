@@ -25,6 +25,16 @@ set t_Co=256
 syntax on
 filetype on
 
+" 设置undo backup目录
+silent !mkdir -p ~/.config/nvim/tmp/backup
+silent !mkdir -p ~/.config/nvim/tmp/undo
+"silent !mkdir -p ~/.config/nvim/tmp/sessions
+set backupdir=~/.config/nvim/tmp/backup,.
+set directory=~/.config/nvim/tmp/backup,.
+if has('persistent_undo')
+    set undofile
+    set undodir=~/.config/nvim/tmp/undo,.
+endif
 
 " au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
@@ -183,4 +193,3 @@ source $HOME/.config/nvim/cfgs/plug-cfg/easymotion-cfg.vim
 " debug
 " source $HOME/.config/nvim/cfgs/plug-cfg/vdebug-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/vimspector-cfg.vim
-"

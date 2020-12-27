@@ -47,6 +47,8 @@
 		"variable": "\ue71b"
 	},
 	"diagnostic.signOffset": 1,
+	"diagnostic.enableSign": true,
+	"diagnostic.virtualTextCurrentLineOnly": false,
 	"diagnostic.errorSign": "\uf467",
 	"diagnostic.warningSign": "\uf071",
 	"diagnostic.infoSign": "\uf129",

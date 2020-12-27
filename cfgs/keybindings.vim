@@ -6,6 +6,15 @@
 " Open the vimrc file anytime
 noremap <leader>nc :e ~/.config/nvim/init.vim<CR>
 
+" basic keymapping
+noremap <m-w> 5w
+noremap <m-b> 5b
+noremap <c-H> 5h
+noremap <c-J> 5j
+noremap <c-K> 5k
+noremap <c-L> 5l
+
+
 " 调整窗口大小
 " Ctrl+Shift+上下左右键
 nmap <c-s-right> <c-w>>
@@ -51,14 +60,15 @@ map  <Leader><Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
 
 "---------easymotion替换原生的查找 但问号就不好用了
+" ------使用星号查找不好用
 " Gif config
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
-" Without these mappings, `n` & `N` works fine. (These mappings just provide
-" different highlight method and have some other features )
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
+"map  / <Plug>(easymotion-sn)
+"omap / <Plug>(easymotion-tn)
+"" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+"" Without these mappings, `n` & `N` works fine. (These mappings just provide
+"" different highlight method and have some other features )
+"map  n <Plug>(easymotion-next)
+"map  N <Plug>(easymotion-prev)
 "---------easymotion替换原生的查找
 
 
