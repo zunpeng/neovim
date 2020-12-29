@@ -1,6 +1,6 @@
 let g:coc_explorer_global_presets = {
             \   '.vim': {
-            \     'root-uri': '~/.vim',
+            \     'root-uri': '~/.config/nvim',
             \   },
             \   'cocConfig': {
             \      'root-uri': '~/.config/coc',

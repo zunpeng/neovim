@@ -193,7 +193,7 @@
 	"python.formatting.provider": "yapf",
 	"python.formatting.yapfArgs": [
 		"--style",
-		"{SPACES_AROUND_POWER_OPERATOR: True, SPACES_BEFORE_COMMENT: 1}"
+		"{SPACES_AROUND_POWER_OPERATOR: True, SPACES_BEFORE_COMMENT: 4}"
 	],
 	"html.format.enable": true,
 	"javascript.referencesCodeLens.enable": true,

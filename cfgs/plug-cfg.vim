@@ -53,7 +53,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdcommenter'
 
 "语法检查
-"Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 " Plug 'w0rp/ale'
 
 " 浮动窗口
@@ -104,7 +104,7 @@ Plug 'mzlogin/vim-markdown-toc'
 " debug插件
 " Plug 'vim-vdebug/vdebug'
 " debug 插件2 vimspector
-Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
+" Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
 "
 " 虚拟环境
 Plug 'jmcantrell/vim-virtualenv'

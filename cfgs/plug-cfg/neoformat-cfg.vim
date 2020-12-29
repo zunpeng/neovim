@@ -14,24 +14,29 @@ let g:neoformat_python_autopep8 = {
             \ 'no_append': 1,
             \ }
 
-let g:neoformat_enabled_python = ['autopep8']
+"let g:neoformat_enabled_python = ['autopep8']
 let g:neoformat_enabled_python = ['autopep8', 'yapf', 'docformatter']
-" let g:neoformat_enabled_yaml = ['pyaml','prettier']
 " pyaml格式化yml文件时自动清理注释并排序
+" let g:neoformat_enabled_yaml = ['pyaml','prettier']
 let g:neoformat_enabled_yaml = ['prettier']
 let g:neoformat_try_formatprg = 1
 " Enable alignment
-let g:neoformat_basic_format_align = 1
+"启用对齐，
+"let g:neoformat_basic_format_align = 1
 " Enable tab to spaces conversion
+"启用制表符到空格的转换，
 let g:neoformat_basic_format_retab = 1
 " Enable trimmming of trailing whitespace
+"启用尾部空格的修剪，
 let g:neoformat_basic_format_trim = 1
 let g:neoformat_run_all_formatters = 1
 " runs all formatters for current buffer without tab to spaces conversion
 let b:neoformat_run_all_formatters = 1
-let b:neoformat_basic_format_retab = 0
+"let b:neoformat_basic_format_retab = 0
 let g:neoformat_only_msg_on_error = 1
-augroup fmt
-    autocmd!
-    autocmd BufWritePre * undojoin | Neoformat
-augroup END
+
+" 管理撤销历史
+"augroup fmt
+"    autocmd!
+"    autocmd BufWritePre * undojoin | Neoformat
+"augroup END

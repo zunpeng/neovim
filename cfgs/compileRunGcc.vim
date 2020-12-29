@@ -17,10 +17,11 @@ func! CompileRunGcc()
     elseif &filetype == 'sh'
         :!time bash %
     elseif &filetype == 'python'
-        set splitbelow
-        :sp
-        :res 15%
-        :term python3 %
+        " set splitbelow
+        " :sp
+        " :res 15%
+        " :term python3 %
+
     elseif &filetype == 'html'
         silent! exec "!".g:mkdp_browser." % &"
     elseif &filetype == 'markdown'
@@ -41,4 +42,6 @@ func! CompileRunGcc()
         :res 15%
         :term go run .
     endif
+    " 切换到最后一行方便光标跟随运行日志
+    :$
 endfunc
