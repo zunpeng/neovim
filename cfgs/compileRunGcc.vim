@@ -17,10 +17,10 @@ func! CompileRunGcc()
     elseif &filetype == 'sh'
         :!time bash %
     elseif &filetype == 'python'
-        " set splitbelow
-        " :sp
-        " :res 15%
-        " :term python3 %
+        set splitbelow
+        :sp
+        :res 15%
+        :term python3 %
 
     elseif &filetype == 'html'
         silent! exec "!".g:mkdp_browser." % &"

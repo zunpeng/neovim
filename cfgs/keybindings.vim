@@ -22,7 +22,7 @@ nmap <c-s-left> <c-w><
 nmap <c-s-up> <c-w>-
 nmap <c-s-down> <c-w>+
 " Press <SPACE> + q to close the window below the current window
-noremap <LEADER>q <C-w>j:q<CR>
+noremap <leader>q <C-w>j:q<CR>
 
 " 关闭 s 默认功能
 "noremap s <nop>
@@ -184,7 +184,7 @@ vmap <Leader>tr <Plug>(coc-translator-rv)
 let g:coc_snippet_next = '<tab>'
 
 " ----------------------------
-" ====== Plug - airline 标签切换
+" ====== Plug - airline 标签切换现在不用airline的标签切换了，此处快捷键不用了
 " ----------------------------
 "  根据标签序号切换窗口
 nmap <leader>1 <Plug>AirlineSelectTab1

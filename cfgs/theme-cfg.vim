@@ -29,3 +29,30 @@ color gruvbox
 "colorscheme dracula
 " " 背景透明
 hi Normal ctermfg=252 ctermbg=none
+
+" -----------------------------
+" === base colors config
+" -----------------------------
+"
+"高亮当前列
+set cursorcolumn
+"高亮当前行
+set cursorline
+" 设置当前列高亮背景色
+hi CursorColumn term=reverse ctermbg=8 guibg=Grey50
+" 设置当前行高亮背景色
+" 其中 ctermbg是设定背景色，ctermfg是设定前景色，guibg是设定下划线的背景色，guifg是设定下划线的前景色。
+" “=”后边就是颜色，你可以将它们换成你喜欢的颜色，NONE表示默认。
+" 要想不显示下划线，只需要将后边两项设为NONE就可以了。
+hi CursorLine term=NONE cterm=NONE ctermbg=8 guibg=NONE guifg=NONE
+"hi CursorLine term=underline cterm=underline ctermbg=8 guibg=Grey50
+"设置括号匹配高亮颜色
+" term应该是光标下的字体颜色,ctermbg匹配到的括号背景色, ctermfg匹配到的括号前景色
+hi MatchParen term=reverse ctermbg=DarkYellow ctermfg=0 guibg=Cyan
+
+"hi NormalFloat ctermbg=242 guibg=DarkGrey
+" 自动补全颜色设置
+hi Pmenu ctermfg=black ctermbg=gray  guibg=#444444
+hi PmenuSel ctermfg=7 ctermbg=4 guibg=#555555 guifg=#ffffff
+"配置查找高亮颜色
+hi Search term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
