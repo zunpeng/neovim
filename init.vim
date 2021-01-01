@@ -27,14 +27,14 @@ filetype on
 
 " 设置undo backup目录
 silent !mkdir -p ~/.config/nvim/tmp/backup
-silent !mkdir -p ~/.config/nvim/tmp/undo
+" silent !mkdir -p ~/.config/nvim/tmp/undo
 "silent !mkdir -p ~/.config/nvim/tmp/sessions
 set backupdir=~/.config/nvim/tmp/backup,.
 set directory=~/.config/nvim/tmp/backup,.
-if has('persistent_undo')
-    set undofile
-    set undodir=~/.config/nvim/tmp/undo,.
-endif
+" if has('persistent_undo')
+"     set undofile
+"     set undodir=~/.config/nvim/tmp/undo,.
+" endif
 
 " au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 

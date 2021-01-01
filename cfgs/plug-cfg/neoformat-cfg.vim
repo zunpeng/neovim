@@ -15,7 +15,24 @@ let g:neoformat_python_autopep8 = {
             \ }
 
 "let g:neoformat_enabled_python = ['autopep8']
-let g:neoformat_enabled_python = ['autopep8', 'yapf', 'docformatter']
+let g:neoformat_enabled_python = ['autopep8', 'yapf', 'docformatter', 'black', 'isort', 'pyment']
+" golang
+let g:neoformat_enabled_go = ['gofmt', 'goimports', 'gofumpt', 'gofumports']
+" java
+let g:neoformat_enabled_java = ['uncrustify', 'astyle', 'prettier']
+" json
+let g:neoformat_enabled_json = ['js-beautify', 'prettydiff', 'prettier', 'jq', 'fixjson']
+" markdown
+let g:neoformat_enabled_markdown = ['remark', 'prettier']
+" nginx
+let g:neoformat_enabled_nginx = ['nginxbeautifier']
+" xml
+let g:neoformat_enabled_xml = ['tidy', 'prettydiff', 'prettier']
+" xhtml
+let g:neoformat_enabled_xhtml = ['tidy', 'prettydiff']
+" html
+let g:neoformat_enabled_html = ['html-beautify','prettier', 'prettydiff']
+
 " pyaml格式化yml文件时自动清理注释并排序
 " let g:neoformat_enabled_yaml = ['pyaml','prettier']
 let g:neoformat_enabled_yaml = ['prettier']

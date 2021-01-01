@@ -23,6 +23,8 @@ nmap <c-s-up> <c-w>-
 nmap <c-s-down> <c-w>+
 " Press <SPACE> + q to close the window below the current window
 noremap <leader>q <C-w>j:q<CR>
+" 保存save file
+noremap <leader>sf :w<CR>
 
 " 关闭 s 默认功能
 "noremap s <nop>
@@ -36,9 +38,9 @@ noremap <leader>sh :set splitright<CR>:vsplit<CR>
 " 常规模式下输入 cS 清除行尾空格,同时取消高亮
 "nmap cS :%s/\s\+$//g<CR>:noh<CR>
 "上面的cS与vim surround冲突
-nmap <leader><leader>cS :%s/\s\+$//g<CR>:noh<CR>
+nmap <leader><leader>cs :%s/\s\+$//g<CR>:noh<CR>
 " 常规模式下输入 cM 清除行尾 ^M 符号,同时取消高亮
-nmap <leader><leader>cM :%s/\r$//g<CR>:noh<CR>
+nmap <leader><leader>cm :%s/\r$//g<CR>:noh<CR>
 
 "---------------- plug easymotion
 map <Leader><Leader>l <Plug>(easymotion-lineforward)
@@ -137,6 +139,7 @@ let g:floaterm_keymap_new = '<leader>fc'
 let g:floaterm_keymap_first = '<leader>fa'
 " 跳转到最后一个floaterm窗口
 let g:floaterm_keymap_last = '<leader>fe'
+" 隐藏和显示完全可以使用<leader>ff来操作
 " 隐藏floaterm
 let g:floaterm_keymap_hide = '<leader>fh'
 " 显示floaterm
@@ -175,6 +178,24 @@ vmap <Leader>te <Plug>(coc-translator-ev)
 " replace
 nmap <Leader>tr <Plug>(coc-translator-r)
 vmap <Leader>tr <Plug>(coc-translator-rv)
+
+
+" ------------------------------
+" ====== coc-snippets
+" ------------------------------
+" Use <C-l> for trigger snippet expand.
+" imap <C-l> <Plug>(coc-snippets-expand)
+imap <m-/> <Plug>(coc-snippets-expand)
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
 
 
 " ------------------------
@@ -331,3 +352,5 @@ let g:terminal_key ="<leader>tt" "哪个键将用于切换终端窗口，默认�
 " let g:terminal_list  ="<leader>" "设置为0以将终端缓冲区隐藏在缓冲区列表中。
 " let g:terminal_fixheight ="<leader>" "设置为1以设置winfixheight终端窗口。
 " let g:terminal_close ="<leader>" "设置为1以在处理完成后关闭窗口。
+"
+

@@ -65,7 +65,7 @@
 	"list.previousKeymap": "<C-u>",
 	"snippets.ultisnips.directories": [
 		"$HOME/.config/nvim/Ultisnips/",
-		"$HOME/.config/nvim/plugged/vim-snippets/UltiSnips/"
+		"$HOME/.config/nvim/plugins/vim-snippets/UltiSnips/"
 	],
 	"coc.preferences.formatOnSaveFiletypes": [
 		"javascript",
@@ -75,7 +75,8 @@
 		"json",
 		"python",
 		"vue",
-		"svelte"
+		"svelte",
+		"go"
 	],
 	"yaml.format.enable": true,
 	"signature.target": "float",

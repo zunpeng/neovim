@@ -21,7 +21,6 @@ func! CompileRunGcc()
         :sp
         :res 15%
         :term python3 %
-
     elseif &filetype == 'html'
         silent! exec "!".g:mkdp_browser." % &"
     elseif &filetype == 'markdown'
