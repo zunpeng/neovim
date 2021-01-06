@@ -9,10 +9,10 @@ noremap <leader>nc :e ~/.config/nvim/init.vim<CR>
 " basic keymapping
 noremap <m-w> 5w
 noremap <m-b> 5b
-noremap <c-H> 5h
-noremap <c-J> 5j
-noremap <c-K> 5k
-noremap <c-L> 5l
+noremap <c-h> 5h
+noremap <c-j> 5j
+noremap <c-k> 5k
+noremap <c-l> 5l
 
 
 " 调整窗口大小
@@ -163,8 +163,10 @@ nmap tt :NERDTreeToggle<CR>
 " --------------------
 " ====== ale 语法检查2
 " --------------------
-nmap ]a <Plug>(ale_next_wrap)
-nmap [a <Plug>(ale_previous_wrap)
+" nmap ]a <Plug>(ale_next_wrap)
+" nmap [a <Plug>(ale_previous_wrap)
+nmap <silent> <m-p> <Plug>(ale_previous_wrap)
+nmap <silent> <m-n> <Plug>(ale_next_wrap)
 
 " ------------------------------
 " ====== coc-translator 英文翻译

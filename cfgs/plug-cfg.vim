@@ -104,7 +104,7 @@ Plug 'mzlogin/vim-markdown-toc'
 " debug插件
 " Plug 'vim-vdebug/vdebug'
 " debug 插件2 vimspector
-" Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
+Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
 "
 " 虚拟环境
 Plug 'jmcantrell/vim-virtualenv'
@@ -125,5 +125,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " sudo write root file
 Plug 'lambdalisue/suda.vim'
+
 
 call plug#end()

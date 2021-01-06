@@ -21,7 +21,6 @@ let g:maplocalleader = ','
 set nocompatible    "禁用 Vi 兼容模式
 " 当文件在外部被修改，自动更新该文件
 set autoread
-set t_Co=256
 syntax on
 filetype on
 
@@ -137,6 +136,8 @@ set foldlevelstart=99
 " 禁用 ale的lsp，使用 coc的lsp，需在插件加载前关闭ale的lsp
 " 其他配置加入到 ale的配置文件中ale-cfg.vim
 let g:ale_disable_lsp = 1
+
+
 " 插件配置
 source $HOME/.config/nvim/cfgs/plug-cfg.vim
 source $HOME/.config/nvim/cfgs/keybindings.vim
