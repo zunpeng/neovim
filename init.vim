@@ -172,6 +172,9 @@ source $HOME/.config/nvim/cfgs/plug-cfg/easymotion-cfg.vim
 
 source $HOME/.config/nvim/cfgs/plug-cfg/ale-cfg.vim
 
+" golang调试器
+source $HOME/.config/nvim/cfgs/plug-cfg/vim-delve-cfg.vim
+
 " debug
 " source $HOME/.config/nvim/cfgs/plug-cfg/vdebug-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/vimspector-cfg.vim

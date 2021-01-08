@@ -126,5 +126,10 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " sudo write root file
 Plug 'lambdalisue/suda.vim'
 
+" golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" 使用vim-godebug时报错，使用vim-delve更好用一些
+" Plug 'jodosha/vim-godebug'
+Plug 'sebdah/vim-delve'
 
 call plug#end()

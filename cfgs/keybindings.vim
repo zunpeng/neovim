@@ -339,10 +339,16 @@ nmap <Leader>nf :Neoformat<CR>
 " --------------------------
 "
 " bookmark insert(插入书签)比bt更省事一些
-nmap <Leader>bi <Plug>(coc-bookmark-toggle)
-nmap <Leader>ba <Plug>(coc-bookmark-annotate)
-nmap <Leader>bj <Plug>(coc-bookmark-next)
-nmap <Leader>bk <Plug>(coc-bookmark-prev)
+" nmap <Leader>bi <Plug>(coc-bookmark-toggle)
+" nmap <Leader>ba <Plug>(coc-bookmark-annotate)
+" nmap <Leader>bj <Plug>(coc-bookmark-next)
+" nmap <Leader>bk <Plug>(coc-bookmark-prev)
+nmap <Leader>bi :CocCommand bookmark.toggle<CR>
+nmap <Leader>ba :CocCommand bookmark.annotate<CR>
+nmap <Leader>bj :CocCommand bookmark.next<CR>
+nmap <Leader>bk :CocCommand bookmark.prev<CR>
+nmap <leader>bc :CocList bookmarkCurfile<CR>
+nmap <leader>bb :CocList bookmarkAll<CR>
 
 let g:terminal_key ="<leader>tt" "哪个键将用于切换终端窗口，默认为<m-=>。
 " let g:terminal_cwd ="<leader>" "初始化工作目录：0保持不变，1文件路径和2项目根目录。
@@ -355,4 +361,18 @@ let g:terminal_key ="<leader>tt" "哪个键将用于切换终端窗口，默认�
 " let g:terminal_fixheight ="<leader>" "设置为1以设置winfixheight终端窗口。
 " let g:terminal_close ="<leader>" "设置为1以在处理完成后关闭窗口。
 "
+"
+" ------------------------------
+" === golang调试插件vim-delve 快捷键
+" === https://github.com/sebdah/vim-delve
+" ------------------------------
+nmap <leader>da :DlvAddBreakpoint<CR>
+nmap <leader>di :DlvToggleBreakpoint<CR>
+nmap <leader>dt :DlvAddTracepoint<CR>
+" nmap <leader>dd :DlvToggleTracepoint<CR>
+nmap <leader>dc :DlvClearAll<CR>
+nmap <leader>ds :DlvDebug<CR>
+nmap <leader>dd :DlvRemoveBreakpoint<CR>
+nmap <leader>dr :DlvRemoveTracepoint<CR>
+nmap <leader>dv :DlvVersion<CR>
 
