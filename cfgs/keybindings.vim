@@ -376,3 +376,10 @@ nmap <leader>dd :DlvRemoveBreakpoint<CR>
 nmap <leader>dr :DlvRemoveTracepoint<CR>
 nmap <leader>dv :DlvVersion<CR>
 
+" localleader is ,
+" isort python import
+autocmd FileType python nnoremap <LocalLeader>i :!isort %<CR><CR>
+" format python codes by yapf
+" 此处也可以去掉（neoformat也带有格式化或coc也有）
+autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
+

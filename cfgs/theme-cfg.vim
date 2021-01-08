@@ -2,37 +2,40 @@
 " ====== 主题   -----------必须在plug配置之后
 " ------------------------------------------------------------------------------
 "
+"=========gruvbox主题配置======================
+"color gruvbox
+" " 背景透明
+" hi Normal ctermfg=252 ctermbg=none
+"===============================
+
 """""""""""deus配置"""""""""""""
-" colorscheme deus
+colorscheme deus
 " " 开启直色后，nvim背景不再透明
-" set t_Co=256
-" let g:deus_termcolors=256
-" set termguicolors " enable true colors support
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" set background=dark
-" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-" let ayucolor="mirage"
-" let g:oceanic_next_terminal_bold = 1
-" let g:oceanic_next_terminal_italic = 1
-" let g:one_allow_italics = 1
+set t_Co=256
+let g:deus_termcolors=256
+" enable true colors support
+set termguicolors
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set background=dark
+hi NonText ctermfg=gray guifg=grey10
+" hi SpecialKey ctermfg=blue guifg=grey70
+
+"" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"" let ayucolor="mirage"
+"" let g:oceanic_next_terminal_bold = 1
+"" let g:oceanic_next_terminal_italic = 1
+"" let g:one_allow_italics = 1
 """""""""""deus配置"""""""""""""
 
-" color dracula
+"color dracula
 "color one
-color gruvbox
 "let ayucolor="light"
 "color ayu
 "color xcodelighthc
 "set background=light
-"set cursorcolumn
-
-" hi NonText ctermfg=gray guifg=grey10
-" hi SpecialKey ctermfg=blue guifg=grey70
 
 "colorscheme dracula
-" " 背景透明
-hi Normal ctermfg=252 ctermbg=none
 
 " -----------------------------
 " === base colors config
@@ -60,3 +63,27 @@ hi MatchParen term=reverse ctermbg=DarkYellow ctermfg=0 guibg=Cyan
 hi PmenuSel ctermfg=7 ctermbg=4 guibg=#555555 guifg=#ffffff
 "配置查找高亮颜色
 "hi Search term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
+"
+" ------------------------------
+" === Terminal Behaviors
+" === 配置vim真色后，内置终端、floaterm、ranger等在vim内打开，颜色会失真，故做如下配置
+" ------------------------------
+let g:neoterm_autoscroll = 1
+autocmd TermOpen term://* startinsert
+tnoremap <C-N> <C-\><C-N>
+tnoremap <C-O> <C-\><C-N><C-O>
+let g:terminal_color_0  = '#000000'
+let g:terminal_color_1  = '#FF5555'
+let g:terminal_color_2  = '#50FA7B'
+let g:terminal_color_3  = '#F1FA8C'
+let g:terminal_color_4  = '#BD93F9'
+let g:terminal_color_5  = '#FF79C6'
+let g:terminal_color_6  = '#8BE9FD'
+let g:terminal_color_7  = '#BFBFBF'
+let g:terminal_color_8  = '#4D4D4D'
+let g:terminal_color_9  = '#FF6E67'
+let g:terminal_color_10 = '#5AF78E'
+let g:terminal_color_11 = '#F4F99D'
+let g:terminal_color_12 = '#CAA9FA'
+let g:terminal_color_13 = '#FF92D0'
+let g:terminal_color_14 = '#9AEDFE'
