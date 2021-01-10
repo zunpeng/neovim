@@ -30,10 +30,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'liuchengxu/eleline.vim'
 
-" Status line
-" Plug 'theniceboy/eleline.vim'
-" Plug 'ojroques/vim-scrollstatus'
-
 Plug 'mg979/vim-xtabline'
 "图标
 Plug 'ryanoasis/vim-devicons'
@@ -60,6 +56,9 @@ Plug 'dense-analysis/ale'
 Plug 'voldikss/vim-floaterm'
 " 快捷键提示
 Plug 'liuchengxu/vim-which-key'
+" On-demand lazy load
+" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+
 " 括号高亮
 Plug 'luochen1990/rainbow'
 
@@ -108,6 +107,7 @@ Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --en
 "
 " 虚拟环境
 Plug 'jmcantrell/vim-virtualenv'
+" Plug 'sansyrox/vim-python-virtualenv'
 "
 " 内置终端配置
 " ALT + =: toggle terminal below.
@@ -131,5 +131,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " 使用vim-godebug时报错，使用vim-delve更好用一些
 " Plug 'jodosha/vim-godebug'
 Plug 'sebdah/vim-delve'
+" 启动页面
+Plug 'mhinz/vim-startify'
 
 call plug#end()

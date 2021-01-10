@@ -210,17 +210,17 @@ let g:coc_snippet_next = '<tab>'
 " ====== Plug - airline 标签切换现在不用airline的标签切换了，此处快捷键不用了
 " ----------------------------
 "  根据标签序号切换窗口
-nmap <leader>1 <Plug>AirlineSelectTab1
-nmap <leader>2 <Plug>AirlineSelectTab2
-nmap <leader>3 <Plug>AirlineSelectTab3
-nmap <leader>4 <Plug>AirlineSelectTab4
-nmap <leader>5 <Plug>AirlineSelectTab5
-nmap <leader>6 <Plug>AirlineSelectTab6
-nmap <leader>7 <Plug>AirlineSelectTab7
-nmap <leader>8 <Plug>AirlineSelectTab8
-nmap <leader>9 <Plug>AirlineSelectTab9
-nmap <leader>- <Plug>AirlineSelectPrevTab
-nmap <leader>= <Plug>AirlineSelectNextTab
+" nmap <leader>1 <Plug>AirlineSelectTab1
+" nmap <leader>2 <Plug>AirlineSelectTab2
+" nmap <leader>3 <Plug>AirlineSelectTab3
+" nmap <leader>4 <Plug>AirlineSelectTab4
+" nmap <leader>5 <Plug>AirlineSelectTab5
+" nmap <leader>6 <Plug>AirlineSelectTab6
+" nmap <leader>7 <Plug>AirlineSelectTab7
+" nmap <leader>8 <Plug>AirlineSelectTab8
+" nmap <leader>9 <Plug>AirlineSelectTab9
+" nmap <leader>- <Plug>AirlineSelectPrevTab
+" nmap <leader>= <Plug>AirlineSelectNextTab
 nmap <leader>tq :bp<cr>:bd #<cr>
 
 " 新建一个标签页
@@ -233,6 +233,22 @@ noremap <leader>tn :+tabnext<CR>
 noremap <leader>th :-tabmove<CR>
 " 当前标签页右移动一格
 noremap <leader>tl :+tabmove<CR>
+
+nmap <leader>ta :XTabListTabs<CR>
+nmap <leader>tf :tabnext 
+" nmap <localleader>tb :tabs<CR>
+" nmap <leader>tf :XTabNameTab<CR>
+
+" ------------------------------
+" === buffers key
+" ------------------------------
+
+" 切换buffer与tab标签
+nmap <leader>bm :XTabMode<CR>
+" 此处不加回车，调出buffer命令后，写buffer数字进行跳转
+nmap <leader>bf :XTabNextBuffer 
+" 查询所有buffer，然后选择加载
+nmap <leader>bl :XTabListBuffers<CR>
 
 
 " ----------------------------

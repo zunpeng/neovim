@@ -2,10 +2,14 @@
 " ====== 主题   -----------必须在plug配置之后
 " ------------------------------------------------------------------------------
 "
-"=========gruvbox主题配置======================
+"=========gruvbox主题配置(透明)======================
 "color gruvbox
-" " 背景透明
+" 背景透明
 " hi Normal ctermfg=252 ctermbg=none
+" 设置括号匹配高亮颜色
+" hi MatchParen term=reverse ctermbg=DarkYellow ctermfg=0 guibg=Cyan
+" 自动补全颜色设置(下面两行)
+" hi Pmenu ctermfg=black ctermbg=gray  guibg=#444444
 "===============================
 
 """""""""""deus配置"""""""""""""
@@ -16,7 +20,7 @@ let g:deus_termcolors=256
 " enable true colors support
 set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set background=dark
+" set background=dark
 hi NonText ctermfg=gray guifg=grey10
 " hi SpecialKey ctermfg=blue guifg=grey70
 
@@ -28,7 +32,7 @@ hi NonText ctermfg=gray guifg=grey10
 "" let g:one_allow_italics = 1
 """""""""""deus配置"""""""""""""
 
-"color dracula
+" color dracula
 "color one
 "let ayucolor="light"
 "color ayu
@@ -53,14 +57,15 @@ set cursorline
 " 要想不显示下划线，只需要将后边两项设为NONE就可以了。
 " hi CursorLine term=NONE cterm=NONE ctermbg=8 guibg=NONE guifg=NONE
 "hi CursorLine term=underline cterm=underline ctermbg=8 guibg=Grey50
-"设置括号匹配高亮颜色
-" term应该是光标下的字体颜色,ctermbg匹配到的括号背景色, ctermfg匹配到的括号前景色
-hi MatchParen term=reverse ctermbg=DarkYellow ctermfg=0 guibg=Cyan
 
-"hi NormalFloat ctermbg=242 guibg=DarkGrey
+"设置括号匹配高亮颜色(使用真色后，括号匹配颜色会变色，注释掉 使用默认稍好一些)
+" term应该是光标下的字体颜色,ctermbg匹配到的括号背景色, ctermfg匹配到的括号前景色
+" hi MatchParen term=reverse ctermbg=DarkYellow ctermfg=0 guibg=Cyan
+" hi NormalFloat ctermbg=242 guibg=DarkGrey
+
 " 自动补全颜色设置(下面两行)
 " hi Pmenu ctermfg=black ctermbg=gray  guibg=#444444
-hi PmenuSel ctermfg=7 ctermbg=4 guibg=#555555 guifg=#ffffff
+" hi PmenuSel ctermfg=7 ctermbg=4 guibg=#555555 guifg=#ffffff
 "配置查找高亮颜色
 "hi Search term=standout ctermfg=0 ctermbg=11 guifg=Black guibg=Yellow
 "
