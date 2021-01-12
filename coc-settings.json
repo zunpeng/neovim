@@ -52,7 +52,7 @@
 	"diagnostic.warningSign": "\uf071",
 	"diagnostic.infoSign": "\uf129",
 	"diagnostic.hintSign": "\uf864",
-	"diagnostic.displayByAle": false,
+	"diagnostic.displayByAle": true,
 	"diagnostic.refreshOnInsertMode": false,
 	"diagnostic.checkCurrentLine": true,
 	"diagnostic.virtualTextPrefix": " ❯❯❯ ",
@@ -61,10 +61,7 @@
 	"list.previewHighlightGroup": "Statement",
 	"list.nextKeymap": "<C-J>",
 	"list.previousKeymap": "<C-K>",
-	"snippets.ultisnips.directories": [
-		"$HOME/.config/nvim/Ultisnips/",
-		"$HOME/.config/nvim/plugins/vim-snippets/UltiSnips/"
-	],
+	"snippets.ultisnips.directories": ["$HOME/.config/nvim/Ultisnips/"],
 	"coc.preferences.formatOnSaveFiletypes": [
 		"javascript",
 		"typescript",
@@ -187,6 +184,7 @@
 		"--style",
 		"{SPACES_AROUND_POWER_OPERATOR: True, SPACES_BEFORE_COMMENT: 4}"
 	],
+	"python.pythonPath": "/opt/python/python3.8.7/bin/python3.8",
 	"html.format.enable": true,
 	"json.format.enable": true,
 	"eslint.autoFixOnSave": false,

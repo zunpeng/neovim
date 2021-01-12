@@ -153,7 +153,9 @@ source $HOME/.config/nvim/cfgs/plug-cfg/floaterm-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/nerdtree-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/coc-explorer-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/rnvimr.vim
+"
 source $HOME/.config/nvim/cfgs/plug-cfg/airline-cfg.vim
+" source $HOME/.config/nvim/cfgs/plug-cfg/spaceline-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/xtabline-cfg.vim
 
 source $HOME/.config/nvim/cfgs/plug-cfg/nerdcommenter-cfg.vim
@@ -178,6 +180,15 @@ source $HOME/.config/nvim/cfgs/plug-cfg/ale-cfg.vim
 " golang调试器
 source $HOME/.config/nvim/cfgs/plug-cfg/vim-delve-cfg.vim
 
+" ctags生成辅助插件
+source $HOME/.config/nvim/cfgs/plug-cfg/vim-gutentags-cfg.vim
 " debug
 " source $HOME/.config/nvim/cfgs/plug-cfg/vdebug-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/vimspector-cfg.vim
+
+" ------------------------------
+" === languags cfgs
+" ------------------------------
+
+" load python virtualenv
+" source $HOME/.config/nvim/cfgs/lang-cfg/python-venv.vim

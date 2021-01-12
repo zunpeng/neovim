@@ -29,6 +29,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Plug 'liuchengxu/eleline.vim'
+" Plug 'glepnir/spaceline.vim'
 
 Plug 'mg979/vim-xtabline'
 "图标
@@ -103,7 +104,7 @@ Plug 'mzlogin/vim-markdown-toc'
 " debug插件
 " Plug 'vim-vdebug/vdebug'
 " debug 插件2 vimspector
-Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
+" Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
 "
 " 虚拟环境
 Plug 'jmcantrell/vim-virtualenv'
@@ -133,5 +134,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sebdah/vim-delve'
 " 启动页面
 Plug 'mhinz/vim-startify'
+
+Plug 'ludovicchabant/vim-gutentags'
 
 call plug#end()

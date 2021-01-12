@@ -6,6 +6,7 @@
 <!-- vim-markdown-toc -->
 
 # neovim config
+
 my neovim config
 
 ## coc plugins list
@@ -40,4 +41,5 @@ coc-tslint
 coc-vimlsp
 coc-xml
 coc-yaml
+coc-sql
 ```

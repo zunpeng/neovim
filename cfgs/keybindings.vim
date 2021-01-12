@@ -23,6 +23,9 @@ nmap <c-s-up> <c-w>-
 nmap <c-s-down> <c-w>+
 " Press <SPACE> + q to close the window below the current window
 noremap <leader>q <C-w>j:q<CR>
+" Shift + q 直接退出（不保存）
+noremap Q :wq<CR>
+
 " 保存save file
 noremap <leader>sf :w<CR>
 
@@ -399,3 +402,16 @@ autocmd FileType python nnoremap <LocalLeader>i :!isort %<CR><CR>
 " 此处也可以去掉（neoformat也带有格式化或coc也有）
 autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
 
+
+" ------------------------------
+" === tab键补全
+" ------------------------------
+
+function! CleverTab()
+    if strpart( getline('.') ,0,col('.')-1) =~'^\s*$'
+        return "\<Tab>"
+    else
+        return "\<C-N>"
+    endif
+endfunction
+inoremap <Tab> <C-R>=CleverTab()<CR>
