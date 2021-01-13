@@ -54,7 +54,8 @@ Plug 'dense-analysis/ale'
 " Plug 'w0rp/ale'
 
 " 浮动窗口
-Plug 'voldikss/vim-floaterm',{'on' : ['FloatermNew', 'FloatermShow', 'FloatermToggle']}
+" Plug 'voldikss/vim-floaterm',{'on' : ['FloatermNew', 'FloatermShow', 'FloatermToggle']}
+Plug 'voldikss/vim-floaterm'
 " 快捷键提示
 " Plug 'liuchengxu/vim-which-key'
 " On-demand lazy load
@@ -84,7 +85,7 @@ Plug 'liuchengxu/vista.vim'
 " Plug 'google/vim-codefmt'
 "
 "格式化
-Plug 'sbdchd/neoformat',{'on': 'Neoformat'}
+Plug 'sbdchd/neoformat',{'on': 'Neoformat', 'for':['python', 'go', 'java', 'json', 'markdown','nginx', 'xml', 'xhtml', 'html', 'yaml']}
 
 " 单词包裹
 " ysiw' 将光标所在字符串(一个单词)进行包裹

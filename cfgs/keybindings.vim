@@ -296,7 +296,7 @@ nmap <leader>mf <Plug>(coc-codeaction)
 " ------------------------------
 " === markdown table-mode
 " ------------------------------
-"  开启关闭
+"  开启关闭表格自动格式化
 nmap <leader>mm :TableModeToggle<CR>
 
 

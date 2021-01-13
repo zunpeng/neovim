@@ -23,7 +23,7 @@ let g:neoformat_enabled_java = ['uncrustify', 'astyle', 'prettier']
 " json
 let g:neoformat_enabled_json = ['js-beautify', 'prettydiff', 'prettier', 'jq', 'fixjson']
 " markdown
-" let g:neoformat_enabled_markdown = ['remark', 'prettier']
+let g:neoformat_enabled_markdown = ['remark', 'prettier']
 " nginx
 let g:neoformat_enabled_nginx = ['nginxbeautifier']
 " xml
