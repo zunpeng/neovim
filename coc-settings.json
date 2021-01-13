@@ -174,6 +174,7 @@
 		"<<": "gitStage",
 		">>": "gitUnstage"
 	},
+	"coc.preferences.enableMarkdown": false,
 	"flutter.openDevLogSplitCommand": "botright 12split",
 	"flutter.lsp.initialization.onlyAnalyzeProjectsWithOpenFiles": false,
 	"tslint.autoFixOnSave": false,

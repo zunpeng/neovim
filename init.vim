@@ -165,6 +165,7 @@ source $HOME/.config/nvim/cfgs/plug-cfg/rainbow-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/vista-cfg.vim
 
 source $HOME/.config/nvim/cfgs/plug-cfg/markdown-preview-cfg.vim
+source $HOME/.config/nvim/cfgs/plug-cfg/bullets-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/markdown-toc-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/autoformat-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/neoformat-cfg.vim

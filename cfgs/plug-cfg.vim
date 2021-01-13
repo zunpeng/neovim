@@ -18,7 +18,7 @@ Plug 'ajmwagar/vim-deus'
 Plug 'morhetz/gruvbox'
 
 "文件树
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree',{'on': 'NERDTreeToggle'}
 
 "rnvimr
 "已配置了ranger目前不需要使用此插件
@@ -54,11 +54,11 @@ Plug 'dense-analysis/ale'
 " Plug 'w0rp/ale'
 
 " 浮动窗口
-Plug 'voldikss/vim-floaterm'
+Plug 'voldikss/vim-floaterm',{'on' : ['FloatermNew', 'FloatermShow', 'FloatermToggle']}
 " 快捷键提示
-Plug 'liuchengxu/vim-which-key'
+" Plug 'liuchengxu/vim-which-key'
 " On-demand lazy load
-" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 " 括号高亮
 Plug 'luochen1990/rainbow'
@@ -78,15 +78,13 @@ Plug 'luochen1990/rainbow'
 
 Plug 'liuchengxu/vista.vim'
 
-" markdown preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 " Autoformat
 " Plug 'google/vim-maktaba'
 " Plug 'google/vim-codefmt'
 "
 "格式化
-Plug 'sbdchd/neoformat'
+Plug 'sbdchd/neoformat',{'on': 'Neoformat'}
 
 " 单词包裹
 " ysiw' 将光标所在字符串(一个单词)进行包裹
@@ -95,8 +93,15 @@ Plug 'sbdchd/neoformat'
 " cs'" 单引号替换成双引号（其他符号同理）
 Plug 'tpope/vim-surround'   " 如果使用 . 重复surround的操作需要安装vim-repeat插件进行配合
 Plug 'tpope/vim-repeat'
+
+" markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for' : ['markdown', 'vim-plug']}
 " 为 Markdown 生成 TOC 的 Vim 插件
-Plug 'mzlogin/vim-markdown-toc'
+Plug 'mzlogin/vim-markdown-toc', {'on':['GenTocGFM', 'GenTocGitLab', 'GenTocMarked', 'GenTocModeline', 'GenTocRedcarpet']}
+" markdown table
+Plug 'dhruvasagar/vim-table-mode'
+" 文档编号整理，自动编号
+Plug 'dkarter/bullets.vim'
 
 " 书签
 " Plug 'MattesGroeger/vim-bookmarks'
@@ -107,7 +112,7 @@ Plug 'mzlogin/vim-markdown-toc'
 " Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
 "
 " 虚拟环境
-Plug 'jmcantrell/vim-virtualenv'
+Plug 'jmcantrell/vim-virtualenv',{'on': [ 'VirtualEnvActivate', 'VirtualEnvDeactivate', 'VirtualEnvList' ]}
 " Plug 'sansyrox/vim-python-virtualenv'
 "
 " 内置终端配置
@@ -128,10 +133,13 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'lambdalisue/suda.vim'
 
 " golang
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" vim-go插件会打开新文件时会自动生成主体代码，保存时如果存在错误，下方会自动弹出错误提示的窗口
+" 其实目前来讲只使用coc-go也够用了，等coc-go不好用时再放开吧(2021-01-13)
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " 使用vim-godebug时报错，使用vim-delve更好用一些
 " Plug 'jodosha/vim-godebug'
-Plug 'sebdah/vim-delve'
+Plug 'sebdah/vim-delve',{'on':['DlvAddBreakpoint', 'DlvToggleBreakpoint','DlvAddTracepoint','DlvToggleTracepoint','DlvClearAll','DlvDebug', 'DlvVersion']}
+
 " 启动页面
 Plug 'mhinz/vim-startify'
 

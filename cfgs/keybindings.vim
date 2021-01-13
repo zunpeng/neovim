@@ -293,6 +293,13 @@ nmap <leader>mt <Plug>MarkdownPreviewToggle
 " markdown 语法修正
 nmap <leader>mf <Plug>(coc-codeaction)
 
+" ------------------------------
+" === markdown table-mode
+" ------------------------------
+"  开启关闭
+nmap <leader>mm :TableModeToggle<CR>
+
+
 " --------------------------
 " ====== Plug - neoformat
 " --------------------------
@@ -407,11 +414,11 @@ autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
 " === tab键补全
 " ------------------------------
 
-function! CleverTab()
-    if strpart( getline('.') ,0,col('.')-1) =~'^\s*$'
-        return "\<Tab>"
-    else
-        return "\<C-N>"
-    endif
-endfunction
-inoremap <Tab> <C-R>=CleverTab()<CR>
+" function! CleverTab()
+"     if strpart( getline('.') ,0,col('.')-1) =~'^\s*$'
+"         return "\<Tab>"
+"     else
+"         return "\<C-N>"
+"     endif
+" endfunction
+" inoremap <Tab> <C-R>=CleverTab()<CR>
