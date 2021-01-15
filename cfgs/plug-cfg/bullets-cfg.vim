@@ -50,7 +50,7 @@ let g:bullets_max_alpha_characters = 2 " default = 2
 " aa. text
 " ab. text
 
-let g:bullets_max_alpha_characters = 1
+" let g:bullets_max_alpha_characters = 1
 " ...
 " y. text
 " z. text

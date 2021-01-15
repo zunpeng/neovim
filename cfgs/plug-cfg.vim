@@ -85,7 +85,7 @@ Plug 'liuchengxu/vista.vim'
 " Plug 'google/vim-codefmt'
 "
 "格式化
-Plug 'sbdchd/neoformat',{'on': 'Neoformat', 'for':['python', 'go', 'java', 'json', 'markdown','nginx', 'xml', 'xhtml', 'html', 'yaml']}
+Plug 'sbdchd/neoformat',{'on': 'Neoformat', 'for':['python', 'go', 'java', 'markdown', 'json', 'nginx', 'xml', 'xhtml', 'html', 'yaml']}
 
 " 单词包裹
 " ysiw' 将光标所在字符串(一个单词)进行包裹
@@ -98,11 +98,11 @@ Plug 'tpope/vim-repeat'
 " markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for' : ['markdown', 'vim-plug']}
 " 为 Markdown 生成 TOC 的 Vim 插件
-Plug 'mzlogin/vim-markdown-toc', {'on':['GenTocGFM', 'GenTocGitLab', 'GenTocMarked', 'GenTocModeline', 'GenTocRedcarpet']}
+Plug 'mzlogin/vim-markdown-toc', {'for':['gitignore','markdown','vim-plug'],'on':['GenTocGFM', 'GenTocGitLab', 'GenTocMarked', 'GenTocModeline', 'GenTocRedcarpet']}
 " markdown table
-Plug 'dhruvasagar/vim-table-mode'
+Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
 " 文档编号整理，自动编号
-Plug 'dkarter/bullets.vim'
+Plug 'dkarter/bullets.vim', {'for' : ['markdown', 'text', 'gitcommit', 'scratch']}
 
 " 书签
 " Plug 'MattesGroeger/vim-bookmarks'
@@ -139,7 +139,8 @@ Plug 'lambdalisue/suda.vim'
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " 使用vim-godebug时报错，使用vim-delve更好用一些
 " Plug 'jodosha/vim-godebug'
-Plug 'sebdah/vim-delve',{'on':['DlvAddBreakpoint', 'DlvToggleBreakpoint','DlvAddTracepoint','DlvToggleTracepoint','DlvClearAll','DlvDebug', 'DlvVersion']}
+" Plug 'sebdah/vim-delve',{'for':['go'],'on':['DlvAddBreakpoint', 'DlvToggleBreakpoint','DlvAddTracepoint','DlvToggleTracepoint','DlvClearAll','DlvDebug', 'DlvVersion']}
+Plug 'sebdah/vim-delve',{'for':['go']}
 
 " 启动页面
 Plug 'mhinz/vim-startify'

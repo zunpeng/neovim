@@ -10,8 +10,24 @@ let g:airline#extensions#ale#enabled = 1
 " 警告保持打开
 let g:ale_sign_column_always = 1
 
+" coc关闭了ale显示，如果需要使用ale的功能需要指定语言的语法检查工具
 " Check Python files with flake8 and pylint.
-let b:ale_linters = ['flake8', 'pylint']
+let b:ale_linters = {
+  \   'csh': ['shell'],
+  \   'elixir': ['credo', 'dialyxir', 'dogma'],
+  \   'go': ['gofmt', 'golint', 'go vet'],
+  \   'hack': ['hack'],
+  \   'help': [],
+  \   'perl': ['perlcritic'],
+  \   'perl6': [],
+  \   'python': ['flake8', 'mypy', 'pylint', 'pyright'],
+  \   'rust': ['cargo', 'rls'],
+  \   'spec': [],
+  \   'text': [],
+  \   'vue': ['eslint', 'vls'],
+  \   'zsh': ['shell'],
+  \}
+
 " Fix Python files with autopep8 and yapf.
 let b:ale_fixers = ['autopep8', 'yapf']
 " Disable warnings about trailing whitespace for Python files.

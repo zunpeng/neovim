@@ -193,3 +193,12 @@ source $HOME/.config/nvim/cfgs/plug-cfg/vim-gutentags-cfg.vim
 
 " load python virtualenv
 " source $HOME/.config/nvim/cfgs/lang-cfg/python-venv.vim
+
+" ------------------------------
+" === Markdown Settings
+" ------------------------------
+" Snippets
+source $HOME/.config/nvim/cfgs/lang-cfg/markdown-snippets.vim
+" auto spell(markdown自动拼写检查)
+" autocmd BufRead,BufNewFile *.md setlocal spell
+
