@@ -11,15 +11,9 @@ let g:xtabline_settings.theme = 'tomorrow'
 noremap to :XTabCycleMode<CR>
 noremap \p :echo expand('%:p')<CR>
 
-" call xtabline#cmds#run("name_tab", expand('%'))
-" fun! s:template() abort
-"   " Template for tab.
-"   return {
-"         \ 'name':    expand('%'),
-"         \ 'cwd':     s:F.fulldir(getcwd()),
-"         \ 'locked':  0,
-"         \ 'icon':    '',
-"         \ 'files':   [],
-"         \ 'buffers': {'valid': [], 'order': [], 'extra': [], 'recent': []},
-"         \}
-" endfun
+" xtabline 在打开文件时没有默认设置标签名称
+" 本处修改：打开文件时默认将文件名设置为tabname，nmap <leader>ta :XTabListTabs<CR>调出tab列表时可以直观看到所有带有文件名的tab
+au BufEnter * exec "call SetXtabName()"
+func! SetXtabName()
+    call xtabline#cmds#run("name_tab", expand('%'))
+endfunc
