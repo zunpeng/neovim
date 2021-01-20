@@ -141,6 +141,8 @@ let g:ale_disable_lsp = 1
 " 插件配置
 source $HOME/.config/nvim/cfgs/plug-cfg.vim
 source $HOME/.config/nvim/cfgs/keybindings.vim
+" 替换数字键至asdfghjkl;
+" source $HOME/.config/nvim/cfgs/cursor-keymap.vim
 source $HOME/.config/nvim/cfgs/compileRunGcc.vim
 
 " source $HOME/.config/nvim/cfgs/plug-cfg/which-key-cfg.vim
@@ -170,9 +172,9 @@ source $HOME/.config/nvim/cfgs/plug-cfg/bullets-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/autoformat-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/neoformat-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/indentline-cfg.vim
-" 使用coc-bookmark
-" source $HOME/.config/nvim/cfgs/plug-cfg/bookmarks-cfg.vim
-source $HOME/.config/nvim/cfgs/plug-cfg/coc-bookmark-cfg.vim
+source $HOME/.config/nvim/cfgs/plug-cfg/bookmarks-cfg.vim
+" coc-bookmark已被弃用2021-01-20
+" source $HOME/.config/nvim/cfgs/plug-cfg/coc-bookmark-cfg.vim
 
 source $HOME/.config/nvim/cfgs/plug-cfg/easymotion-cfg.vim
 

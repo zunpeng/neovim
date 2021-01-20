@@ -54,3 +54,7 @@ let g:airline_powerline_fonts = 0  "支持 powerline 字体,1表示支持
 " let g:airline_symbols.readonly = "RO"
 " let g:airline_symbols.dirty = "DT"
 " let g:airline_symbols.crypt = "CR"
+" let g:airline#extensions#branch#enabled = 1
+" let g:airline#extensions#hunks#enabled=0
+" let g:airline_symbols.branch = '⎇'
+" let g:airline_symbols.space = "\ua0"

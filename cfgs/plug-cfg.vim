@@ -31,6 +31,13 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'liuchengxu/eleline.vim'
 " Plug 'glepnir/spaceline.vim'
 
+" 版本控制
+Plug 'tpope/vim-fugitive'
+" signify与gitgutter二选一
+" Plug 'mhinz/vim-signify'
+" Plug 'airblade/vim-gitgutter'
+
+
 Plug 'mg979/vim-xtabline'
 "图标
 Plug 'ryanoasis/vim-devicons'
@@ -105,12 +112,12 @@ Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'm
 Plug 'dkarter/bullets.vim', {'for' : ['markdown', 'text', 'gitcommit', 'scratch']}
 
 " 书签
-" Plug 'MattesGroeger/vim-bookmarks'
+Plug 'MattesGroeger/vim-bookmarks'
 
 " debug插件
 " Plug 'vim-vdebug/vdebug'
 " debug 插件2 vimspector
-" Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
+Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
 "
 " 虚拟环境
 Plug 'jmcantrell/vim-virtualenv',{'on': [ 'VirtualEnvActivate', 'VirtualEnvDeactivate', 'VirtualEnvList' ]}

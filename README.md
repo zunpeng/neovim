@@ -13,6 +13,7 @@ my neovim config
 
 ```bash
 coc-actions
+## coc-bookmark已被弃用2021-01-20
 coc-bookmark
 coc-clangd
 coc-cmake

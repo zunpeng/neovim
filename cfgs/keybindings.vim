@@ -346,44 +346,41 @@ nmap <Leader>nf :Neoformat<CR>
 " --------------------------
 " ====== plug bookmarks
 " --------------------------
-" "  在当前行添加或删除书签 bookmark toggle
-" nmap <leader>bc <Plug>BookmarkToggle
-" " 在当前行添加注释 bookmark annotate
-" nmap <leader>ba <Plug>BookmarkAnnotate
-" " 显示所有书签
-" nmap <leader>bs <Plug>BookmarkShowAll
-" " 下一个书签
-" nmap <leader>bn <Plug>BookmarkNext
-" " 上一个书签
-" nmap <leader>bp <Plug>BookmarkPrev
-" " 清除书签 好像和BookmarkClearAll是一样的效果
-" nmap <leader>bx <Plug>BookmarkClear
-" " 清除所有书签 大写X
-" nmap <leader>bX <Plug>BookmarkClearAll
-" " 将书签向上移动一行
-" nmap <leader>bk <Plug>BookmarkMoveUp
-" " 将书签向下移动一行
-" nmap <leader>bj <Plug>BookmarkMoveDown
-" "将书签移至任意一行
-" nmap <Leader>bg <Plug>BookmarkMoveToLine
-" " 保存所有书签至一个文件:BookmarkSave <filePath>
-" " 从一个文件加载书签:BookmarkLoad <filePath>
+"  在当前行添加或删除书签 bookmark toggle
+nmap <leader>bc <Plug>BookmarkToggle
+" 在当前行添加书签说明 bookmark annotate
+nmap <leader>ba <Plug>BookmarkAnnotate
+" 显示所有书签
+nmap <leader>bs <Plug>BookmarkShowAll
+" 下一个书签
+nmap <leader>bn <Plug>BookmarkNext
+" 上一个书签
+nmap <leader>bp <Plug>BookmarkPrev
+" 清除书签 好像和BookmarkClearAll是一样的效果
+nmap <leader>bx <Plug>BookmarkClear
+" 清除所有书签 大写X
+nmap <leader>bX <Plug>BookmarkClearAll
+" 将书签向上移动一行
+nmap <leader>bk <Plug>BookmarkMoveUp
+" 将书签向下移动一行
+nmap <leader>bj <Plug>BookmarkMoveDown
+"将书签移至任意一行
+nmap <Leader>bg <Plug>BookmarkMoveToLine
+" 保存所有书签至一个文件:BookmarkSave <filePath>
+" 从一个文件加载书签:BookmarkLoad <filePath>
 "
 " --------------------------
 " ====== plug coc-bookmark 上面的bookmarks不再使用
+" 2021-01-21coc-bookmark被coc弃用
 " --------------------------
 "
 " bookmark insert(插入书签)比bt更省事一些
-" nmap <Leader>bi <Plug>(coc-bookmark-toggle)
-" nmap <Leader>ba <Plug>(coc-bookmark-annotate)
-" nmap <Leader>bj <Plug>(coc-bookmark-next)
-" nmap <Leader>bk <Plug>(coc-bookmark-prev)
-nmap <Leader>bi :CocCommand bookmark.toggle<CR>
-nmap <Leader>ba :CocCommand bookmark.annotate<CR>
-nmap <Leader>bj :CocCommand bookmark.next<CR>
-nmap <Leader>bk :CocCommand bookmark.prev<CR>
-nmap <leader>bc :CocList bookmarkCurfile<CR>
-nmap <leader>bb :CocList bookmarkAll<CR>
+" nmap <Leader>bi :CocCommand bookmark.toggle<CR>
+" nmap <Leader>ba :CocCommand bookmark.annotate<CR>
+" nmap <Leader>bj :CocCommand bookmark.next<CR>
+" nmap <Leader>bk :CocCommand bookmark.prev<CR>
+" nmap <leader>bc :CocList bookmarkCurfile<CR>
+" nmap <leader>bb :CocList bookmarkAll<CR>
 
 let g:terminal_key ="<leader>tt" "哪个键将用于切换终端窗口，默认为<m-=>。
 " let g:terminal_cwd ="<leader>" "初始化工作目录：0保持不变，1文件路径和2项目根目录。
@@ -431,3 +428,11 @@ autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
 "     endif
 " endfunction
 " inoremap <Tab> <C-R>=CleverTab()<CR>
+
+" ------------------------------
+" === easy-align
+" ------------------------------
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
