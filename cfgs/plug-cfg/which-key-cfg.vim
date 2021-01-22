@@ -214,21 +214,21 @@ let g:local_which_key_map['s'] = {
             \ 'w' : ['<Plug>(easymotion-overwin-w)'    , 'Global search whole words and move to']
             \ }
 
-" h  set splitright<CR>:vsplit                                         k  set nosplitbelow<CR>:split<CR>:set splitbelow
-" j  set splitbelow<CR>:split                                          l  set nosplitright<CR>:vsplit<CR>:set splitright
+" h  set splitright<CR>:vsplit                                         j  set nosplitbelow<CR>:split<CR>:set splitbelow
+" k  set splitbelow<CR>:split                                          l  set nosplitright<CR>:vsplit<CR>:set splitright
 " let g:local_which_key_map['w'] = {
 "             \ 'name' : '+CursorMoveBetweenWindows',
 "             \ 'h' : [':set splitright<CR>:vsplit'                      , 'Split window on left'],
-"             \ 'j' : [':set splitbelow<CR>:split'                       , 'Split window on up'],
-"             \ 'k' : [':set nosplitbelow<CR>:split<CR>:set splitbelow'  , 'Split window on below'],
+"             \ 'k' : [':set splitbelow<CR>:split'                       , 'Split window on up'],
+"             \ 'j' : [':set nosplitbelow<CR>:split<CR>:set splitbelow'  , 'Split window on below'],
 "             \ 'l' : [':set nosplitright<CR>:vsplit<CR>:set splitright' , 'Split window on right'],
 "             \ }
 " 命令中间存在回车或冒号等，直接配置超时之后会无法继续调用，所以在下面写成函数再调用，即可解决
 let g:local_which_key_map['w'] = {
             \ 'name' : '+CursorMoveBetweenWindows',
             \ 'h' : [':call Isplitleft()'  , 'Split window on left'],
-            \ 'j' : [':call Isplitup()'    , 'Split window on up'],
-            \ 'k' : [':call Isplitbelow()' , 'Split window on below'],
+            \ 'j' : [':call Isplitbelow()' , 'Split window on below'],
+            \ 'k' : [':call Isplitup()'    , 'Split window on up'],
             \ 'l' : [':call Isplitright()' , 'Split window on right'],
             \ }
 

@@ -314,10 +314,10 @@ nmap <c-s-down> <c-w>+
 
 " 分割窗口
 " split the screens to up (horizontal), down (horizontal), left (vertical), right (vertical)
-noremap <Localleader>wk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
-noremap <Localleader>wj :set splitbelow<CR>:split<CR>
-noremap <Localleader>wl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 noremap <Localleader>wh :set splitright<CR>:vsplit<CR>
+noremap <Localleader>wj :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
+noremap <Localleader>wk :set splitbelow<CR>:split<CR>
+noremap <Localleader>wl :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 
 " 切换窗口
 noremap <leader>wk <c-w>k
