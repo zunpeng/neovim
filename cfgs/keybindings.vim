@@ -171,6 +171,15 @@ nmap <leader>fz :FloatermNew fzf<CR>
 "map <F3> :NERDTreeToggle<CR>
 nmap tt :NERDTreeToggle<CR>
 
+" coc-explorer
+" Use preset argument to open it
+nmap <space>ed :CocCommand explorer --preset .vim<CR>
+nmap <space>ef :CocCommand explorer --preset floating<CR>
+nmap <space>ec :CocCommand explorer --preset cocConfig<CR>
+nmap <space>eb :CocCommand explorer --preset buffer<CR>
+" List all presets
+nmap <space>el :CocList explPresets<CR>
+nmap <space>ee :CocCommand explorer<CR>
 " --------------------
 " ====== ale 语法检查2
 " --------------------
@@ -436,3 +445,5 @@ autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+noremap <leader>lr :call CompileRunGcc()<CR>

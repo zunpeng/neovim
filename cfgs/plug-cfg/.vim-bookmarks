@@ -1,0 +1,3 @@
+let l:bm_file_version = 1
+let l:bm_sessions = {'default': {'/home/zunpeng/.config/nvim/cfgs/plug-cfg/which-key-cfg.vim': [{'sign_idx': 9500, 'line_nr': 32, 'content': '            \ ''b'' : ['':XTabListBuffers''         , ''List all buffers''],'},],}}
+let l:bm_current_session = 'default'

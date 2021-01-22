@@ -140,12 +140,13 @@ let g:ale_disable_lsp = 1
 
 " 插件配置
 source $HOME/.config/nvim/cfgs/plug-cfg.vim
-source $HOME/.config/nvim/cfgs/keybindings.vim
+" source $HOME/.config/nvim/cfgs/keybindings.vim
+source $HOME/.config/nvim/cfgs/keybindings-new.vim
 " 替换数字键至asdfghjkl;
 " source $HOME/.config/nvim/cfgs/cursor-keymap.vim
 source $HOME/.config/nvim/cfgs/compileRunGcc.vim
 
-" source $HOME/.config/nvim/cfgs/plug-cfg/which-key-cfg.vim
+source $HOME/.config/nvim/cfgs/plug-cfg/which-key-cfg.vim
 
 " ====== Plug dracula主题   -----------必须在plug配置之后
 source $HOME/.config/nvim/cfgs/theme-cfg.vim

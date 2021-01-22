@@ -64,9 +64,9 @@ Plug 'dense-analysis/ale'
 " Plug 'voldikss/vim-floaterm',{'on' : ['FloatermNew', 'FloatermShow', 'FloatermToggle']}
 Plug 'voldikss/vim-floaterm'
 " 快捷键提示
-" Plug 'liuchengxu/vim-which-key'
+Plug 'liuchengxu/vim-which-key'
 " On-demand lazy load
-Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 " 括号高亮
 Plug 'luochen1990/rainbow'
