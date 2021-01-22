@@ -83,6 +83,8 @@ let g:floaterm_keymap_kill = '<Localleader>fk'
 nmap <Localleader>fr :FloatermNew ranger<CR>
 " floaterm 打开 fzf
 nmap <Localleader>fz :FloatermNew fzf<CR>
+" floaterm 打开 lazygit
+nmap <Localleader>fg :FloatermNew lazygit<CR>
 
 " ------------------------------
 " === Bookmarks/Buffers Operation <leader>b

@@ -21,7 +21,7 @@ let g:bookmark_sign = ''
 " " ☰	Sets bookmark annotation icon for sign column
 " let g:bookmark_annotation_sign = '##'
 " " $HOME .'/.vim-bookmarks'	Sets file for auto saving (ignored when bookmark_save_per_working_dir is enabled)
-" let g:bookmark_auto_save_file = '$HOME/.config/nvim/tmp/bookmarks'
+let g:bookmark_auto_save_file = '$HOME/.config/nvim/tmp/bookmarks'
 " " 1	Enables/disables warning when clearing all bookmarks
 " let g:bookmark_show_warning = 0
 " " 1	Enables/disables warning when toggling to clear a bookmark with annotation

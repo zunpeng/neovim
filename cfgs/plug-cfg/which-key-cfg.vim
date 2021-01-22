@@ -14,6 +14,8 @@ let g:local_which_key_map = {}
 
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :WhichKey ','<CR>
+vnoremap <silent> <leader> :<c-u>WhichKey '<Space>'<CR>
+vnoremap <silent> <localleader> :<c-u>WhichKey ','<CR>
 " by defaule timeoutlen is 1000 ms
 set timeoutlen=500
 
@@ -155,11 +157,11 @@ let g:which_key_map['v'] = {
 " j  <c-w>j
 let g:which_key_map['w'] = {
             \ 'name' : '+Window' ,
-            \ 'h' : ['<c-w>h'                , 'Switch cursor to left window'],
-            \ 'j' : ['<c-w>j'                , 'Switch cursor to below window'],
-            \ 'k' : ['<c-w>k'                , 'Switch cursor to up window'],
-            \ 'l' : ['<c-w>l'                , 'Switch cursor to right window'],
-            \ 't' : ['call TerminalToggle()' , 'Open terminal window'],
+            \ 'h' : ['<c-w>h'                 , 'Switch cursor to left window'],
+            \ 'j' : ['<c-w>j'                 , 'Switch cursor to below window'],
+            \ 'k' : ['<c-w>k'                 , 'Switch cursor to up window'],
+            \ 'l' : ['<c-w>l'                 , 'Switch cursor to right window'],
+            \ 't' : [':call TerminalToggle()' , 'Open terminal window'],
             \}
 
 " ------------------------------
@@ -186,6 +188,7 @@ let g:local_which_key_map['f'] = {
             \ 'c' : [':FloatermNew'        , 'FloatermNew'],
             \ 'e' : [':FloatermLast'       , 'FloatermLast'],
             \ 'f' : [':FloatermToggle'     , 'FloatermToggle'],
+            \ 'g' : [':FloatermNew lazygi'    , 'FloatermNew lazygit'],
             \ 'h' : [':FloatermHide'       , 'FloatermHide'],
             \ 'k' : [':FloatermKill'       , 'FloatermKill'],
             \ 'n' : [':FloatermNext'       , 'FloatermNext'],
@@ -213,13 +216,43 @@ let g:local_which_key_map['s'] = {
 
 " h  set splitright<CR>:vsplit                                         k  set nosplitbelow<CR>:split<CR>:set splitbelow
 " j  set splitbelow<CR>:split                                          l  set nosplitright<CR>:vsplit<CR>:set splitright
+" let g:local_which_key_map['w'] = {
+"             \ 'name' : '+CursorMoveBetweenWindows',
+"             \ 'h' : [':set splitright<CR>:vsplit'                      , 'Split window on left'],
+"             \ 'j' : [':set splitbelow<CR>:split'                       , 'Split window on up'],
+"             \ 'k' : [':set nosplitbelow<CR>:split<CR>:set splitbelow'  , 'Split window on below'],
+"             \ 'l' : [':set nosplitright<CR>:vsplit<CR>:set splitright' , 'Split window on right'],
+"             \ }
+" 命令中间存在回车或冒号等，直接配置超时之后会无法继续调用，所以在下面写成函数再调用，即可解决
 let g:local_which_key_map['w'] = {
             \ 'name' : '+CursorMoveBetweenWindows',
-            \ 'h' : [':set splitright<CR>:vsplit'                      , 'Split window on left'],
-            \ 'j' : [':set splitbelow<CR>:split'                       , 'Split window on up'],
-            \ 'k' : [':set nosplitbelow<CR>:split<CR>:set splitbelow'  , 'Split window on below'],
-            \ 'l' : [':set nosplitright<CR>:vsplit<CR>:set splitright' , 'Split window on right'],
+            \ 'h' : [':call Isplitleft()'  , 'Split window on left'],
+            \ 'j' : [':call Isplitup()'    , 'Split window on up'],
+            \ 'k' : [':call Isplitbelow()' , 'Split window on below'],
+            \ 'l' : [':call Isplitright()' , 'Split window on right'],
             \ }
+
+func! Isplitleft()
+    set splitright
+    :vsplit
+endfunc
+
+func! Isplitup()
+    set splitbelow
+    :split
+endfunc
+
+func! Isplitbelow()
+    set nosplitbelow
+    :split
+    set splitbelow
+endfunc
+
+func! Isplitright()
+    set nosplitright
+    :vsplit
+    set splitright
+endfunc
 
 " ------------------------------
 " === single key map
@@ -256,6 +289,7 @@ call which_key#register(',', "g:local_which_key_map")
 
 " let g:which_key_sep = '→'
 let g:which_key_sep = ''
+" let g:which_key_display_names = {'<CR>': '↵', '<TAB>': '⇆'}
 
 " 开启一个新窗口用于显示which-key
 let g:which_key_use_floating_win = 0
