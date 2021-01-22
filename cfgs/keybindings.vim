@@ -169,6 +169,17 @@ nmap <leader>dr :DlvRemoveTracepoint<CR>
 nmap <leader>dv :DlvVersion<CR>
 
 " ------------------------------
+" === Git Operation <leader>g
+" ------------------------------
+nmap <leader>gl :FloatermNew lazygit<CR>
+nmap <leader>gn <Plug>(GitGutterNextHunk)
+nmap <leader>gp <Plug>(GitGutterPrevHunk)
+nmap <leader>gP <Plug>(GitGutterPreviewHunk)
+nmap <leader>gs <Plug>(GitGutterStageHunk)
+nmap <leader>gu <Plug>(GitGutterUndoHunk)
+
+
+" ------------------------------
 " === Language Operation <leader>l
 " ------------------------------
 

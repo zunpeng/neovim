@@ -108,6 +108,19 @@ let g:which_key_map['f'] = {
             \ 's' : [':w'                         , 'Save current file']
             \}
 
+"n  <Plug>(GitGutterNextHunk)                 p  <Plug>(GitGutterPrevHunk)
+"s  <Plug>(GitGutterStageHunk)                u  <Plug>(GitGutterUndoHunk)
+"P  <Plug>(GitGutterPreviewHunk)
+let g:which_key_map['g'] = {
+            \ 'name' : '+Git' ,
+            \ 'l' : [':FloatermNew lazygit'         , 'Lazygit'],
+            \ 'n' : ['<Plug>(GitGutterNextHunk)'    , 'Git next hunk'],
+            \ 'p' : ['<Plug>(GitGutterPrevHunk)'    , 'Git prev hunk'],
+            \ 'P' : ['<Plug>(GitGutterPreviewHunk)' , 'Git preview hunk'],
+            \ 's' : ['<Plug>(GitGutterStageHunk)'   , 'Git stage hunk'],
+            \ 'u' : ['<Plug>(GitGutterUndoHunk)'    , 'Git undo hunk']
+            \}
+
 " f  Neoformat                      r  call CompileRunGcc()
 let g:which_key_map['l'] = {
             \ 'name' : '+Languages' ,
@@ -188,7 +201,7 @@ let g:local_which_key_map['f'] = {
             \ 'c' : [':FloatermNew'        , 'FloatermNew'],
             \ 'e' : [':FloatermLast'       , 'FloatermLast'],
             \ 'f' : [':FloatermToggle'     , 'FloatermToggle'],
-            \ 'g' : [':FloatermNew lazygi'    , 'FloatermNew lazygit'],
+            \ 'g' : [':FloatermNew lazygit'    , 'FloatermNew lazygit'],
             \ 'h' : [':FloatermHide'       , 'FloatermHide'],
             \ 'k' : [':FloatermKill'       , 'FloatermKill'],
             \ 'n' : [':FloatermNext'       , 'FloatermNext'],
@@ -280,7 +293,7 @@ let g:which_key_map['q'] = [ '<C-w>j:q' , 'Close below window' ]
 " let g:which_key_map['='] = 'which_key_ignore'
 
 " ignore group key map
-" let g:which_key_map['d'] = {'name' : 'which_key_ignore'}
+let g:which_key_map['h'] = {'name' : 'which_key_ignore'}
 
 
 " 注册键位与对应的字典，不然会找不到典而报错undefine

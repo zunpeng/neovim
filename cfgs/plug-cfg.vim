@@ -28,6 +28,7 @@ Plug 'scrooloose/nerdtree',{'on': 'NERDTreeToggle'}
 "状态栏airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mg979/vim-xtabline'
 " Plug 'liuchengxu/eleline.vim'
 " Plug 'glepnir/spaceline.vim'
 
@@ -35,10 +36,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 " signify与gitgutter二选一
 " Plug 'mhinz/vim-signify'
-" Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 
 
-Plug 'mg979/vim-xtabline'
 "图标
 Plug 'ryanoasis/vim-devicons'
 

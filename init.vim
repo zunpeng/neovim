@@ -186,6 +186,8 @@ source $HOME/.config/nvim/cfgs/plug-cfg/vim-delve-cfg.vim
 
 " ctags生成辅助插件
 source $HOME/.config/nvim/cfgs/plug-cfg/vim-gutentags-cfg.vim
+" gitgutter
+source $HOME/.config/nvim/cfgs/plug-cfg/vim-gitgutter-cfg.vim
 " debug
 " source $HOME/.config/nvim/cfgs/plug-cfg/vdebug-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/vimspector-cfg.vim
