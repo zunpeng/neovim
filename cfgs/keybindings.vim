@@ -177,6 +177,8 @@ nmap <leader>gp <Plug>(GitGutterPrevHunk)
 nmap <leader>gP <Plug>(GitGutterPreviewHunk)
 nmap <leader>gs <Plug>(GitGutterStageHunk)
 nmap <leader>gu <Plug>(GitGutterUndoHunk)
+" turn off/on gitgutter
+nmap <leader>gm :GitGutterToggle<CR>
 
 
 " ------------------------------

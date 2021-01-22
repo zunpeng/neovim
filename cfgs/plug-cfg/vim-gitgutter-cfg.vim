@@ -1,2 +1,6 @@
+" 不使用gitgutter自带标记,使用coc-git自带
+let g:gitgutter_signs = 0
 " 关闭gitgutter自带sign背景，使用coc-git默认颜色
-let g:gigutter_set_sign_backgrounds = 0
+" let g:gigutter_set_sign_backgrounds = 0
+" 设置为0在最下方显示diff窗口(需要手动关闭)，设置为1在当前光标处显示diff
+let g:gitgutter_preview_win_floating = 1

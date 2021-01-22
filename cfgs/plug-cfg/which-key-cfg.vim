@@ -115,6 +115,7 @@ let g:which_key_map['g'] = {
             \ 'name' : '+Git' ,
             \ 'l' : [':FloatermNew lazygit'         , 'Lazygit'],
             \ 'n' : ['<Plug>(GitGutterNextHunk)'    , 'Git next hunk'],
+            \ 'm' : [':GitGutterToggle'    , 'Turn on/off gitgutter'],
             \ 'p' : ['<Plug>(GitGutterPrevHunk)'    , 'Git prev hunk'],
             \ 'P' : ['<Plug>(GitGutterPreviewHunk)' , 'Git preview hunk'],
             \ 's' : ['<Plug>(GitGutterStageHunk)'   , 'Git stage hunk'],
