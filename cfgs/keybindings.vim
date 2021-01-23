@@ -210,8 +210,6 @@ noremap <leader>lr :call CompileRunGcc()<CR>
 
 " ======== Plug - coc.nvim
 imap <m-/> <Plug>(coc-snippets-expand)
-" 在 tmux中alt+/不能用
-imap <m-p> <Plug>(coc-snippets-expand)
 " 代码提示使用tab键选择
 let g:coc_snippet_next = '<tab>'
 
