@@ -115,9 +115,10 @@ nmap <Leader>bg <Plug>BookmarkMoveToLine
 " === Buffer Operation <leader>b
 "
 " 此处不加回车，调出buffer命令后，写buffer数字进行跳转 buffer search
-nmap <leader>bs :XTabNextBuffer
+nmap <leader>Bs :XTabNextBuffer 
+nmap <leader>Bm :XTabMode<CR>
 " 查询所有buffer，然后选择加载
-nmap <leader>bb :XTabListBuffers<CR>
+nmap <leader>Bl :XTabListBuffers<CR>
 
 
 " ------------------------------

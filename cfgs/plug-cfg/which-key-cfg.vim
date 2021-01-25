@@ -24,25 +24,30 @@ set timeoutlen=500
 " ------------------------------
 
 " a  <Plug>BookmarkAnnotate         d  <Plug>BookmarkMoveDown         l  <Plug>BookmarkShowAll          p  <Plug>BookmarkPrev
-" b  XTabListBuffers                g  <Plug>BookmarkMoveToLine       m  XTabMode                       s  XTabNextBuffer
+"                                    g  <Plug>BookmarkMoveToLine
 " c  <Plug>BookmarkClear            i  <Plug>BookmarkToggle           n  <Plug>BookmarkNext             u  <Plug>BookmarkMoveUp
 " C  <Plug>BookmarkClearAll
 
 let g:which_key_map['b'] = {
-            \ 'name' : '+Bookmark/Buffer',
+            \ 'name' : '+Bookmark',
             \ 'a' : ['<Plug>BookmarkAnnotate'   , 'Add a bookmark with annotation'],
-            \ 'b' : [':XTabListBuffers'         , 'List all buffers'],
             \ 'c' : ['<Plug>BookmarkClear'      , 'Clear bookmarks'],
             \ 'C' : ['<Plug>BookmarkClearAll'   , 'Clear all bookmarks'],
             \ 'd' : ['<Plug>BookmarkMoveDown'   , 'Move down current bookmark'],
             \ 'g' : ['<Plug>BookmarkMoveToLine' , 'Move current bookmark to anyline'],
             \ 'i' : ['<Plug>BookmarkToggle'     , 'Add/Remove a bookmark'],
             \ 'l' : ['<Plug>BookmarkShowAll'    , 'List all bookmarks'],
-            \ 'm' : [':XTabMode'                , 'Switch buffer/tab mode'],
             \ 'n' : ['<Plug>BookmarkNext'       , 'Jump to next bookmark'],
             \ 'p' : ['<Plug>BookmarkPrev'       , 'Jump to prev bookmark'],
-            \ 's' : [':XTabNextBuffer'          , 'Search buffer num and jump to'],
             \ 'u' : ['<Plug>BookmarkMoveUp'     , 'Move up current bookmark']
+            \}
+
+" l  XTabListBuffers                m  XTabMode                       s  XTabNextBuffer
+let g:which_key_map['B'] = {
+            \ 'name' : '+Buffers',
+            \ 'l' : [':XTabListBuffers'         , 'List all buffers'],
+            \ 'm' : [':XTabMode'                , 'Switch buffer/tab mode'],
+            \ 's' : [':XTabNextBuffer '          , 'Search buffer num and jump to'],
             \}
 
 " SPC  <plug>NERDCommenterToggle                 e  <Plug>(coc-translator-e)                  r  <Plug>(coc-translator-r)
