@@ -55,6 +55,17 @@ noremap <leader>fc :e ~/.config/nvim/init.vim<CR>
 " 保存save file
 noremap <leader>fs :w<CR>
 
+" 转换为unix/linux格式文件
+noremap <leader>ftu :set ff=unix<CR>
+" 转换为dos(windows)格式文件
+noremap <leader>ftd :set ff=dos<CR>
+" 检查当前文件为什么格式
+noremap <leader>ft? :set ff?<CR>
+" 检查当前文件编码格式
+noremap <leader>fe? :set encoding?<CR>
+noremap <leader>feu :set encoding=UTF-8<CR>
+
+
 " ----------------------
 " ====== Plug - floaterm <localleader>f
 " ----------------------

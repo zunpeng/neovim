@@ -197,7 +197,7 @@ source $HOME/.config/nvim/cfgs/plug-cfg/vim-gitgutter-cfg.vim
 " ------------------------------
 
 " load python virtualenv
-" source $HOME/.config/nvim/cfgs/lang-cfg/python-venv.vim
+"source $HOME/.config/nvim/cfgs/lang-cfg/python-venv.vim
 
 " ------------------------------
 " === Markdown Settings

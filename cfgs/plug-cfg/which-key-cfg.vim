@@ -110,7 +110,18 @@ let g:which_key_map['e'] = {
 let g:which_key_map['f'] = {
             \ 'name' : '+File/Config' ,
             \ 'c' : [':e ~/.config/nvim/init.vim' , 'Open init.vim in current buffer'],
-            \ 's' : [':w'                         , 'Save current file']
+            \ 's' : [':w'                         , 'Save current file'],
+            \ 't' : {
+                    \'name' : '+Filetype(Unix/Dos)',
+                    \'u' : [':set ff=unix' , 'Convert filetype to unix/linux'],
+                    \'d' : [':set ff=dos' , 'Convert filetype to dos(windows)'],
+                    \'?' : [':set ff?' , 'Current filetype]'],
+                    \},
+            \ 'e' : {
+                    \'name' : '+FileEncoding',
+                    \'u' : [':set encoding=UTF-8' , 'Convert encoding to UTF-8'],
+                    \'?' : [':set encoding?' , 'Current file encoding'],
+                    \}
             \}
 
 "n  <Plug>(GitGutterNextHunk)                 p  <Plug>(GitGutterPrevHunk)

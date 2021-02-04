@@ -12,6 +12,7 @@ let g:ale_sign_column_always = 1
 
 " coc关闭了ale显示，如果需要使用ale的功能需要指定语言的语法检查工具
 " Check Python files with flake8 and pylint.
+" python只使用flake8来检测python代码，pylint太严格
 let b:ale_linters = {
   \   'csh': ['shell'],
   \   'elixir': ['credo', 'dialyxir', 'dogma'],
@@ -20,7 +21,7 @@ let b:ale_linters = {
   \   'help': [],
   \   'perl': ['perlcritic'],
   \   'perl6': [],
-  \   'python': ['flake8', 'mypy', 'pylint', 'pyright'],
+  \   'python': ['flake8'],
   \   'rust': ['cargo', 'rls'],
   \   'spec': [],
   \   'text': [],
@@ -29,7 +30,8 @@ let b:ale_linters = {
   \}
 
 " Fix Python files with autopep8 and yapf.
-let b:ale_fixers = ['autopep8', 'yapf']
+" let b:ale_fixers = ['autopep8', 'yapf']
+let b:ale_fixers = ['yapf']
 " Disable warnings about trailing whitespace for Python files.
 let b:ale_warn_about_trailing_whitespace = 0
 

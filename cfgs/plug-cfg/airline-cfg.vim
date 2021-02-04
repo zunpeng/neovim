@@ -14,6 +14,8 @@ let g:airline_theme="dracula"
 
 let g:airline_powerline_fonts = 0  "支持 powerline 字体,1表示支持
 
+let g:airline#extensions#virtualenv#enabled = 1
+
 "============tabline使用的是xtabline插件，所以下面的配置不需要了
 " let g:airline#extensions#tabline#enabled = 0 "显示窗口tab和buffer
 "
