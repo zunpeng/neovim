@@ -1,3 +1,7 @@
 /tmp/
 /plugins/vim-easy-align/
 /plugins/bullets.vim/
+
+.netrwhist
+plugins/bullets.vim
+plugins/vim-easy-align
