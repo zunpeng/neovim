@@ -45,9 +45,9 @@ let g:which_key_map['b'] = {
 " l  XTabListBuffers                m  XTabMode                       s  XTabNextBuffer
 let g:which_key_map['B'] = {
             \ 'name' : '+Buffers',
-            \ 'l' : [':XTabListBuffers'         , 'List all buffers'],
-            \ 'm' : [':XTabMode'                , 'Switch buffer/tab mode'],
-            \ 's' : [':XTabNextBuffer '          , 'Search buffer num and jump to'],
+            \ 'l' : [':XTabListBuffers' , 'List all buffers'],
+            \ 'm' : [':XTabMode'        , 'Switch buffer/tab mode'],
+            \ 's' : [':XTabNextBuffer ' , 'Search buffer num and jump to'],
             \}
 
 " SPC  <plug>NERDCommenterToggle                 e  <Plug>(coc-translator-e)                  r  <Plug>(coc-translator-r)
@@ -114,13 +114,13 @@ let g:which_key_map['f'] = {
             \ 't' : {
                     \'name' : '+Filetype(Unix/Dos)',
                     \'u' : [':set ff=unix' , 'Convert filetype to unix/linux'],
-                    \'d' : [':set ff=dos' , 'Convert filetype to dos(windows)'],
-                    \'?' : [':set ff?' , 'Current filetype]'],
+                    \'d' : [':set ff=dos'  , 'Convert filetype to dos(windows)'],
+                    \'?' : [':set ff?'     , 'Current filetype]'],
                     \},
             \ 'e' : {
                     \'name' : '+FileEncoding',
                     \'u' : [':set encoding=UTF-8' , 'Convert encoding to UTF-8'],
-                    \'?' : [':set encoding?' , 'Current file encoding'],
+                    \'?' : [':set encoding?'      , 'Current file encoding'],
                     \}
             \}
 
@@ -131,7 +131,7 @@ let g:which_key_map['g'] = {
             \ 'name' : '+Git' ,
             \ 'l' : [':FloatermNew lazygit'         , 'Lazygit'],
             \ 'n' : ['<Plug>(GitGutterNextHunk)'    , 'Git next hunk'],
-            \ 'm' : [':GitGutterToggle'    , 'Turn on/off gitgutter'],
+            \ 'm' : [':GitGutterToggle'             , 'Turn on/off gitgutter'],
             \ 'p' : ['<Plug>(GitGutterPrevHunk)'    , 'Git prev hunk'],
             \ 'P' : ['<Plug>(GitGutterPreviewHunk)' , 'Git preview hunk'],
             \ 's' : ['<Plug>(GitGutterStageHunk)'   , 'Git stage hunk'],
@@ -214,18 +214,18 @@ let g:local_which_key_map['c'] = {
 " e  FloatermLast
 let g:local_which_key_map['f'] = {
             \ 'name' : '+Floaterm' ,
-            \ 'a' : [':FloatermFirst'      , 'FloatermFirst'],
-            \ 'c' : [':FloatermNew'        , 'FloatermNew'],
-            \ 'e' : [':FloatermLast'       , 'FloatermLast'],
-            \ 'f' : [':FloatermToggle'     , 'FloatermToggle'],
-            \ 'g' : [':FloatermNew lazygit'    , 'FloatermNew lazygit'],
-            \ 'h' : [':FloatermHide'       , 'FloatermHide'],
-            \ 'k' : [':FloatermKill'       , 'FloatermKill'],
-            \ 'n' : [':FloatermNext'       , 'FloatermNext'],
-            \ 'p' : [':FloatermPrev'       , 'FloatermPrev'],
-            \ 'r' : [':FloatermNew ranger' , 'FloatermNew ranger'],
-            \ 's' : [':FloatermShow'       , 'FloatermShow'],
-            \ 'z' : [':FloatermNew fzf'    , 'FloatermNew fzf']
+            \ 'a' : [':FloatermFirst'       , 'FloatermFirst'],
+            \ 'c' : [':FloatermNew'         , 'FloatermNew'],
+            \ 'e' : [':FloatermLast'        , 'FloatermLast'],
+            \ 'f' : [':FloatermToggle'      , 'FloatermToggle'],
+            \ 'g' : [':FloatermNew lazygit' , 'FloatermNew lazygit'],
+            \ 'h' : [':FloatermHide'        , 'FloatermHide'],
+            \ 'k' : [':FloatermKill'        , 'FloatermKill'],
+            \ 'n' : [':FloatermNext'        , 'FloatermNext'],
+            \ 'p' : [':FloatermPrev'        , 'FloatermPrev'],
+            \ 'r' : [':FloatermNew ranger'  , 'FloatermNew ranger'],
+            \ 's' : [':FloatermShow'        , 'FloatermShow'],
+            \ 'z' : [':FloatermNew fzf'     , 'FloatermNew fzf']
             \ }
 
 " f  <Plug>(easymotion-overwin-f)              k  <Plug>(easymotion-k)                      s  <Plug>(easymotion-overwin-f2)
