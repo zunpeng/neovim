@@ -42,11 +42,9 @@ Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --en
 ## Install vimspector plug
 :PlugInstall
 
-## Install adapter of python/golang/java
+## Install adapter of python/golang
 :VimspectorInstall debugpy
 :VimspectorInstall vscode-go
-:VimspectorInstall vscode-java-debug
-
 ```
 
 3. **dependencies**
