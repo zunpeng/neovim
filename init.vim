@@ -204,6 +204,7 @@ source $HOME/.config/nvim/cfgs/plug-cfg/vim-gitgutter-cfg.vim
 " ------------------------------
 " Snippets
 source $HOME/.config/nvim/cfgs/lang-cfg/markdown-snippets.vim
+source $HOME/.config/nvim/cfgs/lang-cfg/symbol-cfg.vim
 " auto spell(markdown自动拼写检查)
 " autocmd BufRead,BufNewFile *.md setlocal spell
 
