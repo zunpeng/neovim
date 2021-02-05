@@ -163,22 +163,37 @@ nmap ga <Plug>(EasyAlign)
 
 
 " ------------------------------
-" === Debug <leader>d
+" === Debug <leader>d <localleader>d
 " ------------------------------
 
 " ------------------------------
-" === golang调试插件vim-delve 快捷键
+" === golang调试插件vim-delve 快捷键<localleader>d
 " === https://github.com/sebdah/vim-delve
 " ------------------------------
-nmap <leader>da :DlvAddBreakpoint<CR>
-nmap <leader>di :DlvToggleBreakpoint<CR>
-nmap <leader>dt :DlvAddTracepoint<CR>
-" nmap <leader>dd :DlvToggleTracepoint<CR>
-nmap <leader>dc :DlvClearAll<CR>
-nmap <leader>ds :DlvDebug<CR>
-nmap <leader>dd :DlvRemoveBreakpoint<CR>
-nmap <leader>dr :DlvRemoveTracepoint<CR>
-nmap <leader>dv :DlvVersion<CR>
+nmap <localleader>da :DlvAddBreakpoint<CR>
+nmap <localleader>di :DlvToggleBreakpoint<CR>
+nmap <localleader>dt :DlvAddTracepoint<CR>
+" nmap <localleader>dd :DlvToggleTracepoint<CR>
+nmap <localleader>dc :DlvClearAll<CR>
+nmap <localleader>ds :DlvDebug<CR>
+nmap <localleader>dd :DlvRemoveBreakpoint<CR>
+nmap <localleader>dr :DlvRemoveTracepoint<CR>
+nmap <localleader>dv :DlvVersion<CR>
+
+" ------------------------------
+" === debug vimspector <leader>d
+" ------------------------------
+nmap <leader>dd <Plug>VimspectorContinue
+nmap <leader>dx <Plug>VimspectorStop
+nmap <leader>dr <Plug>VimspectorRestart
+nmap <leader>dp <Plug>VimspectorPause
+nmap <leader>di <Plug>VimspectorToggleBreakpoint
+nmap <leader>da <Plug>VimspectorToggleConditionalBreakpoint
+nmap <leader>df <Plug>VimspectorAddFunctionBreakpoint
+nmap <leader>dj <Plug>VimspectorStepOver
+nmap <leader>dl <Plug>VimspectorStepInto
+nmap <leader>dq <Plug>VimspectorStepOut
+nmap <leader>dn <Plug>VimspectorRunToCursor
 
 " ------------------------------
 " === Git Operation <leader>g

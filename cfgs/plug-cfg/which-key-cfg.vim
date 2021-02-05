@@ -78,19 +78,26 @@ let g:which_key_map['c'] = {
             \ 'y'   : ['<plug>NERDCommenterYank'      , 'CommenterYank']
             \}
 
-" a  DlvAddBreakpoint        d  DlvRemoveBreakpoint     r  DlvRemoveTracepoint     t  DlvAddTracepoint        v  DlvVersion
-" c  DlvClearAll             i  DlvToggleBreakpoint     s  DlvDebug
+" a  <Plug>VimspectorToggleConditionalBreakpoint         j  <Plug>VimspectorStepOver                            q  <Plug>VimspectorStepOut
+" d  <Plug>VimspectorContinue                            l  <Plug>VimspectorStepInto                            r  <Plug>VimspectorRestart
+" f  <Plug>VimspectorAddFunctionBreakpoint               n  <Plug>VimspectorRunToCursor                         x  <Plug>VimspectorStop
+" i  <Plug>VimspectorToggleBreakpoint                    p  <Plug>VimspectorPause
+
 let g:which_key_map['d'] = {
             \ 'name' : '+Debugger',
-            \ 'a' : [':DlvAddBreakpoint'    , 'Add breakpoint(Go debug Delve)'],
-            \ 'c' : [':DlvClearAll'         , 'Clear all breakpoint(Go debug Delve)'],
-            \ 'd' : [':DlvRemoveBreakpoint' , 'Remove breakpoint(Go debug Delve)'],
-            \ 'i' : [':DlvToggleBreakpoint' , 'Add toggle breakpoint(Go debug Delve)'],
-            \ 'r' : [':DlvRemoveTracepoint' , 'Remove trace breakpoint(Go debug Delve)'],
-            \ 's' : [':DlvDebug'            , 'Start debug(Go debug Delve)'],
-            \ 't' : [':DlvAddTracepoint'    , 'Add trace breakpoint(Go debug Delve)'],
-            \ 'v' : [':DlvVersion'          , 'Show delve version(Go debug Delve)']
+            \ 'a' : [ '<Plug>VimspectorToggleConditionalBreakpoint' , '(F9)Toggle conditional line breakpoint on the current line'],
+            \ 'd' : [ '<Plug>VimspectorContinue'                    , '(F5)When debugging, continue. Otherwise start debugging'],
+            \ 'f' : [ '<Plug>VimspectorAddFunctionBreakpoint'       , '(F8)Add a function breakpoint for the expression under cursor'],
+            \ 'i' : [ '<Plug>VimspectorToggleBreakpoint'            , '(<leader>F9)Toggle line breakpoint on the current line'],
+            \ 'j' : [ '<Plug>VimspectorStepOver'                    , '(F10)Step Over'],
+            \ 'l' : [ '<Plug>VimspectorStepInto'                    , '(F11)Step Into'],
+            \ 'n' : [ '<Plug>VimspectorRunToCursor'                 , '(<leader>F8)Run to Cursor'],
+            \ 'p' : [ '<Plug>VimspectorPause'                       , '(F6)Pause debugee.'],
+            \ 'q' : [ '<Plug>VimspectorStepOut'                     , '(F12)Step out of current function scope'],
+            \ 'r' : [ '<Plug>VimspectorRestart'                     , '(F4)Restart debugging with the same configuration'],
+            \ 'x' : [ '<Plug>VimspectorStop'                        , '(F3)Stop debugging']
             \}
+
 " b  CocCommand explorer --preset buffer                               f  CocCommand explorer --preset floating
 " c  CocCommand explorer --preset cocConfig                            l  CocList explPresets
 " d  CocCommand explorer --preset .vim                                 n  NERDTreeToggle
@@ -208,6 +215,21 @@ let g:local_which_key_map['c'] = {
             \ 'm' : [':%s/\r$//g<CR>:noh<CR>'   , 'Clear ^M and cancel highlight'],
             \ 'h' : [':noh'                     , 'Cancel highlight charaters'],
             \}
+
+" a  DlvAddBreakpoint        d  DlvRemoveBreakpoint     r  DlvRemoveTracepoint     t  DlvAddTracepoint        v  DlvVersion
+" c  DlvClearAll             i  DlvToggleBreakpoint     s  DlvDebug
+let g:local_which_key_map['d'] = {
+            \ 'name' : '+Debugger',
+            \ 'a' : [':DlvAddBreakpoint'    , 'Add breakpoint(Go debug Delve)'],
+            \ 'c' : [':DlvClearAll'         , 'Clear all breakpoint(Go debug Delve)'],
+            \ 'd' : [':DlvRemoveBreakpoint' , 'Remove breakpoint(Go debug Delve)'],
+            \ 'i' : [':DlvToggleBreakpoint' , 'Add toggle breakpoint(Go debug Delve)'],
+            \ 'r' : [':DlvRemoveTracepoint' , 'Remove trace breakpoint(Go debug Delve)'],
+            \ 's' : [':DlvDebug'            , 'Start debug(Go debug Delve)'],
+            \ 't' : [':DlvAddTracepoint'    , 'Add trace breakpoint(Go debug Delve)'],
+            \ 'v' : [':DlvVersion'          , 'Show delve version(Go debug Delve)']
+            \}
+
 "
 " a  FloatermFirst           f  FloatermToggle          k  FloatermKill            p  FloatermPrev            s  FloatermShow
 " c  FloatermNew             h  FloatermHide            n  FloatermNext            r  FloatermNew ranger      z  FloatermNew fzf
@@ -308,6 +330,10 @@ let g:which_key_map['q'] = [ '<C-w>j:q' , 'Close below window' ]
 " let g:which_key_map.9 = 'which_key_ignore'
 " let g:which_key_map['-'] = 'which_key_ignore'
 " let g:which_key_map['='] = 'which_key_ignore'
+
+" vimspector有自带快捷键(<leader>F8 <leader>F9)
+let g:which_key_map['<F8>'] = 'which_key_ignore'
+let g:which_key_map['<F9>'] = 'which_key_ignore'
 
 " ignore group key map
 let g:which_key_map['h'] = {'name' : 'which_key_ignore'}
