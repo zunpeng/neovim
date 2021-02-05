@@ -28,6 +28,8 @@ This is my neovim custom config
 
 [https://github.com/puremourning/vimspector](https://github.com/puremourning/vimspector)
 
+![vimspector capture](imgs/vimspector01.png)
+
 ### 2.1.1 vimspector install
 
 1. **vim-plug**
