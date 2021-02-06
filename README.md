@@ -109,7 +109,7 @@ cd $GOPATH/src/github.com/go-delve/delve
 make install
 ```
 
-- create config file `.vimspector.json` and add contents below
+- Create config file `.vimspector.json` in project folder and add contents below.
 
 ```json
 {
