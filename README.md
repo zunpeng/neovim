@@ -54,17 +54,6 @@ Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --en
 - golang: go, delve
 - python: python2.7 or python3
 
-
-**devle install**
-
-[https://github.com/go-delve/delve/blob/master/Documentation/installation/linux/install.md](https://github.com/go-delve/delve/blob/master/Documentation/installation/linux/install.md)
-
-```bash
-git clone https://github.com/go-delve/delve.git $GOPATH/src/github.com/go-delve/delve
-cd $GOPATH/src/github.com/go-delve/delve
-make install
-```
-
 ### 2.1.2 vimspector base config
 
 ```vim
@@ -110,7 +99,33 @@ sign define vimspectorPC text=🔶 texthl=SpellBad
 
 2. golang debug config
 
-TODO
+- devle install
+
+[https://github.com/go-delve/delve/blob/master/Documentation/installation/linux/install.md](https://github.com/go-delve/delve/blob/master/Documentation/installation/linux/install.md)
+
+```bash
+git clone https://github.com/go-delve/delve.git $GOPATH/src/github.com/go-delve/delve
+cd $GOPATH/src/github.com/go-delve/delve
+make install
+```
+
+- create config file `.vimspector.json` and add contents below
+
+```json
+{
+	"configurations": {
+		"run": {
+			"adapter": "vscode-go",
+			"configuration": {
+				"request": "launch",
+				"program": "${fileDirname}",
+				"mode": "debug",
+				"dlvToolPath": "$GOPATH/bin/dlv"
+			}
+		}
+	}
+}
+```
 
 ### 2.1.4 vimspector mappings config
 
