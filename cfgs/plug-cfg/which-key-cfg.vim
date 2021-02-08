@@ -209,10 +209,15 @@ let g:which_key_map['w'] = {
 " group
 " 常规模式下输入 cS 清除行尾空格,同时取消高亮 nmap <leader>cs :%s/\s\+$//g<CR>:noh<CR>
 " 常规模式下输入 cM 清除行尾 ^M 符号,同时取消高亮 nmap <leader>cm :%s/\r$//g<CR>:noh<CR>
+" a  %s/^\s*//g                                                    l  g/^$/d
+" m  Clear ^M and cancel highlight
+" h  Cancel highlight charaters                                    s  Clear space end of current line and cancel highlight
 let g:local_which_key_map['c'] = {
             \ 'name' : '+Charaters' ,
-            \ 's' : [':%s/\s\+$//g<CR>:noh<CR>' , 'Clear space end of current line and cancel highlight'],
+            \ 'a' : [':%s/^\s+//g<CR>:noh<CR>'  , 'Clear space start of contents and cancel higlight'],
+            \ 'l' : [':g/^$/d<CR>:noh<CR>'      , 'Clear white space line and cancel higlight'],
             \ 'm' : [':%s/\r$//g<CR>:noh<CR>'   , 'Clear ^M and cancel highlight'],
+            \ 's' : [':%s/\s\+$//g<CR>:noh<CR>' , 'Clear space end of contents and cancel highlight'],
             \ 'h' : [':noh'                     , 'Cancel highlight charaters'],
             \}
 

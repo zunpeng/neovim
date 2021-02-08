@@ -141,6 +141,10 @@ nmap <localleader>cs :%s/\s\+$//g<CR>:noh<CR>
 nmap <localleader>cm :%s/\r$//g<CR>:noh<CR>
 " 取消高亮
 nmap <localleader>ch :noh<CR>
+" 删除空行
+nmap <localleader>cl :g/^$/d<CR>:noh<CR>
+" 删除行首空格
+nmap <localleader>ca :%s/^\s*//g<CR>:noh<CR>
 " 从当前字符换行
 noremap <leader>cj i<CR><ESC>
 

@@ -100,7 +100,7 @@ set guifont=DroidSansMono\ Nerd\ Font\ 11
 "如果设置主题的话，会影响vimrc中配置的配色
 "colorscheme desert
 " 启用每行超过180列的字符提示（字体变色并加下划线），不启用就注释掉
-au BufWinEnter * let w:m2=matchadd('Underlined', '\%>' . 180 . 'v.\+', -1)
+" au BufWinEnter * let w:m2=matchadd('Underlined', '\%>' . 180 . 'v.\+', -1)
 " 自动切换到文件当前目录
 set autochdir
 "设置命令行的高度
