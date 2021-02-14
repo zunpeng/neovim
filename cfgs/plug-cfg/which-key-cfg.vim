@@ -23,27 +23,9 @@ set timeoutlen=500
 " === <leader> key map
 " ------------------------------
 
-" a  <Plug>BookmarkAnnotate         d  <Plug>BookmarkMoveDown         l  <Plug>BookmarkShowAll          p  <Plug>BookmarkPrev
-"                                    g  <Plug>BookmarkMoveToLine
-" c  <Plug>BookmarkClear            i  <Plug>BookmarkToggle           n  <Plug>BookmarkNext             u  <Plug>BookmarkMoveUp
-" C  <Plug>BookmarkClearAll
-
-let g:which_key_map['b'] = {
-            \ 'name' : '+Bookmark',
-            \ 'a' : ['<Plug>BookmarkAnnotate'   , 'Add a bookmark with annotation'],
-            \ 'c' : ['<Plug>BookmarkClear'      , 'Clear bookmarks'],
-            \ 'C' : ['<Plug>BookmarkClearAll'   , 'Clear all bookmarks'],
-            \ 'd' : ['<Plug>BookmarkMoveDown'   , 'Move down current bookmark'],
-            \ 'g' : ['<Plug>BookmarkMoveToLine' , 'Move current bookmark to anyline'],
-            \ 'i' : ['<Plug>BookmarkToggle'     , 'Add/Remove a bookmark'],
-            \ 'l' : ['<Plug>BookmarkShowAll'    , 'List all bookmarks'],
-            \ 'n' : ['<Plug>BookmarkNext'       , 'Jump to next bookmark'],
-            \ 'p' : ['<Plug>BookmarkPrev'       , 'Jump to prev bookmark'],
-            \ 'u' : ['<Plug>BookmarkMoveUp'     , 'Move up current bookmark']
-            \}
 
 " l  XTabListBuffers                m  XTabMode                       s  XTabNextBuffer
-let g:which_key_map['B'] = {
+let g:which_key_map['b'] = {
             \ 'name' : '+Buffers',
             \ 'l' : [':XTabListBuffers' , 'List all buffers'],
             \ 'm' : [':XTabMode'        , 'Switch buffer/tab mode'],
@@ -205,6 +187,24 @@ let g:which_key_map['w'] = {
 " === localleader key map
 " ------------------------------
 
+" a  <Plug>BookmarkAnnotate         d  <Plug>BookmarkMoveDown         l  <Plug>BookmarkShowAll          p  <Plug>BookmarkPrev
+"                                    g  <Plug>BookmarkMoveToLine
+" c  <Plug>BookmarkClear            i  <Plug>BookmarkToggle           n  <Plug>BookmarkNext             u  <Plug>BookmarkMoveUp
+" C  <Plug>BookmarkClearAll
+
+let g:local_which_key_map['b'] = {
+            \ 'name' : '+Bookmark',
+            \ 'a' : ['<Plug>BookmarkAnnotate'   , 'Add a bookmark with annotation'],
+            \ 'c' : ['<Plug>BookmarkClear'      , 'Clear bookmarks'],
+            \ 'C' : ['<Plug>BookmarkClearAll'   , 'Clear all bookmarks'],
+            \ 'd' : ['<Plug>BookmarkMoveDown'   , 'Move down current bookmark'],
+            \ 'g' : ['<Plug>BookmarkMoveToLine' , 'Move current bookmark to anyline'],
+            \ 'i' : ['<Plug>BookmarkToggle'     , 'Add/Remove a bookmark'],
+            \ 'l' : ['<Plug>BookmarkShowAll'    , 'List all bookmarks'],
+            \ 'n' : ['<Plug>BookmarkNext'       , 'Jump to next bookmark'],
+            \ 'p' : ['<Plug>BookmarkPrev'       , 'Jump to prev bookmark'],
+            \ 'u' : ['<Plug>BookmarkMoveUp'     , 'Move up current bookmark']
+            \}
 " 第一个元素表明执行的操作，第二个是该操作的介绍
 " group
 " 常规模式下输入 cS 清除行尾空格,同时取消高亮 nmap <leader>cs :%s/\s\+$//g<CR>:noh<CR>

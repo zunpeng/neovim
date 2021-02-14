@@ -98,38 +98,38 @@ nmap <Localleader>fz :FloatermNew fzf<CR>
 nmap <Localleader>fg :FloatermNew lazygit<CR>
 
 " ------------------------------
-" === Bookmarks/Buffers Operation <leader>b
+" === Bookmarks/Buffers Operation <localleader>b <leader>b
 " ------------------------------
 "  在当前行添加或删除书签 bookmark toggle insert
-nmap <leader>bi <Plug>BookmarkToggle
+nmap <localleader>bi <Plug>BookmarkToggle
 " 在当前行添加书签说明 bookmark annotate
-nmap <leader>ba <Plug>BookmarkAnnotate
+nmap <localleader>ba <Plug>BookmarkAnnotate
 " 显示所有书签 list
-nmap <leader>bl <Plug>BookmarkShowAll
+nmap <localleader>bl <Plug>BookmarkShowAll
 " 下一个书签 next
-nmap <leader>bn <Plug>BookmarkNext
+nmap <localleader>bn <Plug>BookmarkNext
 " 上一个书签 previous
-nmap <leader>bp <Plug>BookmarkPrev
+nmap <localleader>bp <Plug>BookmarkPrev
 " 清除书签 好像和BookmarkClearAll是一样的效果 clean/clear
-nmap <leader>bc <Plug>BookmarkClear
+nmap <localleader>bc <Plug>BookmarkClear
 " 清除所有书签 大写X
-nmap <leader>bC <Plug>BookmarkClearAll
+nmap <localleader>bC <Plug>BookmarkClearAll
 " 将书签向上移动一行 up
-nmap <leader>bu <Plug>BookmarkMoveUp
+nmap <localleader>bu <Plug>BookmarkMoveUp
 " 将书签向下移动一行 down
-nmap <leader>bd <Plug>BookmarkMoveDown
+nmap <localleader>bd <Plug>BookmarkMoveDown
 "将书签移至任意一行 go
-nmap <Leader>bg <Plug>BookmarkMoveToLine
+nmap <localLeader>bg <Plug>BookmarkMoveToLine
 " 保存所有书签至一个文件:BookmarkSave <filePath>
 " 从一个文件加载书签:BookmarkLoad <filePath>
 
 " === Buffer Operation <leader>b
 "
 " 此处不加回车，调出buffer命令后，写buffer数字进行跳转 buffer search
-nmap <leader>Bs :XTabNextBuffer 
-nmap <leader>Bm :XTabMode<CR>
+nmap <leader>bs :XTabNextBuffer 
+nmap <leader>bm :XTabMode<CR>
 " 查询所有buffer，然后选择加载
-nmap <leader>Bl :XTabListBuffers<CR>
+nmap <leader>bl :XTabListBuffers<CR>
 
 
 " ------------------------------
