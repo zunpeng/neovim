@@ -29,6 +29,8 @@ let g:which_key_map['b'] = {
             \ 'name' : '+Buffers',
             \ 'l' : [':XTabListBuffers' , 'List all buffers'],
             \ 'm' : [':XTabMode'        , 'Switch buffer/tab mode'],
+            \ 'n' : [':XTabNextBuffer'  , 'Jump to next buffer'],
+            \ 'p' : [':XTabPrevBuffer'  , 'Jump to prev buffer'],
             \ 's' : [':XTabNextBuffer ' , 'Search buffer num and jump to'],
             \}
 
@@ -131,7 +133,13 @@ let g:which_key_map['g'] = {
 let g:which_key_map['l'] = {
             \ 'name' : '+Languages' ,
             \ 'f' : [':Neoformat'            , 'Format current contents'],
-            \ 'r' : [':call CompileRunGcc()' , 'Run current file']
+            \ 'r' : [':call CompileRunGcc()' , 'Run current file'],
+            \ 'v' : {
+                    \'name' : '+PythonVenv',
+                    \'a' : [':VirtualEnvActivate '  , 'VirtualEnvActivate'],
+                    \'d' : [':VirtualEnvDeactivate' , 'VirtualEnvDeactivate'],
+                    \'l' : [':VirtualEnvList'       , 'VirtualEnvList']
+                    \}
             \}
 
 " f  <Plug>(coc-codeaction)                    p  <Plug>MarkdownPreview                     t  <Plug>MarkdownPreviewToggle

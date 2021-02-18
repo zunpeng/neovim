@@ -109,7 +109,7 @@ Plug 'mzlogin/vim-markdown-toc', {'for':['gitignore','markdown','vim-plug'],'on'
 " markdown table
 Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
 " 文档编号整理，自动编号
-Plug 'dkarter/bullets.vim', {'for' : ['markdown', 'text', 'gitcommit', 'scratch']}
+Plug 'dkarter/bullets.vim', {'for' : ['markdown', 'text', 'gitcommit', 'scratch', 'vim-plug']}
 
 " 书签
 Plug 'MattesGroeger/vim-bookmarks'
@@ -120,7 +120,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
 "
 " 虚拟环境
-Plug 'jmcantrell/vim-virtualenv',{'on': [ 'VirtualEnvActivate', 'VirtualEnvDeactivate', 'VirtualEnvList' ]}
+Plug 'jmcantrell/vim-virtualenv',{'on': [ 'VirtualEnvActivate', 'VirtualEnvDeactivate', 'VirtualEnvList' ], 'for' : ['python', 'vim-plug']}
 " Plug 'sansyrox/vim-python-virtualenv'
 "
 " 内置终端配置

@@ -127,6 +127,8 @@ nmap <localLeader>bg <Plug>BookmarkMoveToLine
 "
 " 此处不加回车，调出buffer命令后，写buffer数字进行跳转 buffer search
 nmap <leader>bs :XTabNextBuffer 
+nmap <leader>bn :XTabNextBuffer<CR>
+nmap <leader>bp :XTabPrevBuffer<CR>
 nmap <leader>bm :XTabMode<CR>
 " 查询所有buffer，然后选择加载
 nmap <leader>bl :XTabListBuffers<CR>
@@ -247,6 +249,11 @@ let g:coc_snippet_next = '<tab>'
 " neoformat 格式化
 " nmap <Leader>bb :Neoformat jsbeautify<CR>
 nmap <Leader>lf :Neoformat<CR>
+
+"VirtualEnvActivate    VirtualEnvDeactivate  VirtualEnvList
+nmap <leader>lva :VirtualEnvActivate 
+nmap <leader>lvd :VirtualEnvDeactivate<CR>
+nmap <leader>lvl :VirtualEnvList<CR>
 
 " localleader is ,
 " isort python import

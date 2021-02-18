@@ -8,6 +8,14 @@ let g:xtabline_settings.enable_persistance = 0
 let g:xtabline_settings.last_open_first = 1
 let g:xtabline_settings.theme = 'tomorrow'
 " let g:xtabline_settings.theme = 'dracula'
+
+" `-2`  ->   path/to/file.ext
+" `-1`  ->   to/file.ext
+" ` 0`  ->   file.ext
+" ` 1`  ->   l/p/t/file.ext      (default)
+" ` 2`  ->   l/p/to/file.ext
+let g:xtabline_settings.buffers_paths = -2
+
 noremap to :XTabCycleMode<CR>
 noremap \p :echo expand('%:p')<CR>
 
