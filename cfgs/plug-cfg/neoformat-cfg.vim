@@ -14,6 +14,15 @@ let g:neoformat_python_autopep8 = {
             \ 'no_append': 1,
             \ }
 
+" c/c++和格式化与本地安装的clangd格式化配置相关，需要将配置导出，然后再放到~/.clang-format下
+" 导出配置命令
+" clang-format -style=格式名 -dump-config > 文件名
+" clang-format -style=llvm -dump-config > ~/.clang-format
+" style 可以是以下几种llvm, google, chromium, mozilla, webkit
+
+" let g:neoformat_enabled_c = ['uncrustify', 'clang-format', 'astyle']
+" let g:neoformat_enabled_cpp = ['uncrustify', 'clang-format', 'astyle']
+" let g:neoformat_enabled_c# = ['uncrustify', 'clang-format', 'astyle']
 "let g:neoformat_enabled_python = ['autopep8']
 let g:neoformat_enabled_python = ['autopep8', 'yapf', 'docformatter', 'black', 'isort', 'pyment']
 " golang

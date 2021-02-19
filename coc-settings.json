@@ -72,7 +72,9 @@
 		"python",
 		"vue",
 		"svelte",
-		"go"
+		"go",
+		"c",
+		"cpp"
 	],
 	"yaml.format.enable": true,
 	"signature.target": "float",

@@ -37,6 +37,8 @@ set directory=~/.config/nvim/tmp/backup,.
 
 " au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" 设置c自动缩进
+set cindent
 " 制表符
 set tabstop=4
 "把tab转成空格

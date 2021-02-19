@@ -92,7 +92,7 @@ Plug 'liuchengxu/vista.vim'
 " Plug 'google/vim-codefmt'
 "
 "格式化
-Plug 'sbdchd/neoformat',{'on': 'Neoformat', 'for':['python', 'go', 'java', 'markdown', 'json', 'nginx', 'xml', 'xhtml', 'html', 'yaml']}
+Plug 'sbdchd/neoformat',{'on': 'Neoformat', 'for':['python', 'cpp', 'c', 'go', 'java', 'markdown', 'json', 'nginx', 'xml', 'xhtml', 'html', 'yaml']}
 
 " 单词包裹
 " ysiw' 将光标所在字符串(一个单词)进行包裹
