@@ -127,6 +127,107 @@ make install
 }
 ```
 
+3. c/c++ debug config
+
+- gdb install
+
+```bash
+sudo pacman -S gdb
+```
+
+- Create config file `.vimspector.json` in project folder and add contents below.
+
+```json
+{
+	"configurations": {
+		"qemu-riscv64-oslab": {},
+		"launch-current-file": {
+			"adapter": "vscode-cpptools",
+			"configuration": {
+				"default": true,
+				"type": "cppdbg",
+				"request": "launch",
+				"program": "${fileDirname}/${fileBasenameNoExtension}",
+				"args": ["*${ProgramArgs}"], // 用户输入
+				"cwd": "${workspaceRoot}",
+				"environment": [],
+				"externalConsole": true,
+				"stopAtEntry": true,
+				"MIMode": "gdb",
+				"breakpointers": {
+					"exception": {
+						"cpp_throw": "Y", // 抛出异常时暂停
+						"cpp_catch": "N" // 捕获时不暂停
+					}
+				}
+			}
+		},
+		"launch-current-project": {
+			"adapter": "vscode-cpptools",
+			"configuration": {
+				"variables": {
+					"ProgramName": {
+						"shell": ["basename ", "${workspaceRoot}"] // 无法正确执行，需要用户输入
+					},
+					"ProgramPath": "${workspaceRoot}/_builds/${ProgramName}"
+				},
+				"type": "cppdbg",
+				"request": "launch",
+				"program": "${workspaceRoot}/_builds/${ProgramName}",
+				"args": ["*${ProgramArgs}"],
+				"cwd": "${workspaceRoot}",
+				"environment": [],
+				"externalConsole": true,
+				"stopAtEntry": true,
+				"MIMode": "gdb",
+				"breakpointers": {
+					"exception": {
+						"cpp_throw": "Y",
+						"cpp_catch": "N"
+					}
+				}
+			}
+		},
+		"attach-current-file": {
+			"adapter": "vscode-cpptools",
+			"configuration": {
+				"type": "cppdbg",
+				"request": "attach",
+				"program": "${fileDirname}/${fileBasenameNoExtension}",
+				"MIMode": "gdb",
+				"breakpointers": {
+					"exception": {
+						"cpp_throw": "Y",
+						"cpp_catch": "N"
+					}
+				}
+			}
+		},
+		"attach-current-project": {
+			"adapter": "vscode-cpptools",
+			"configuration": {
+				"variables": {
+					"ProgramName": {
+						"shell": ["basename", "${workspaceRoot}"]
+					},
+					"ProgramPath": "${workspaceRoot}/_builds/${ProgramName}"
+				},
+				"type": "cppdbg",
+				"request": "attach",
+				"program": "${ProgramPath}",
+				"MIMode": "gdb",
+				"breakpointers": {
+					"exception": {
+						"cpp_throw": "Y",
+						"cpp_catch": "N"
+					}
+				}
+			}
+		}
+	}
+}
+```
+
 ### 2.1.4 vimspector mappings config
 
 1. keybindings config
@@ -143,6 +244,7 @@ nmap <leader>dj <Plug>VimspectorStepOver
 nmap <leader>dl <Plug>VimspectorStepInto
 nmap <leader>dq <Plug>VimspectorStepOut
 nmap <leader>dn <Plug>VimspectorRunToCursor
+nmap <leader>dc :VimspectorReset
 ```
 
 2. vim-which-key config
@@ -151,6 +253,7 @@ nmap <leader>dn <Plug>VimspectorRunToCursor
 let g:which_key_map['d'] = {
             \ 'name' : '+Debugger',
             \ 'a' : [ '<Plug>VimspectorToggleConditionalBreakpoint' , '(F9)Toggle conditional line breakpoint on the current line'],
+            \ 'c' : [ ':VimspectorReset'                            , 'Close vimspector interface'],
             \ 'd' : [ '<Plug>VimspectorContinue'                    , '(F5)When debugging, continue. Otherwise start debugging'],
             \ 'f' : [ '<Plug>VimspectorAddFunctionBreakpoint'       , '(F8)Add a function breakpoint for the expression under cursor'],
             \ 'i' : [ '<Plug>VimspectorToggleBreakpoint'            , '(<leader>F9)Toggle line breakpoint on the current line'],
