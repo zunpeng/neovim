@@ -200,6 +200,7 @@ nmap <leader>dj <Plug>VimspectorStepOver
 nmap <leader>dl <Plug>VimspectorStepInto
 nmap <leader>dq <Plug>VimspectorStepOut
 nmap <leader>dn <Plug>VimspectorRunToCursor
+nmap <leader>dc :VimspectorReset<CR>
 
 " ------------------------------
 " === Git Operation <leader>g

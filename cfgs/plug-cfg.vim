@@ -117,7 +117,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 " debug插件
 " Plug 'vim-vdebug/vdebug'
 " debug 插件2 vimspector
-Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go'}
+Plug 'puremourning/vimspector', {'do': './install_gadget.py --enable-python --enable-go --enable-c --enable-cpp'}
 "
 " 虚拟环境
 Plug 'jmcantrell/vim-virtualenv',{'on': [ 'VirtualEnvActivate', 'VirtualEnvDeactivate', 'VirtualEnvList' ], 'for' : ['python', 'vim-plug']}

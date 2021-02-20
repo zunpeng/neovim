@@ -70,6 +70,7 @@ let g:which_key_map['c'] = {
 let g:which_key_map['d'] = {
             \ 'name' : '+Debugger',
             \ 'a' : [ '<Plug>VimspectorToggleConditionalBreakpoint' , '(F9)Toggle conditional line breakpoint on the current line'],
+            \ 'c' : [ ':VimspectorReset'                            , 'Close vimspector interface'],
             \ 'd' : [ '<Plug>VimspectorContinue'                    , '(F5)When debugging, continue. Otherwise start debugging'],
             \ 'f' : [ '<Plug>VimspectorAddFunctionBreakpoint'       , '(F8)Add a function breakpoint for the expression under cursor'],
             \ 'i' : [ '<Plug>VimspectorToggleBreakpoint'            , '(<leader>F9)Toggle line breakpoint on the current line'],
