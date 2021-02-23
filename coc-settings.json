@@ -201,5 +201,24 @@
 	"prettier.trailingComma": "all",
 	"prettier.singleQuote": false,
 	"coc-actions.hideCursor": false,
-	"coc-actions.showActionKind": true
+	"coc-actions.showActionKind": true,
+	//	"java.configuration.runtimes": [
+	//		{
+	//			"name": "jdk1.8",
+	//			"path": "/opt/java/jdk1.8.0_271/bin/java",
+	//			"default": true
+	//		}
+	//	],
+	"java.home": "/opt/java/jdk-11.0.9",
+	"java.import.maven.enabled": true,
+	"java.configuration.maven.userSettings": "/opt/apache-maven-3.6.3/conf/settings.xml",
+	"java.completion.enabled": true,
+	"java.completion.overwrite": false,
+	"java.completion.guessMethodArguments": true,
+	"java.format.enabled": true,
+	"java.codeGeneration.generateComments": true,
+	"java.project.resourceFilters": [".project", ".svn", ".git"],
+	"java.referencesCodeLens.enabled": true,
+	"java.implementationsCodeLens.enabled": true,
+	"java.jdt.ls.vmargs": "-javaagent:/opt/common/java/lombok-1.18.18.jar"
 }

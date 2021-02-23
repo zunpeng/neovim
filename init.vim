@@ -130,6 +130,12 @@ set fileformats=unix,dos,mac                          "给出文件的<EOL>格�
 
 " -----------------------折叠设置 begin---------------------------
 " 设置默认折叠方式为缩进
+" manual	手工定义折叠
+" indent	更多的缩进表示更高级别的折叠
+" expr	用表达式来定义折叠
+" syntax	用语法高亮来定义折叠
+" diff	对没有更改的文本进行折叠
+" marker	对文中的标志折叠
 set foldmethod=indent
 " 每次打开文件时关闭折叠
 set foldlevelstart=99
@@ -170,6 +176,9 @@ source $HOME/.config/nvim/cfgs/plug-cfg/rainbow-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/vista-cfg.vim
 
 source $HOME/.config/nvim/cfgs/plug-cfg/markdown-preview-cfg.vim
+
+source $HOME/.config/nvim/cfgs/plug-cfg/vimwiki-cfg.vim
+
 source $HOME/.config/nvim/cfgs/plug-cfg/bullets-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/markdown-toc-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/autoformat-cfg.vim

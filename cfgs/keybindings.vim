@@ -126,7 +126,7 @@ nmap <localLeader>bg <Plug>BookmarkMoveToLine
 " === Buffer Operation <leader>b
 "
 " 此处不加回车，调出buffer命令后，写buffer数字进行跳转 buffer search
-nmap <leader>bs :XTabNextBuffer 
+nmap <leader>bs :XTabNextBuffer<space>
 nmap <leader>bn :XTabNextBuffer<CR>
 nmap <leader>bp :XTabPrevBuffer<CR>
 nmap <leader>bm :XTabMode<CR>
@@ -252,9 +252,44 @@ let g:coc_snippet_next = '<tab>'
 nmap <Leader>lf :Neoformat<CR>
 
 "VirtualEnvActivate    VirtualEnvDeactivate  VirtualEnvList
-nmap <leader>lva :VirtualEnvActivate 
+nmap <leader>lva :VirtualEnvActivate
 nmap <leader>lvd :VirtualEnvDeactivate<CR>
 nmap <leader>lvl :VirtualEnvList<CR>
+
+" line action
+nmap <leader>lla <Plug>(coc-codeaction)
+" definition
+nmap <leader>lld <Plug>(coc-definition)
+" references
+nmap <leader>llr <Plug>(coc-references)
+" type definition
+nmap <leader>llt <Plug>(coc-type-definition)
+" rename
+nmap <leader>lls <Plug>(coc-rename)
+" declaration
+nmap <leader>llm <Plug>(coc-declaration)
+" implementation
+nmap <leader>lli <Plug>(coc-implementation)
+" format
+nmap <leader>llf <Plug>(coc-format)
+" quickfix
+nmap <leader>llx <Plug>(coc-fix-current)
+" code lens
+nmap <leader>lll <Plug>(coc-codelens-action)
+" next diagnostic
+nmap <leader>lln <Plug>(coc-diagnostic-next)
+" next error
+nmap <leader>lle <Plug>(coc-diagnostic-next-error)
+" diagnostics
+nmap <leader>llp :CocList diagnostics
+" search outline
+nmap <leader>llo :CocList outline
+" references
+nmap <leader>llv :CocList -I symbols
+" nmap <leader>llu :CocUpdate                          " update CoC
+" nmap <leader>llc :CocDisable                         " disable CoC
+" nmap <leader>llz :CocEnable                          " enable CoC
+
 
 " localleader is ,
 " isort python import
@@ -375,6 +410,14 @@ noremap <leader>wk <c-w>k
 noremap <leader>wj <c-w>j
 noremap <leader>wh <c-w>h
 noremap <leader>wl <c-w>l
+
+" ------------------------------
+" === vimwiki <leader>w
+" ------------------------------
+
+nmap <leader>wm <Plug>VimwikiTabIndex
+nmap <leader>wvh <Plug>Vimwiki2HTML
+nmap <leader>wvb <Plug>Vimwiki2HTMLBrowse
 
 " terminal
 let g:terminal_key ="<leader>wt" "哪个键将用于切换终端窗口，默认为<m-=>。

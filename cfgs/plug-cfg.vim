@@ -31,6 +31,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'mg979/vim-xtabline'
 " Plug 'liuchengxu/eleline.vim'
 " Plug 'glepnir/spaceline.vim'
+"在状态栏上显示buffer
+Plug 'bling/vim-bufferline'
 
 " 版本控制
 Plug 'tpope/vim-fugitive'
@@ -110,6 +112,8 @@ Plug 'mzlogin/vim-markdown-toc', {'for':['gitignore','markdown','vim-plug'],'on'
 Plug 'dhruvasagar/vim-table-mode', { 'on': 'TableModeToggle', 'for': ['text', 'markdown', 'vim-plug'] }
 " 文档编号整理，自动编号
 Plug 'dkarter/bullets.vim', {'for' : ['markdown', 'text', 'gitcommit', 'scratch', 'vim-plug']}
+" vimwiki
+Plug 'vimwiki/vimwiki'
 
 " 书签
 Plug 'MattesGroeger/vim-bookmarks'

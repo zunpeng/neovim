@@ -21,6 +21,7 @@ let g:indentLine_setConceal = 1
 
 "开启indentLine_setConceal时json中的引号自动被隐藏,打开文件时检测是否是json文件,将其关闭
 autocmd FileType json let g:indentLine_setConceal=0
+autocmd FileType markdown let g:indentLine_setConceal=0
 
 " vim-markdown的concealcursor特性与indentLine冲突。在输入下划线和星号的时候下划线和星号会被indentLine隐藏
 " 如果安装了indentLine，init.vim(vimrc)中增加下面一句问题就解决了。
