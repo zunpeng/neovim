@@ -485,3 +485,5 @@ noremap <leader>vl :silent! Vista finder ctags<CR>
 " endfunction
 " inoremap <Tab> <C-R>=CleverTab()<CR>
 
+iab xtime <c-r>=strftime("%Y-%m-%d %H:%M:%S")<CR>
+iab xdate <c-r>=strftime("%Y-%m-%d")<CR>
