@@ -158,4 +158,6 @@ Plug 'mhinz/vim-startify'
 
 Plug 'ludovicchabant/vim-gutentags'
 
+Plug 'mattn/calendar-vim'
+
 call plug#end()

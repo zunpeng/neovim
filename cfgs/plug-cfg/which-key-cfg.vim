@@ -23,8 +23,6 @@ set timeoutlen=500
 " === <leader> key map
 " ------------------------------
 
-
-" l  XTabListBuffers                m  XTabMode                       s  XTabNextBuffer
 let g:which_key_map['b'] = {
             \ 'name' : '+Buffers',
             \ 'l' : [':XTabListBuffers' , 'List all buffers'],
@@ -34,38 +32,26 @@ let g:which_key_map['b'] = {
             \ 's' : [':XTabNextBuffer ' , 'Search buffer num and jump to'],
             \}
 
-" SPC  <plug>NERDCommenterToggle                 e  <Plug>(coc-translator-e)                  r  <Plug>(coc-translator-r)
-"   $  <plug>NERDCommenterToEOL                  i  <plug>NERDCommenterInvert                 s  <plug>NERDCommenterSexy
-"   A  <plug>NERDCommenterAppend                 j  i<CR><ESC>                                t  <Plug>(coc-translator-p)
-"   a  <plug>NERDCommenterAltDelims              l  <plug>NERDCommenterAlignLeft              u  <plug>NERDCommenterUncomment
-"   b  <plug>NERDCommenterAlignBoth              m  <plug>NERDCommenterMinimal                y  <plug>NERDCommenterYank
-"   c  <plug>NERDCommenterComment                n  <plug>NERDCommenterNested
-
 let g:which_key_map['c'] = {
             \ 'name' : '+Content/Comment'      ,
-            \ 'SPC' : ['<plug>NERDCommenterToggle'    , 'Comment/Uncomment current line'],
-            \ '$'   : ['<plug>NERDCommenterToEOL'     , 'CommenterToEOL'],
-            \ 'A'   : ['<plug>NERDCommenterAppend'    , 'Add comment at end of the current line'],
-            \ 'a'   : ['<plug>NERDCommenterAltDelims' , 'CommenterAltDelims'],
-            \ 'b'   : ['<plug>NERDCommenterAlignBoth' , 'CommenterAlignBoth'],
-            \ 'c'   : ['<plug>NERDCommenterComment'   , 'Comment current line'],
-            \ 'e'   : ['<Plug>(coc-translator-e)'     , 'Translate current word and display into command line'],
-            \ 'i'   : ['<plug>NERDCommenterInvert'    , 'Commenter invert'],
-            \ 'j'   : ['i<CR><ESC>'                   , 'Split into new line after current cursor'],
-            \ 'l'   : ['<plug>NERDCommenterAlignLeft' , 'CommenterAlignLeft'],
-            \ 'm'   : ['<plug>NERDCommenterMinimal'   , 'CommenterMinimal'],
-            \ 'n'   : ['<plug>NERDCommenterNested'    , 'CommenterNested'],
-            \ 'r'   : ['<Plug>(coc-translator-r)'     , 'Translate current word and replace it'],
-            \ 's'   : ['<plug>NERDCommenterSexy'      , 'CommenterSexy'],
-            \ 't'   : ['<Plug>(coc-translator-p)'     , 'Translate current word'],
-            \ 'u'   : ['<plug>NERDCommenterUncomment' , 'Uncomment current line'],
-            \ 'y'   : ['<plug>NERDCommenterYank'      , 'CommenterYank']
+            \ '$' : ['<plug>NERDCommenterToEOL'     , 'CommenterToEOL'],
+            \ 'A' : ['<plug>NERDCommenterAppend'    , 'Add comment at end of the current line'],
+            \ 'a' : ['<plug>NERDCommenterAltDelims' , 'CommenterAltDelims'],
+            \ 'b' : ['<plug>NERDCommenterAlignBoth' , 'CommenterAlignBoth'],
+            \ 'c' : ['<plug>NERDCommenterComment'   , 'Comment current line'],
+            \ 'd' : ['<plug>NERDCommenterToggle'    , 'Comment/Uncomment current line'],
+            \ 'e' : ['<Plug>(coc-translator-e)'     , 'Translate current word and display into command line'],
+            \ 'i' : ['<plug>NERDCommenterInvert'    , 'Commenter invert'],
+            \ 'j' : ['i<CR><ESC>'                   , 'Split into new line after current cursor'],
+            \ 'l' : ['<plug>NERDCommenterAlignLeft' , 'CommenterAlignLeft'],
+            \ 'm' : ['<plug>NERDCommenterMinimal'   , 'CommenterMinimal'],
+            \ 'n' : ['<plug>NERDCommenterNested'    , 'CommenterNested'],
+            \ 'r' : ['<Plug>(coc-translator-r)'     , 'Translate current word and replace it'],
+            \ 's' : ['<plug>NERDCommenterSexy'      , 'CommenterSexy'],
+            \ 't' : ['<Plug>(coc-translator-p)'     , 'Translate current word'],
+            \ 'u' : ['<plug>NERDCommenterUncomment' , 'Uncomment current line'],
+            \ 'y' : ['<plug>NERDCommenterYank'      , 'CommenterYank']
             \}
-
-" a  <Plug>VimspectorToggleConditionalBreakpoint         j  <Plug>VimspectorStepOver                            q  <Plug>VimspectorStepOut
-" d  <Plug>VimspectorContinue                            l  <Plug>VimspectorStepInto                            r  <Plug>VimspectorRestart
-" f  <Plug>VimspectorAddFunctionBreakpoint               n  <Plug>VimspectorRunToCursor                         x  <Plug>VimspectorStop
-" i  <Plug>VimspectorToggleBreakpoint                    p  <Plug>VimspectorPause
 
 let g:which_key_map['d'] = {
             \ 'name' : '+Debugger',
@@ -83,10 +69,6 @@ let g:which_key_map['d'] = {
             \ 'x' : [ '<Plug>VimspectorStop'                        , '(F3)Stop debugging']
             \}
 
-" b  CocCommand explorer --preset buffer                               f  CocCommand explorer --preset floating
-" c  CocCommand explorer --preset cocConfig                            l  CocList explPresets
-" d  CocCommand explorer --preset .vim                                 n  NERDTreeToggle
-" e  CocCommand explorer
 let g:which_key_map['e'] = {
             \ 'name' : '+ExplorerTree' ,
             \ 'b' : [':CocCommand explorer --preset buffer'    , 'Open exporer(only buffers)'],
@@ -98,7 +80,6 @@ let g:which_key_map['e'] = {
             \ 'n' : [':NERDTreeToggle'                         , 'Open NerdTree']
             \}
 
-" c  e ~/.config/nvim/init.vim      s  w
 let g:which_key_map['f'] = {
             \ 'name' : '+File/Config' ,
             \ 'c' : [':e ~/.config/nvim/init.vim' , 'Open init.vim in current buffer'],
@@ -116,9 +97,6 @@ let g:which_key_map['f'] = {
                     \}
             \}
 
-"n  <Plug>(GitGutterNextHunk)                 p  <Plug>(GitGutterPrevHunk)
-"s  <Plug>(GitGutterStageHunk)                u  <Plug>(GitGutterUndoHunk)
-"P  <Plug>(GitGutterPreviewHunk)
 let g:which_key_map['g'] = {
             \ 'name' : '+Git' ,
             \ 'l' : [':FloatermNew lazygit'         , 'Lazygit'],
@@ -130,11 +108,29 @@ let g:which_key_map['g'] = {
             \ 'u' : ['<Plug>(GitGutterUndoHunk)'    , 'Git undo hunk']
             \}
 
-" f  Neoformat                      r  call CompileRunGcc()
 let g:which_key_map['l'] = {
             \ 'name' : '+Languages' ,
             \ 'f' : [':Neoformat'            , 'Format current contents'],
             \ 'r' : [':call CompileRunGcc()' , 'Run current file'],
+            \ 'l' : {
+                    \'name' : '+Coding',
+                    \'a' : ['<Plug>(coc-codeaction)'            , 'Line action'],
+                    \'f' : ['<Plug>(coc-format)'                , 'Format(coc)'],
+                    \'F' : ['<Plug>(coc-format-selected)'       , 'Format selected(coc)'],
+                    \'m' : ['<Plug>(coc-declaration)'           , 'Declaration'],
+                    \'p' : [':CocList diagnostics'              , 'Code diagnostics'],
+                    \'t' : ['<Plug>(coc-type-definition)'       , 'Go to type definition'],
+                    \'d' : ['<Plug>(coc-definition)'            , 'Go to definition'],
+                    \'i' : ['<Plug>(coc-implementation)'        , 'Go to implementation'],
+                    \'n' : ['<Plug>(coc-diagnostic-next)'       , 'Next diagnostic'],
+                    \'r' : ['<Plug>(coc-references)'            , 'Go to references'],
+                    \'v' : [':CocList -I symbols '              , 'Symbols list'],
+                    \'e' : ['<Plug>(coc-diagnostic-next-error)' , 'Next diagnostic error'],
+                    \'l' : ['<Plug>(coc-codelens-action)'       , 'Codelens action'],
+                    \'o' : ['CocList outline'                   , 'Outline'],
+                    \'s' : ['<Plug>(coc-rename)'                , 'Rename'],
+                    \'x' : ['<Plug>(coc-fix-current)'           , 'Fix current']
+                    \},
             \ 'v' : {
                     \'name' : '+PythonVenv',
                     \'a' : [':VirtualEnvActivate '  , 'VirtualEnvActivate'],
@@ -143,25 +139,72 @@ let g:which_key_map['l'] = {
                     \}
             \}
 
-" f  <Plug>(coc-codeaction)                    p  <Plug>MarkdownPreview                     t  <Plug>MarkdownPreviewToggle
-" m  TableModeToggle                           q  <Plug>MarkdownPreviewStop
 let g:which_key_map['m'] = {
-            \ 'name' : '+Markdown' ,
+            \ 'name' : '+Markdown/VimWiki' ,
+            \ 'a' : ['<Plug>VimwikiIndex' , 'Vimwiki index'],
+            \ 'b' : {'name'  : '+VimwikiTables',
+                    \ 'h' : ['<Plug>VimwikiTableMoveColumnLeft'  , 'Move column left'],
+                    \ 'l' : ['<Plug>VimwikiTableMoveColumnRight' , 'Move column right']
+                    \},
+            \ 'c' : {'name'  : '+VimwikiConvert',
+                    \ 'b' : ['<Plug>Vimwiki2HTMLBrowse' , 'Convert to html and open browse'],
+                    \ 'h' : ['<Plug>Vimwiki2HTML'       , 'Convert to html'],
+                    \},
+            \ 'd' : {'name'  : '+VimwikiDiary',
+                    \ 'a' : ['<Plug>VimwikiDiaryIndex'             , 'Open diary index page'],
+                    \ 'i' : ['<Plug>VimwikiDiaryGenerateLinks'     , 'Inser all diary link'],
+                    \ 'm' : ['<Plug>VimwikiMakeTomorrowDiaryNote'  , 'Make tomorrow diary'],
+                    \ 'v' : ['<Plug>CalendarV'                     , 'Open calendar on left'],
+                    \ 'd' : ['<Plug>VimwikiMakeDiaryNote'          , 'Open/make today diary'],
+                    \ 'j' : ['<Plug>CalendarH'                     , 'Open calendar on below'],
+                    \ 'n' : ['<Plug>CalendarT'                     , 'Open calendar on new tab'],
+                    \ 'y' : ['<Plug>VimwikiMakeYesterdayDiaryNote' , 'Open/make yesterday diary'],
+                    \ 'h' : [':Calendar'                           , 'Open calendar on left'],
+                    \ 'l' : [':CalendarVR'                         , 'Open calendar on right'],
+                    \ 't' : ['<Plug>VimwikiTabMakeDiaryNote'       , 'Open today diary']
+                    \},
+            \ 'e' : ['<Plug>VimwikiSplitLink'      , 'Split and follow'],
             \ 'f' : ['<Plug>(coc-codeaction)'      , 'Format current markdown file'],
+            \ 'g' : ['<Plug>VimwikiFollowLink'     , 'Follow/create wiki link'],
+            \ 'h' : ['<Plug>VimwikiGoBackLink'     , 'Go back to previously visited vimwiki page'],
+            \ 'i' : ['VimwikiGenerateLinks'        , 'Insert a list of wikis'],
+            \ 'j' : ['<Plug>VimwikiNextLink'       , 'Find next wiki link'],
+            \ 'k' : ['<Plug>VimwikiPrevLink'       , 'Find prev wiki link']                     ,
+            \ 'l' : ['<Plug>VimwikiTabnewLink'     , 'Follow wiki link in new tab']                     ,
             \ 'm' : [':TableModeToggle'            , 'Enable/Disable markdown table mode'],
             \ 'p' : ['<Plug>MarkdownPreview'       , 'Preview current markdown into browser'],
             \ 'q' : ['<Plug>MarkdownPreviewStop'   , 'Quit Preview markdown'],
-            \ 't' : ['<Plug>MarkdownPreviewToggle' , 'Start/End preview markdown']
+            \ 'r' : ['<Plug>VimwikiRenameLink'     , 'Rename wiki link'],
+            \ 's' : ['<Plug>VimwikiUISelect'       , 'List all wikis'],
+            \ 't' : ['<Plug>MarkdownPreviewToggle' , 'Start/End preview markdown'],
+            \ 'v' : ['<Plug>VimwikiVSplitLink'     , 'Vertical split and follow'],
+            \ 'w' : ['<Plug>VimwikiTabIndex'       , 'Open index file in new tab'],
+            \ 'x' : ['<Plug>VimwikiToggleListItem' , 'Toggle checkbox of list item on/off'],
+            \ 'X' : ['<Plug>VimwikiDeleteLink'     , 'Delete wiki link']
             \}
 
-" r  %s//g<left><left>
+let g:which_key_map['q'] = {
+            \ 'name' : '+Quit' ,
+            \ 'a' : [':qall<CR>'    , 'Close all windows'],
+            \ 'f' : [':qf<CR>'    , 'Force close current window'],
+            \ 'h' : ['<C-w>h:q<CR>' , 'Close left window'],
+            \ 'j' : ['<C-w>j:q<CR>' , 'Close below window'],
+            \ 'k' : ['<C-w>k:q<CR>' , 'Close above window'],
+            \ 'l' : ['<C-w>l:q<CR>' , 'Close right window'],
+            \ 'q' : [':q<CR>'       , 'Close current window'],
+            \ 'w' : [':wq<CR>'      , 'Save current buffer and quit'],
+            \}
+
+let g:which_key_map['r'] = {
+            \ 'name' : '+Rename' ,
+            \ 'n' : ['<Plug>(coc-rename)' , 'Definition rename']
+            \}
+
 let g:which_key_map['s'] = {
             \ 'name' : '+Search' ,
             \ 'r' : [':%s//g<left><left>' , 'Global replace characters']
             \}
 
-" <  -tabmove           i  tabe               n  +tabnext           p  -tabnext           q  bp<cr>:bd #        s  tabnext
-" >  +tabmove           l  XTabListTabs
 let g:which_key_map['t'] = {
             \ 'name' : '+Tabs' ,
             \ '<' : [':-tabmove'     , 'Move current tab a node to left'],
@@ -175,14 +218,12 @@ let g:which_key_map['t'] = {
             \ 's' : [':tabnext '     , 'Switch tab by tabnum']
             \}
 
-" l  silent! Vista finder ctags     v  Vista!!
 let g:which_key_map['v'] = {
             \ 'name' : '+Vista/Ctags' ,
             \ 'v' : [':Vista!!'                    , 'Open vista window'],
             \ 'l' : [':silent! Vista finder ctags' , 'List all ctags of current buffer']
             \}
-" h  <c-w>h                         k  <c-w>k                         l  <c-w>l                         t  call TerminalToggle()
-" j  <c-w>j
+
 let g:which_key_map['w'] = {
             \ 'name' : '+Window' ,
             \ 'h' : ['<c-w>h'                 , 'Switch cursor to left window'],
@@ -195,11 +236,6 @@ let g:which_key_map['w'] = {
 " ------------------------------
 " === localleader key map
 " ------------------------------
-
-" a  <Plug>BookmarkAnnotate         d  <Plug>BookmarkMoveDown         l  <Plug>BookmarkShowAll          p  <Plug>BookmarkPrev
-"                                    g  <Plug>BookmarkMoveToLine
-" c  <Plug>BookmarkClear            i  <Plug>BookmarkToggle           n  <Plug>BookmarkNext             u  <Plug>BookmarkMoveUp
-" C  <Plug>BookmarkClearAll
 
 let g:local_which_key_map['b'] = {
             \ 'name' : '+Bookmark',
@@ -214,13 +250,11 @@ let g:local_which_key_map['b'] = {
             \ 'p' : ['<Plug>BookmarkPrev'       , 'Jump to prev bookmark'],
             \ 'u' : ['<Plug>BookmarkMoveUp'     , 'Move up current bookmark']
             \}
+
 " 第一个元素表明执行的操作，第二个是该操作的介绍
 " group
 " 常规模式下输入 cS 清除行尾空格,同时取消高亮 nmap <leader>cs :%s/\s\+$//g<CR>:noh<CR>
 " 常规模式下输入 cM 清除行尾 ^M 符号,同时取消高亮 nmap <leader>cm :%s/\r$//g<CR>:noh<CR>
-" a  %s/^\s*//g                                                    l  g/^$/d
-" m  Clear ^M and cancel highlight
-" h  Cancel highlight charaters                                    s  Clear space end of current line and cancel highlight
 let g:local_which_key_map['c'] = {
             \ 'name' : '+Charaters' ,
             \ 'a' : [':%s/^\s+//g<CR>:noh<CR>'  , 'Clear space start of contents and cancel higlight'],
@@ -230,8 +264,6 @@ let g:local_which_key_map['c'] = {
             \ 'h' : [':noh'                     , 'Cancel highlight charaters'],
             \}
 
-" a  DlvAddBreakpoint        d  DlvRemoveBreakpoint     r  DlvRemoveTracepoint     t  DlvAddTracepoint        v  DlvVersion
-" c  DlvClearAll             i  DlvToggleBreakpoint     s  DlvDebug
 let g:local_which_key_map['d'] = {
             \ 'name' : '+Debugger',
             \ 'a' : [':DlvAddBreakpoint'    , 'Add breakpoint(Go debug Delve)'],
@@ -244,10 +276,6 @@ let g:local_which_key_map['d'] = {
             \ 'v' : [':DlvVersion'          , 'Show delve version(Go debug Delve)']
             \}
 
-"
-" a  FloatermFirst           f  FloatermToggle          k  FloatermKill            p  FloatermPrev            s  FloatermShow
-" c  FloatermNew             h  FloatermHide            n  FloatermNext            r  FloatermNew ranger      z  FloatermNew fzf
-" e  FloatermLast
 let g:local_which_key_map['f'] = {
             \ 'name' : '+Floaterm' ,
             \ 'a' : [':FloatermFirst'       , 'FloatermFirst'],
@@ -264,9 +292,6 @@ let g:local_which_key_map['f'] = {
             \ 'z' : [':FloatermNew fzf'     , 'FloatermNew fzf']
             \ }
 
-" f  <Plug>(easymotion-overwin-f)              k  <Plug>(easymotion-k)                      s  <Plug>(easymotion-overwin-f2)
-" h  <Plug>(easymotion-linebackward)           l  <Plug>(easymotion-lineforward)            t  <Plug>(easymotion-t2)
-" j  <Plug>(easymotion-j)                      L  <Plug>(easymotion-overwin-line)           w  <Plug>(easymotion-overwin-w)
 let g:local_which_key_map['s'] = {
             \ 'name' : '+Search/easymotion',
             \ 'f' : ['<Plug>(easymotion-overwin-f)'    , 'Global search one char and move to'],
@@ -280,15 +305,6 @@ let g:local_which_key_map['s'] = {
             \ 'w' : ['<Plug>(easymotion-overwin-w)'    , 'Global search whole words and move to']
             \ }
 
-" h  set splitright<CR>:vsplit                                         j  set nosplitbelow<CR>:split<CR>:set splitbelow
-" k  set splitbelow<CR>:split                                          l  set nosplitright<CR>:vsplit<CR>:set splitright
-" let g:local_which_key_map['w'] = {
-"             \ 'name' : '+CursorMoveBetweenWindows',
-"             \ 'h' : [':set splitright<CR>:vsplit'                      , 'Split window on left'],
-"             \ 'k' : [':set splitbelow<CR>:split'                       , 'Split window on up'],
-"             \ 'j' : [':set nosplitbelow<CR>:split<CR>:set splitbelow'  , 'Split window on below'],
-"             \ 'l' : [':set nosplitright<CR>:vsplit<CR>:set splitright' , 'Split window on right'],
-"             \ }
 " 命令中间存在回车或冒号等，直接配置超时之后会无法继续调用，所以在下面写成函数再调用，即可解决
 let g:local_which_key_map['w'] = {
             \ 'name' : '+CursorMoveBetweenWindows',
@@ -324,7 +340,7 @@ endfunc
 " === single key map
 " ------------------------------
 let g:which_key_map['p'] = [ '\"+p' , 'Paset content from system plate' ]
-let g:which_key_map['q'] = [ '<C-w>j:q' , 'Close below window' ]
+" let g:which_key_map['q'] = [ '<C-w>j:q' , 'Close below window' ]
 
 
 

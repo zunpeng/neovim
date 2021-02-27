@@ -1,5 +1,6 @@
 {
-	"coc.preferences.hoverTarget": "preview",
+	//coc提示信息默认为浮动窗口,此配置会显示到分屏
+	//	"coc.preferences.hoverTarget": "preview",
 	"coc.preferences.enableFloatHighlight": true,
 	"coc.preferences.snippetStatusText": "Ⓢ ",
 	"coc.preferences.extensionUpdateCheck": "daily",
@@ -220,5 +221,8 @@
 	"java.project.resourceFilters": [".project", ".svn", ".git"],
 	"java.referencesCodeLens.enabled": true,
 	"java.implementationsCodeLens.enabled": true,
-	"java.jdt.ls.vmargs": "-javaagent:/opt/common/java/lombok-1.18.18.jar"
+	"java.jdt.ls.vmargs": "-javaagent:/opt/common/java/lombok-1.18.18.jar",
+	"floaterm.completion.enable": true,
+	"floaterm.completion.shortcut": "floaterm",
+	"floaterm.completion.priority": 5
 }

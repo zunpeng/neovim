@@ -106,7 +106,7 @@ set guifont=DroidSansMono\ Nerd\ Font\ 11
 " 自动切换到文件当前目录
 set autochdir
 "设置命令行的高度
-set cmdheight=1
+set cmdheight=2
 " 再次打开文件，定位到上次退出时的位置
 if has("autocmd")
     autocmd BufReadPost *
@@ -163,6 +163,8 @@ source $HOME/.config/nvim/cfgs/plug-cfg/vim-startify-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/floaterm-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/nerdtree-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/coc-explorer-cfg.vim
+source $HOME/.config/nvim/cfgs/plug-cfg/coc-extensions.vim
+source $HOME/.config/nvim/cfgs/plug-cfg/coc-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/rnvimr.vim
 "
 source $HOME/.config/nvim/cfgs/plug-cfg/airline-cfg.vim
@@ -215,7 +217,7 @@ source $HOME/.config/nvim/cfgs/plug-cfg/vimspector-cfg.vim
 " ------------------------------
 " Snippets
 source $HOME/.config/nvim/cfgs/lang-cfg/markdown-snippets.vim
-source $HOME/.config/nvim/cfgs/lang-cfg/symbol-cfg.vim
+"source $HOME/.config/nvim/cfgs/lang-cfg/symbol-cfg.vim
 " auto spell(markdown自动拼写检查)
 " autocmd BufRead,BufNewFile *.md setlocal spell
 

@@ -5,10 +5,22 @@
 " 替换数字加减（后面的Ctrl+a换成了移动光标到行首）
 noremap + <C-a>
 noremap - <C-x>
-" Press <SPACE> + q to close the window below the current window
-noremap <leader>q <C-w>j:q<CR>
+" close all windows
+noremap <leader>qa :qall<CR>
+" force close current window
+noremap <leader>qf :q!<CR>
+" close current window
+noremap <leader>qq :q<CR>
+" close the window left the current window
+noremap <leader>qh <C-w>h:q<CR>
+" close the window below the current window
+noremap <leader>qj <C-w>j:q<CR>
+" close the window above the current window
+noremap <leader>qk <C-w>k:q<CR>
+" close the window right the current window
+noremap <leader>ql <C-w>l:q<CR>
 " Shift + q 直接退出（不保存）
-noremap Q :wq<CR>
+noremap Q :q!<CR>
 
 " 设置快捷键将选中文本块复制至系统剪贴板
 vnoremap <Leader>y "+y
@@ -160,6 +172,8 @@ vmap <Leader>ce <Plug>(coc-translator-ev)
 " translator content and replace old charaters
 nmap <Leader>cr <Plug>(coc-translator-r)
 vmap <Leader>cr <Plug>(coc-translator-rv)
+" 注释
+nmap <leader>cd <plug>NERDCommenterToggle
 
 " === easy-align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -272,6 +286,8 @@ nmap <leader>llm <Plug>(coc-declaration)
 nmap <leader>lli <Plug>(coc-implementation)
 " format
 nmap <leader>llf <Plug>(coc-format)
+nmap <leader>llF <Plug>(coc-format-selected)
+xmap <leader>llF <Plug>(coc-format-selected)
 " quickfix
 nmap <leader>llx <Plug>(coc-fix-current)
 " code lens
@@ -315,6 +331,73 @@ nmap <leader>mt <Plug>MarkdownPreviewToggle
 nmap <leader>mf <Plug>(coc-codeaction)
 "  开启关闭表格自动格式化
 nmap <leader>mm :TableModeToggle<CR>
+
+" ------------------------------
+" === vimwiki <leader>m
+" ------------------------------
+
+" vimwiki doc-cn
+" https://github.com/vimcn/vimwiki.vim.cnx/blob/master/doc/vimwiki.cnx
+"
+"  打开第[count] 个vimwiki索引
+map <Leader>ma <Plug>VimwikiIndex
+" 在新标签页中打开 第 [count] 个 wiki 索引文件
+map <Leader>mw <Plug>VimwikiTabIndex
+" 列出可选择的 wiki 列表,配置多个wiki的话
+map <Leader>ms <Plug>VimwikiUISelect
+" 打开第 [count] 个 wiki 项目的日记首页
+map <Leader>mda <Plug>VimwikiDiaryIndex
+"打开今天第 [count] 个 wiki 日记文件
+map <Leader>mdd <Plug>VimwikiMakeDiaryNote
+"在新标签页中打开今天第 [count] 个 wiki 日记文件
+map <Leader>mdt <Plug>VimwikiTabMakeDiaryNote
+" 插入所有可用的日志词条到当前缓冲区
+map <Leader>mdi <Plug>VimwikiDiaryGenerateLinks           
+" 创建明天的日志
+map <Leader>mdm <Plug>VimwikiMakeTomorrowDiaryNote
+" 创建昨天的日志
+map <Leader>mdy <Plug>VimwikiMakeYesterdayDiaryNote
+
+" 打开日历(左侧)
+map <Leader>mdh :Calendar<CR>
+map <Leader>mdv <Plug>CalendarV
+" 打开日历(下方)
+map <Leader>mdj <Plug>CalendarH
+" 打开日历(新标签页)
+map <Leader>mdn <Plug>CalendarT
+" 打开日历(右侧)
+map <Leader>mdl :CalendarVR<CR>
+" 转换当前 wiki 页面为 HTML
+map <Leader>mch <Plug>Vimwiki2HTML
+"转换当前 wiki 页面为 HTML 并在浏览器中打开
+map <Leader>mcb <Plug>Vimwiki2HTMLBrowse
+"进入（必要时创建新的） Wiki 词条
+nmap <Leader>mg <Plug>VimwikiFollowLink
+" 插入所有可用的词条到当前缓冲区
+nmap <Leader>mi :VimwikiGenerateLinks<CR>
+"水平分栏窗口中进入（必要时创建新的） Wiki 词条
+map <Leader>me <Plug>VimwikiSplitLink
+"垂直分栏窗口中进入（必要时创建新的） Wiki 词条
+map <Leader>mv <Plug>VimwikiVSplitLink
+"进入（必要时创建新的） wiki 词条，在新的 tab 页中打开
+map <Leader>ml <Plug>VimwikiTabnewLink
+"回到上一个 Wiki 词条
+nmap <Leader>mh <Plug>VimwikiGoBackLink
+"寻找并将光标定位到本页的下一个 Wiki 词条
+nmap <Leader>mj <Plug>VimwikiNextLink
+"寻找并将光标定位到本页的上一个 Wiki 词条
+nmap <Leader>mk <Plug>VimwikiPrevLink
+" 删除光标所在的 Wiki 词条
+map <Leader>mX <Plug>VimwikiDeleteLink
+"重命名光标所在的 Wiki 词条
+map <Leader>mr <Plug>VimwikiRenameLink
+"切换列表项的开关（选中/反选）
+map <Leader>mx <Plug>VimwikiToggleListItem
+" 向左移动表格的当前列
+map <Leader>mbh <Plug>VimwikiTableMoveColumnLeft
+" 向右移动表格的当前列
+map <Leader>mbl <Plug>VimwikiTableMoveColumnRight
+
 
 " ------------------------------
 " === Search Operation <leader>s
@@ -411,13 +494,6 @@ noremap <leader>wj <c-w>j
 noremap <leader>wh <c-w>h
 noremap <leader>wl <c-w>l
 
-" ------------------------------
-" === vimwiki <leader>w
-" ------------------------------
-
-nmap <leader>wm <Plug>VimwikiTabIndex
-nmap <leader>wvh <Plug>Vimwiki2HTML
-nmap <leader>wvb <Plug>Vimwiki2HTMLBrowse
 
 " terminal
 let g:terminal_key ="<leader>wt" "哪个键将用于切换终端窗口，默认为<m-=>。
