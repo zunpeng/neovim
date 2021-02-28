@@ -42,7 +42,7 @@ let g:which_key_map['c'] = {
             \ 'd' : ['<plug>NERDCommenterToggle'    , 'Comment/Uncomment current line'],
             \ 'e' : ['<Plug>(coc-translator-e)'     , 'Translate current word and display into command line'],
             \ 'i' : ['<plug>NERDCommenterInvert'    , 'Commenter invert'],
-            \ 'j' : ['i<CR><ESC>'                   , 'Split into new line after current cursor'],
+            \ 'j' : [':start<CR><ESC>'              , 'Current position wrap'],
             \ 'l' : ['<plug>NERDCommenterAlignLeft' , 'CommenterAlignLeft'],
             \ 'm' : ['<plug>NERDCommenterMinimal'   , 'CommenterMinimal'],
             \ 'n' : ['<plug>NERDCommenterNested'    , 'CommenterNested'],
@@ -185,14 +185,14 @@ let g:which_key_map['m'] = {
 
 let g:which_key_map['q'] = {
             \ 'name' : '+Quit' ,
-            \ 'a' : [':qall<CR>'    , 'Close all windows'],
-            \ 'f' : [':qf<CR>'    , 'Force close current window'],
-            \ 'h' : ['<C-w>h:q<CR>' , 'Close left window'],
-            \ 'j' : ['<C-w>j:q<CR>' , 'Close below window'],
-            \ 'k' : ['<C-w>k:q<CR>' , 'Close above window'],
-            \ 'l' : ['<C-w>l:q<CR>' , 'Close right window'],
-            \ 'q' : [':q<CR>'       , 'Close current window'],
-            \ 'w' : [':wq<CR>'      , 'Save current buffer and quit'],
+            \ 'a' : [':qall'    , 'Close all windows'],
+            \ 'f' : [':q!'      , 'Force close current window'],
+            \ 'h' : ['<C-w>h:q' , 'Close left window'],
+            \ 'j' : ['<C-w>j:q' , 'Close below window'],
+            \ 'k' : ['<C-w>k:q' , 'Close above window'],
+            \ 'l' : ['<C-w>l:q' , 'Close right window'],
+            \ 'q' : [':q'       , 'Close current window'],
+            \ 'w' : [':wq'      , 'Save current buffer and quit'],
             \}
 
 let g:which_key_map['r'] = {
@@ -255,14 +255,42 @@ let g:local_which_key_map['b'] = {
 " group
 " 常规模式下输入 cS 清除行尾空格,同时取消高亮 nmap <leader>cs :%s/\s\+$//g<CR>:noh<CR>
 " 常规模式下输入 cM 清除行尾 ^M 符号,同时取消高亮 nmap <leader>cm :%s/\r$//g<CR>:noh<CR>
+" let g:local_which_key_map['c'] = {
+"             \ 'name' : '+Charaters' ,
+"             \ 'a' : [':%s/^\s+//g<CR>:noh<CR>'  , 'Clear space start of contents and cancel higlight'],
+"             \ 'l' : [':g/^$/d<CR>:noh<CR>'      , 'Clear white space line and cancel higlight'],
+"             \ 'm' : [':%s/\r$//g<CR>:noh<CR>'   , 'Clear ^M and cancel highlight'],
+"             \ 's' : [':%s/\s\+$//g<CR>:noh<CR>' , 'Clear space end of contents and cancel highlight'],
+"             \ 'h' : [':noh'                     , 'Cancel highlight charaters'],
+"             \}
 let g:local_which_key_map['c'] = {
             \ 'name' : '+Charaters' ,
-            \ 'a' : [':%s/^\s+//g<CR>:noh<CR>'  , 'Clear space start of contents and cancel higlight'],
-            \ 'l' : [':g/^$/d<CR>:noh<CR>'      , 'Clear white space line and cancel higlight'],
-            \ 'm' : [':%s/\r$//g<CR>:noh<CR>'   , 'Clear ^M and cancel highlight'],
-            \ 's' : [':%s/\s\+$//g<CR>:noh<CR>' , 'Clear space end of contents and cancel highlight'],
+            \ 'a' : [':call ClearStartSpace()'  , 'Clear space start of contents and cancel higlight'],
+            \ 'l' : [':call ClearWhiteLine()'      , 'Clear white space line and cancel higlight'],
+            \ 'm' : [':call ClearMSymbol()'   , 'Clear ^M and cancel highlight'],
+            \ 's' : [':call ClearEndSpace()' , 'Clear space end of contents and cancel highlight'],
             \ 'h' : [':noh'                     , 'Cancel highlight charaters'],
             \}
+
+func! ClearStartSpace()
+    :%s/^\s\+//g
+    :noh
+endfunc
+
+func! ClearWhiteLine()
+    :g/^$/d
+    :noh
+endfunc
+
+func! ClearMSymbol()
+    :%s/\r$//g
+    :noh
+endfunc
+
+func! ClearEndSpace()
+    :%s/\s\+$//g
+    :noh
+endfunc
 
 let g:local_which_key_map['d'] = {
             \ 'name' : '+Debugger',

@@ -224,5 +224,6 @@
 	"java.jdt.ls.vmargs": "-javaagent:/opt/common/java/lombok-1.18.18.jar",
 	"floaterm.completion.enable": true,
 	"floaterm.completion.shortcut": "floaterm",
-	"floaterm.completion.priority": 5
+	"floaterm.completion.priority": 5,
+	"highlight.document.enable": true
 }
