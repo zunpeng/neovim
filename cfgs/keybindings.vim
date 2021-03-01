@@ -372,7 +372,8 @@ map <Leader>mch <Plug>Vimwiki2HTML
 "转换当前 wiki 页面为 HTML 并在浏览器中打开
 map <Leader>mcb <Plug>Vimwiki2HTMLBrowse
 "进入（必要时创建新的） Wiki 词条
-nmap <Leader>mg <Plug>VimwikiFollowLink
+" nmap <Leader>mg <Plug>VimwikiFollowLink
+nmap <Leader>mg :VimwikiFollowLink<CR>
 " 插入所有可用的词条到当前缓冲区
 nmap <Leader>mi :VimwikiGenerateLinks<CR>
 "水平分栏窗口中进入（必要时创建新的） Wiki 词条
@@ -382,7 +383,8 @@ map <Leader>mv <Plug>VimwikiVSplitLink
 "进入（必要时创建新的） wiki 词条，在新的 tab 页中打开
 map <Leader>ml <Plug>VimwikiTabnewLink
 "回到上一个 Wiki 词条
-nmap <Leader>mh <Plug>VimwikiGoBackLink
+" nmap <Leader>mh <Plug>VimwikiGoBackLink
+nmap <Leader>mh :VimwikiGoBackLink<CR>
 "寻找并将光标定位到本页的下一个 Wiki 词条
 nmap <Leader>mj <Plug>VimwikiNextLink
 "寻找并将光标定位到本页的上一个 Wiki 词条
