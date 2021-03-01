@@ -78,7 +78,8 @@
 	"yaml.format.enable": true,
 	"signature.target": "float",
 	"explorer.width": 38,
-	"explorer.quitOnOpen": true,
+	// 在打开文件后关闭explorer
+	"explorer.quitOnOpen": false,
 	"explorer.sources": [
 		{
 			"name": "buffer",

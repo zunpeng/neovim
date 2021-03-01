@@ -29,7 +29,8 @@ let g:which_key_map['b'] = {
             \ 'm' : [':XTabMode'        , 'Switch buffer/tab mode'],
             \ 'n' : [':XTabNextBuffer'  , 'Jump to next buffer'],
             \ 'p' : [':XTabPrevBuffer'  , 'Jump to prev buffer'],
-            \ 's' : [':XTabNextBuffer ' , 'Search buffer num and jump to'],
+            \ 'N' : [':XTabNextBuffer ' , 'Search buffer num and jump to next'],
+            \ 'P' : [':XTabPrevBuffer ' , 'Search buffer num and jump to prev'],
             \}
 
 let g:which_key_map['c'] = {
@@ -186,6 +187,7 @@ let g:which_key_map['m'] = {
 let g:which_key_map['q'] = {
             \ 'name' : '+Quit' ,
             \ 'a' : [':qall'    , 'Close all windows'],
+            \ 'b' : [':XTabCloseBuffer'    , 'Close current buffer'],
             \ 'f' : [':q!'      , 'Force close current window'],
             \ 'h' : ['<C-w>h:q' , 'Close left window'],
             \ 'j' : ['<C-w>j:q' , 'Close below window'],

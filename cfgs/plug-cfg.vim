@@ -32,7 +32,7 @@ Plug 'mg979/vim-xtabline'
 " Plug 'liuchengxu/eleline.vim'
 " Plug 'glepnir/spaceline.vim'
 "在状态栏上显示buffer
-Plug 'bling/vim-bufferline'
+" Plug 'bling/vim-bufferline'
 
 " 版本控制
 Plug 'tpope/vim-fugitive'

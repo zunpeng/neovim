@@ -7,6 +7,8 @@ noremap + <C-a>
 noremap - <C-x>
 " close all windows
 noremap <leader>qa :qall<CR>
+" 关闭当前buffer窗口
+noremap <leader>qb :XTabCloseBuffer<CR>
 " force close current window
 noremap <leader>qf :q!<CR>
 " close current window
@@ -138,7 +140,8 @@ nmap <localLeader>bg <Plug>BookmarkMoveToLine
 " === Buffer Operation <leader>b
 "
 " 此处不加回车，调出buffer命令后，写buffer数字进行跳转 buffer search
-nmap <leader>bs :XTabNextBuffer<space>
+nmap <leader>bN :XTabNextBuffer<space>
+nmap <leader>bP :XTabPrevBuffer<space>
 nmap <leader>bn :XTabNextBuffer<CR>
 nmap <leader>bp :XTabPrevBuffer<CR>
 nmap <leader>bm :XTabMode<CR>
