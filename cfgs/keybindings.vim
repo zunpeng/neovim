@@ -142,6 +142,7 @@ nmap <localLeader>bg <Plug>BookmarkMoveToLine
 " 此处不加回车，调出buffer命令后，写buffer数字进行跳转 buffer search
 nmap <leader>bN :XTabNextBuffer<space>
 nmap <leader>bP :XTabPrevBuffer<space>
+nmap <leader>bs <Plug>(XT-Select-Buffer)<space>
 nmap <leader>bn :XTabNextBuffer<CR>
 nmap <leader>bp :XTabPrevBuffer<CR>
 nmap <leader>bm :XTabMode<CR>
@@ -389,9 +390,11 @@ map <Leader>ml <Plug>VimwikiTabnewLink
 " nmap <Leader>mh <Plug>VimwikiGoBackLink
 nmap <Leader>mh :VimwikiGoBackLink<CR>
 "寻找并将光标定位到本页的下一个 Wiki 词条
-nmap <Leader>mj <Plug>VimwikiNextLink
+" nmap <Leader>mj <Plug>VimwikiNextLink
+nmap <Leader>mj :VimwikiNextLink<CR>
 "寻找并将光标定位到本页的上一个 Wiki 词条
-nmap <Leader>mk <Plug>VimwikiPrevLink
+" nmap <Leader>mk <Plug>VimwikiPrevLink
+nmap <Leader>mk :VimwikiPrevLink<CR>
 " 删除光标所在的 Wiki 词条
 map <Leader>mX <Plug>VimwikiDeleteLink
 "重命名光标所在的 Wiki 词条

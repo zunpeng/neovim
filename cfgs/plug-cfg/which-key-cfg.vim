@@ -31,6 +31,7 @@ let g:which_key_map['b'] = {
             \ 'p' : [':XTabPrevBuffer'  , 'Jump to prev buffer'],
             \ 'N' : [':XTabNextBuffer ' , 'Search buffer num and jump to next'],
             \ 'P' : [':XTabPrevBuffer ' , 'Search buffer num and jump to prev'],
+            \ 's' : ['<Plug>(XT-Select-Buffer)' , 'Search buffer num and jump'],
             \}
 
 let g:which_key_map['c'] = {
