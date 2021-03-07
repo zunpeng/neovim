@@ -414,3 +414,10 @@ let g:which_key_use_floating_win = 0
 autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
+
+" 提示窗口在上面或在下面: botright/topleft
+" default: botright
+let g:which_key_position = 'botright'
+" 提示菜单靠左还是靠右(0左，1右)
+let g:which_key_centered = 0
