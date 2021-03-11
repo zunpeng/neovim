@@ -68,8 +68,14 @@ let g:which_key_map['d'] = {
             \ 'p' : [ '<Plug>VimspectorPause'                       , '(F6)Pause debugee.'],
             \ 'q' : [ '<Plug>VimspectorStepOut'                     , '(F12)Step out of current function scope'],
             \ 'r' : [ '<Plug>VimspectorRestart'                     , '(F4)Restart debugging with the same configuration'],
+            \ 'v' : [ ':call LoadVimspectorConfig()'                , 'Load vimspector json template'],
             \ 'x' : [ '<Plug>VimspectorStop'                        , '(F3)Stop debugging']
             \}
+"
+func! LoadVimspectorConfig()
+    :tabe .vimspector.json
+    :LoadVimSpectorJsonTemplate
+endfunc
 
 let g:which_key_map['e'] = {
             \ 'name' : '+ExplorerTree' ,

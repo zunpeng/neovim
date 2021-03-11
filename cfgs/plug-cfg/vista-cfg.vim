@@ -50,3 +50,5 @@ let g:vista#renderer#icons = {
             \   "function": "\uf794",
             \   "variable": "\uf71b",
             \  }
+
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'vista') | q | endif

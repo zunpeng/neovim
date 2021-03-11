@@ -139,6 +139,8 @@ Plug 'jmcantrell/vim-virtualenv',{'on': [ 'VirtualEnvActivate', 'VirtualEnvDeact
 Plug 'skywind3000/vim-terminal-help'
 " fzf Plug
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 " Plug vim-visual-multi
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " sudo write root file

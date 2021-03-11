@@ -1,0 +1,88 @@
+{
+	"configurations": {
+		"qemu-riscv64-oslab": {},
+		"launch-current-file": {
+			"adapter": "vscode-cpptools",
+			"configuration": {
+				"default": true,
+				"type": "cppdbg",
+				"request": "launch",
+				"program": "${fileDirname}/${fileBasenameNoExtension}",
+				"args": ["*${ProgramArgs}"], // 用户输入
+				"cwd": "${workspaceRoot}",
+				"environment": [],
+				"externalConsole": true,
+				"stopAtEntry": true,
+				"MIMode": "gdb",
+				"breakpointers": {
+					"exception": {
+						"cpp_throw": "Y", // 抛出异常时暂停
+						"cpp_catch": "N" // 捕获时不暂停
+					}
+				}
+			}
+		},
+		"launch-current-project": {
+			"adapter": "vscode-cpptools",
+			"configuration": {
+				"variables": {
+					"ProgramName": {
+						"shell": ["basename ", "${workspaceRoot}"] // 无法正确执行，需要用户输入
+					},
+					"ProgramPath": "${workspaceRoot}/_builds/${ProgramName}"
+				},
+				"type": "cppdbg",
+				"request": "launch",
+				"program": "${workspaceRoot}/_builds/${ProgramName}",
+				"args": ["*${ProgramArgs}"],
+				"cwd": "${workspaceRoot}",
+				"environment": [],
+				"externalConsole": true,
+				"stopAtEntry": true,
+				"MIMode": "gdb",
+				"breakpointers": {
+					"exception": {
+						"cpp_throw": "Y",
+						"cpp_catch": "N"
+					}
+				}
+			}
+		},
+		"attach-current-file": {
+			"adapter": "vscode-cpptools",
+			"configuration": {
+				"type": "cppdbg",
+				"request": "attach",
+				"program": "${fileDirname}/${fileBasenameNoExtension}",
+				"MIMode": "gdb",
+				"breakpointers": {
+					"exception": {
+						"cpp_throw": "Y",
+						"cpp_catch": "N"
+					}
+				}
+			}
+		},
+		"attach-current-project": {
+			"adapter": "vscode-cpptools",
+			"configuration": {
+				"variables": {
+					"ProgramName": {
+						"shell": ["basename", "${workspaceRoot}"]
+					},
+					"ProgramPath": "${workspaceRoot}/_builds/${ProgramName}"
+				},
+				"type": "cppdbg",
+				"request": "attach",
+				"program": "${ProgramPath}",
+				"MIMode": "gdb",
+				"breakpointers": {
+					"exception": {
+						"cpp_throw": "Y",
+						"cpp_catch": "N"
+					}
+				}
+			}
+		}
+	}
+}

@@ -7,11 +7,13 @@ let g:coc_global_extensions =[
     \'coc-prettier',
     \'coc-pairs',
     \'coc-html',
+    \'coc-html-css-support',
     \'coc-highlight',
     \'coc-git',
     \'coc-explorer',
     \'coc-eslint',
     \'coc-emmet',
+    \'coc-cssmodules',
     \'coc-actions',
     \'coc-yaml',
     \'coc-xml',
@@ -28,5 +30,8 @@ let g:coc_global_extensions =[
     \'coc-css',
     \'coc-cmake',
     \'coc-clangd',
-    \'coc-floaterm'
+    \'coc-floaterm',
+    \'coc-css',
+    \'coc-htmlhint',
+    \'coc-vetur'
     \]

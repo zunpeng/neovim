@@ -205,6 +205,8 @@ source $HOME/.config/nvim/cfgs/plug-cfg/vim-gitgutter-cfg.vim
 " source $HOME/.config/nvim/cfgs/plug-cfg/vdebug-cfg.vim
 source $HOME/.config/nvim/cfgs/plug-cfg/vimspector-cfg.vim
 
+source $HOME/.config/nvim/cfgs/plug-cfg/fzf-cfg.vim
+
 " ------------------------------
 " === languags cfgs
 " ------------------------------
