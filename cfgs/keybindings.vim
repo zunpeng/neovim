@@ -147,7 +147,8 @@ nmap <leader>bn :XTabNextBuffer<CR>
 nmap <leader>bp :XTabPrevBuffer<CR>
 nmap <leader>bm :XTabMode<CR>
 " 查询所有buffer，然后选择加载
-nmap <leader>bl :XTabListBuffers<CR>
+" nmap <leader>bl :XTabListBuffers<CR>
+nmap <leader>bl :Buffers<CR>
 
 
 " ------------------------------

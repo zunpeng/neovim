@@ -25,7 +25,7 @@ set timeoutlen=500
 
 let g:which_key_map['b'] = {
             \ 'name' : '+Buffers',
-            \ 'l' : [':XTabListBuffers' , 'List all buffers'],
+            \ 'l' : [':Buffers' , 'List all buffers'],
             \ 'm' : [':XTabMode'        , 'Switch buffer/tab mode'],
             \ 'n' : [':XTabNextBuffer'  , 'Jump to next buffer'],
             \ 'p' : [':XTabPrevBuffer'  , 'Jump to prev buffer'],
