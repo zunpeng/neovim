@@ -162,4 +162,6 @@ Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'mattn/calendar-vim'
 
+Plug 'pangloss/vim-javascript'
+
 call plug#end()

@@ -227,4 +227,5 @@
 	"floaterm.completion.shortcut": "floaterm",
 	"floaterm.completion.priority": 5,
 	"highlight.document.enable": true
+	//"emmet.includeLanguages": { "vue-html": "html", "javascript": "javascriptreact" }
 }

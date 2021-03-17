@@ -7,7 +7,7 @@ function! s:read_template_into_buffer(template)
     execute '0r ~/.config/nvim/template/vimspector/'.a:template
 endfunction
 command! -bang -nargs=* LoadVimSpectorJsonTemplate call fzf#run({
-            \   'source': 'ls -1 ~/.config/nvim/template/vimspector/',
+            \   'source': 'ls -d -1 ~/.config/nvim/template/vimspector/*.json',
             \   'down': 20,
             \   'sink': function('<sid>read_template_into_buffer')
             \ })

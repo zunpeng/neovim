@@ -207,6 +207,8 @@ source $HOME/.config/nvim/cfgs/plug-cfg/vimspector-cfg.vim
 
 source $HOME/.config/nvim/cfgs/plug-cfg/fzf-cfg.vim
 
+source $HOME/.config/nvim/cfgs/plug-cfg/vim-javascript-cfg.vim
+
 " ------------------------------
 " === languags cfgs
 " ------------------------------
