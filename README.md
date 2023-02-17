@@ -302,3 +302,23 @@ coc-xml
 coc-yaml
 coc-sql
 ```
+
+# 3. 问题：
+
+1. neovim安装markdown-preview.nvim插件预览浏览器无反应
+
+**解决：** 到插件目录执行 yarn install 重装安装一次插件
+
+---
+如果没有yarn，需要自行安装，如果没有nodejs还需要安装nodejs
+
+```bash
+npm install -g yarn
+yarn --version
+```
+
+注意： 安装有些插件时，npm连接会超时，如果修改为taobao镜像时，可能存在版本较低的情况，不满足要求，所以改成了其他代理
+
+`https://registry.npmjs.org/`
+
+npm配置文件在windows下的位置： `C:/用户/用户名/.npmrc`
