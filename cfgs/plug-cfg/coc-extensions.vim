@@ -33,5 +33,6 @@ let g:coc_global_extensions =[
     \'coc-floaterm',
     \'coc-css',
     \'coc-htmlhint',
-    \'coc-vetur'
+    \'coc-vetur',
+    \'coc-solargraph'
     \]
